@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charleston Bachelorette Party Guide | Where To Eat, Play &amp; Stay in the Holy City</title>
+<meta name="description" content="The local's guide to a Charleston bachelorette weekend — where to eat and drink, things to do, where to stay, and who to call for decor and planning.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  :root{
+    --pink:#F0A0B0;      /* Blush Row - Eat & Drink */
+    --pink-dark:#D9788C;
+    --marigold:#F2B341;  /* Porch Yellow - Things To Do */
+    --marigold-dark:#D6952A;
+    --harbor:#4C82A3;    /* Harbor Blue - Where To Stay */
+    --harbor-dark:#376283;
+    --palmetto:#5C8367;  /* Palmetto Green - Planners */
+    --palmetto-dark:#436049;
+    --ink:#26313D;
+    --cream:#E9F2F1;
+    --cream-2:#DCEAE8;
+  }
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Karla', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+  }
+
+  h1,h2,h3,h4,.display-font{
+    font-family:'Fraunces', serif;
+  }
+
+  .eyebrow{
+    font-family:'Karla', sans-serif;
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.78rem;
+  }
+
+  /* ---------- NAV ---------- */
+  .cbg-nav{
+    background:var(--cream);
+    border-bottom:3px solid var(--ink);
+  }
+  .cbg-nav .navbar-brand{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.35rem;
+    color:var(--ink);
+  }
+  .cbg-nav .nav-link{
+    font-weight:700;
+    color:var(--ink) !important;
+    margin:0 .4rem;
+  }
+  .cbg-nav .nav-link:hover{ color:var(--pink-dark) !important; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--cream);
+    padding:4.5rem 0 2rem;
+    overflow:hidden;
+  }
+  .hero .stamp{
+    display:inline-block;
+    border:2px solid var(--ink);
+    border-radius:50%;
+    padding:.6rem 1rem;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:.8rem;
+    transform:rotate(-6deg);
+    background:var(--cream);
+  }
+  .hero h1{
+    font-weight:900;
+    font-size:clamp(2.4rem, 6vw, 4.4rem);
+    line-height:1.02;
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--pink-dark);
+  }
+  .hero p.lede{
+    font-size:1.15rem;
+    max-width:540px;
+    color:#4a5560;
+  }
+
+  /* Charleston route map — signature element */
+  .route-map{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    max-width:760px;
+    margin:3rem auto 0;
+    padding:0 10px;
+  }
+  .route-map::before{
+    content:"";
+    position:absolute;
+    top:34px;
+    left:34px;
+    right:34px;
+    height:0;
+    border-top:3px dashed var(--ink);
+    z-index:0;
+  }
+  .route-stop{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
+    color:var(--ink);
+    width:110px;
+    transition:transform .18s ease;
+  }
+  .route-stop:hover{ transform:translateY(-6px); }
+  .route-pin{
+    width:68px;
+    height:68px;
+    border-radius:50%;
+    border:3px solid var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+  }
+  .route-pin svg{ width:30px; height:30px; }
+  .pin-eat{ background:var(--pink); }
+  .pin-do{ background:var(--marigold); }
+  .pin-stay{ background:var(--harbor); }
+  .pin-plan{ background:var(--palmetto); }
+  .route-stop .label{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    padding-top:.6rem;
+    font-size:.92rem;
+    text-align:center;
+    line-height:1.15;
+  }
+
+  /* ---------- SECTION HEADER BANDS ---------- */
+  .band{
+    border-top:3px solid var(--ink);
+    border-bottom:3px solid var(--ink);
+    padding:2.6rem 0 1rem;
+  }
+  .band h2{
+    font-weight:900;
+    font-size:clamp(1.9rem, 4vw, 2.9rem);
+    margin-bottom:.25rem;
+  }
+  .band-eat{ background:var(--pink); }
+  .band-do{ background:var(--marigold); }
+  .band-stay{ background:var(--harbor); color:var(--cream); }
+  .band-stay .eyebrow{ color:var(--cream); opacity:.85; }
+  .band-plan{ background:var(--palmetto); color:var(--cream); }
+  .band-plan .eyebrow{ color:var(--cream); opacity:.85; }
+
+  section.content{
+    padding:3rem 0 3.5rem;
+  }
+
+  /* ---------- CARDS ---------- */
+  .venue-card{
+    background:#fff;
+    border:2.5px solid var(--ink);
+    border-radius:4px;
+    height:100%;
+    padding:1.5rem;
+    box-shadow:6px 6px 0 var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .venue-card:hover{
+    transform:translate(-3px,-3px);
+    box-shadow:9px 9px 0 var(--ink);
+  }
+  .venue-tag{
+    display:inline-block;
+    font-family:'Karla',sans-serif;
+    font-weight:800;
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:.2rem .55rem;
+    border-radius:20px;
+    margin-bottom:.65rem;
+  }
+  .tag-eat{ background:var(--pink); color:var(--ink); }
+  .tag-do{ background:var(--marigold); color:var(--ink); }
+  .tag-stay{ background:var(--harbor); color:#fff; }
+  .tag-plan{ background:var(--palmetto); color:#fff; }
+
+  .venue-card h3{
+    font-size:1.28rem;
+    font-weight:700;
+    margin-bottom:.4rem;
+  }
+  .venue-card .neighborhood{
+    font-weight:700;
+    font-size:.85rem;
+    color:#6b7580;
+    margin-bottom:.6rem;
+  }
+  .venue-card p{
+    font-size:.96rem;
+    color:#3a4450;
+    margin-bottom:0;
+  }
+
+  /* ---------- BEST-FOR PICKS ---------- */
+  .pick-card{
+    border-left:5px solid var(--ink);
+    padding:1rem 1.2rem;
+    background:var(--cream-2);
+    height:100%;
+  }
+  .pick-card h4{
+    font-weight:700;
+    font-size:1.1rem;
+  }
+
+  /* ---------- ITINERARY (ticket style) ---------- */
+  .ticket{
+    background:#fff;
+    border:2.5px solid var(--ink);
+    border-radius:6px;
+    position:relative;
+    padding:1.6rem 1.6rem 1.4rem;
+  }
+  .ticket::before, .ticket::after{
+    content:"";
+    position:absolute;
+    width:26px; height:26px;
+    background:var(--cream);
+    border:2.5px solid var(--ink);
+    border-radius:50%;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .ticket::before{ left:-14px; }
+  .ticket::after{ right:-14px; }
+  .ticket .day-label{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-size:1.5rem;
+  }
+  .ticket ul{
+    list-style:none;
+    padding-left:0;
+    margin-bottom:0;
+  }
+  .ticket ul li{
+    padding:.35rem 0;
+    border-top:1px dashed #c9c0ad;
+    font-size:.95rem;
+  }
+  .ticket ul li:first-child{ border-top:none; }
+  .ticket ul li strong{ color:var(--pink-dark); }
+
+  /* ---------- CTA / FOOTER ---------- */
+  .cta{
+    background:var(--ink);
+    color:var(--cream);
+    padding:3.5rem 0;
+    text-align:center;
+  }
+  .cta h2{ color:#fff; font-weight:800; }
+  .btn-blush{
+    background:var(--pink);
+    border:2.5px solid var(--cream);
+    color:var(--ink);
+    font-weight:800;
+    padding:.65rem 1.8rem;
+    border-radius:30px;
+  }
+  .btn-blush:hover{ background:var(--marigold); color:var(--ink); }
+
+  footer{
+    background:var(--cream-2);
+    padding:1.8rem 0;
+    font-size:.85rem;
+    color:#5a6470;
+  }
+
+  .disclosure{
+    font-size:.82rem;
+    color:#6b7580;
+    font-style:italic;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar cbg-nav sticky-top py-3">
+  <div class="container justify-content-center">
+    <a class="navbar-brand mb-0" href="#top">Charleston Bachelorette Party Guide</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <span class="stamp">Made by locals, for the bride tribe</span>
+        <h1 class="mt-3">The Holy City is calling your <em>bride tribe</em>.</h1>
+        <p class="lede mt-3">Cobblestone streets, low-country cocktails, and a harbor made for a golden-hour toast — Charleston is one of the best bachelorette destinations in the South. Here's the local, unsponsored rundown of where to eat, what to do, where to crash, and who to call when you'd rather not lift a finger.</p>
+      </div>
+      <div class="col-lg-5 d-none d-lg-flex justify-content-end">
+        <div class="pick-card" style="max-width:320px;">
+          <p class="eyebrow mb-2">Quick Facts</p>
+          <p class="mb-1">🗓️ Best months: April–June, Sept–Nov</p>
+          <p class="mb-1">📍 Home base: East Bay / French Quarter</p>
+          <p class="mb-0">💸 Plan on $500–800 pp for a long weekend</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-map">
+      <a href="#plan" class="route-stop">
+        <div class="route-pin pin-plan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#26313D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="9" width="16" height="11" rx="1"/>
+            <path d="M4 13h16"/>
+            <path d="M12 9v11"/>
+            <path d="M12 9c-1.8 0-3.3-1.4-3.3-3.2C8.7 4.2 9.9 3 11.2 3c1.4 0 2.8 1.6 2.8 3.6"/>
+            <path d="M12 9c1.8 0 3.3-1.4 3.3-3.2C15.3 4.2 14.1 3 12.8 3c-1.4 0-2.8 1.6-2.8 3.6"/>
+          </svg>
+        </div>
+        <span class="label">Planners</span>
+      </a>
+      <a href="#do" class="route-stop">
+        <div class="route-pin pin-do">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#26313D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <polygon points="14.5,9.5 12.8,12.8 9.5,14.5 11.2,11.2"/>
+          </svg>
+        </div>
+        <span class="label">Things To Do</span>
+      </a>
+      <a href="#eat" class="route-stop">
+        <div class="route-pin pin-eat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#26313D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2v9a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V2"/>
+            <path d="M8 2v20"/>
+            <path d="M17 2c-1.5 2-1.5 6 0 8s1.5 6 0 12"/>
+          </svg>
+        </div>
+        <span class="label">Eat &amp; Drink</span>
+      </a>
+      <a href="#stay" class="route-stop">
+        <div class="route-pin pin-stay">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#26313D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18v-7a2 2 0 0 1 2-2h5v9"/>
+            <path d="M3 13h18v5"/>
+            <path d="M10 9h8a2 2 0 0 1 2 2v2"/>
+            <path d="M3 21h18"/>
+          </svg>
+        </div>
+        <span class="label">Where To Stay</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- PLANNERS -->
+<section id="plan">
+  <div class="band band-plan">
+    <div class="container">
+      <p class="eyebrow">House One</p>
+      <h2>Party Planners &amp; Decor</h2>
+      <p class="mb-0">For the maid of honor who'd rather not build a balloon arch at midnight.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-plan">Decor &amp; Setup</span>
+            <a href="https://bachbabes.com/"><h3>Bach Babes Charleston</h3></a>
+            <p>Luxury Airbnb decor packages, custom mimosa bars, and VIP planning add-ons for a rental that photographs as good as it feels.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-plan">Full-Service</span>
+            <a href="https://southernsoireechs.com/"><h3>Southern Soirée</h3></a>
+            <p>A Charleston-born party planner and decorator known for custom sugar cookies and thoughtful, personal touches on every setup.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-plan">Concierge</span>
+            <a href="https://kayandcoweekends.com/"><h3>Kay + Co Weekends</h3></a>
+            <p>Balloon garlands, Instagram-ready backdrops, and fridge-stocking service so your group can walk into a fully styled house.</p>
+          </div>
+        </div>
+      </div>
+      <p class="disclosure mt-4 mb-0">We are not affiliated with, and receive no compensation from, any planner listed here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THINGS TO DO -->
+<section id="do">
+  <div class="band band-do">
+    <div class="container">
+      <p class="eyebrow">House Two</p>
+      <h2>Things To Do</h2>
+      <p class="mb-0">From harbor cruises to candle-making, here's how to fill the daylight hours.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-do">On The Water</span>
+            <a href="https://www.natureadventuresoutfitters.com/kayak-tours.html"><h3>Shem Creek Sunset Kayak Tour</h3></a>
+            <p class="neighborhood">Mount Pleasant</p>
+            <p>Paddle the saltmarsh at golden hour as the shrimp boats come in — a quieter, more scenic alternative to a booze cruise.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-do">Tasting</span>
+            <a href="https://highwiredistilling.com/"><h3>High Wire Distilling Tour</h3></a>
+            <p class="neighborhood">Old Naval Base / NoMo</p>
+            <p>A guided tasting through Charleston's own small-batch distillery, featuring spirits made from heirloom Southern grains.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-do">Creative</span>
+            <a href="https://michaelatyourplace.com"><h3>Michael At Your Place</h3></a>
+            <p class="neighborhood">Charleston Bachelorette Live Show</p>
+            <p>A interactive or not so much per your preference show. Get a fun show from a talented dancer.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-do">Food Tour</span>
+            <a href="https://charlestonculinarytours.com/"><h3>Charleston Culinary Walking Tour</h3></a>
+            <p class="neighborhood">French Quarter</p>
+            <p>A guided tasting crawl through historic Charleston eateries, with the stories behind the dishes served up alongside them.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-do">Wellness</span>
+            <a href="https://www.charlestonharborresort.com/the-estuary-spa.htm"><h3>Charleston Harbor Resort</h3></a>
+            <p class="neighborhood">Mount Pleasant</p>
+            <p>Book the group in for facials and massages the morning after a big night out — the bride will thank you.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-do">Puzzle Room</span>
+            <a href="https://www.charlestonescapegames.com/?utm_source=google&utm_medium=gbp&utm_campaign=charleston"><h3>Charleston Escape Room Challenge</h3></a>
+            <p class="neighborhood">Upper King</p>
+            <p>A themed hour of puzzle-solving with the crew before the night out — a fun, low-key way to kick off a Friday.</p>
+          </div>
+        </div>
+      </div>
+      <p class="disclosure mt-4 mb-0">Book tours and classes 2–3 months ahead for peak spring and fall weekends.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EAT & DRINK -->
+<section id="eat">
+  <div class="band band-eat">
+    <div class="container">
+      <p class="eyebrow">House Three</p>
+      <h2>Where To Eat &amp; Drink</h2>
+      <p class="mb-0">Low-country classics, rooftop pours, and one seriously good bowl of grits.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-eat">Brunch</span>
+            <a href="https://www.basickitchen.com/"><h3>Basic Kitchen</h3></a>
+            <p class="neighborhood">King Street</p>
+            <p>Bright, plant-forward brunch spot with a killer avocado toast and a rotating list of fresh-pressed cocktails — perfect for easing the crew into day two.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-eat">Dancing</span>
+            <a href="https://www.vernschs.com/"><h3>Vern's</h3></a>
+            <p class="neighborhood">Meeting Street</p>
+            <p>Craft cocktails upstairs, a moody speakeasy-style bar below — the kind of spot that quietly turns into the best part of the night.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-eat">Fine Dining</span>
+            <a href="http://eattheordinary.com/"><h3>The Ordinary</h3></a>
+            <p class="neighborhood">Upper King</p>
+            <p>An old bank vault turned oyster hall. Order the raw bar tower and split a bottle of something bubbly for the bride.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-eat">Treats</span>
+            <a href="https://www.sweetpalmcoffee.com/"><h3>Sweet Palm Coffee</h3></a>
+            <p class="neighborhood">King Street</p>
+            <p>House-made coffees, a breakfast to lunch menu, and plenty of sweets. Chicken Ceasar wrap is the best.</p>
+          </div>
+        </div>
+        
+      </div>
+      <p class="disclosure mt-4 mb-0">All picks are our own — no restaurant paid to be featured on this list.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHERE TO STAY -->
+<section id="stay">
+  <div class="band band-stay">
+    <div class="container">
+      <p class="eyebrow">House Four</p>
+      <h2>Where To Stay</h2>
+      <p class="mb-0">Group-friendly stays that keep everyone under one roof.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-stay">Boutique Hotel</span>
+            <a href="https://www.thevendue.com/"><h3>The Vendue</h3></a>
+            <p class="neighborhood">French Quarter</p>
+            <p>An art-filled boutique hotel two blocks from the water, with a rooftop bar that makes a great home-base meeting point.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-stay">Historic Inn</span>
+            <a href="https://www.harbourviewcharleston.com/"><h3>HarbourView Inn</h3></a>
+            <p class="neighborhood">East Bay Street</p>
+            <p>Wake up to a harbor view and walk everywhere from here — the Market, Rainbow Row, and King Street are all under ten minutes on foot.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="venue-card">
+            <span class="venue-tag tag-stay">Group Rental</span>
+            <a href="https://eastbaycompany.com/"><h3>East Bay Rowhouse Rentals</h3></a>
+            <p class="neighborhood">East Bay Street</p>
+            <p>Multi-bedroom historic rowhomes that sleep 8–12, so nobody has to split off into separate hotel rooms.</p>
+          </div>
+        </div>
+      </div>
+      <p class="disclosure mt-4 mb-0">Book your group stay 3+ months out — downtown weekends fill up fast, especially in fall wedding season.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ITINERARY -->
+<section class="content" id="itinerary">
+  <div class="container">
+    <p class="eyebrow">Sample weekend</p>
+    <h2 class="mb-2" style="font-weight:800;">A 4-Day Charleston Bach Itinerary</h2>
+    <p class="mb-4" style="max-width:620px;color:#4a5560;">A fuller weekend than a quick in-and-out — arrive Thursday, ease in, and give the group a real mix of water, food, and downtime before everyone flies home Sunday.</p>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day One</p>
+          <p class="day-label mb-3">Thursday</p>
+          <ul>
+            <li><span class="part">Afternoon </span>Check into your East Bay rowhouse rental — decor already set up by Southern Soirée</li>
+            <li><span class="part">Evening </span>Low-key dinner at the house while stragglers land</li>
+            <li><span class="part">Night </span>Porch drinks and a group toast to kick off the weekend</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day Two</p>
+          <p class="day-label mb-3">Friday</p>
+          <ul>
+            <li><span class="part">Morning </span>Brunch at Basic Kitchen</li>
+            <li><span class="part">Afternoon </span>High Wire Distilling Tour, then a Paint &amp; Sip class</li>
+            <li><span class="part">Evening </span>Dinner at The Ordinary</li>
+            <li><span class="part">Night </span>Drinks at The Watch Rooftop</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day Three</p>
+          <p class="day-label mb-3">Saturday</p>
+          <ul>
+            <li><span class="part">Morning </span>Sunrise paddle at Shem Creek</li>
+            <li><span class="part">Afternoon </span>Charleston Culinary Walking Tour</li>
+            <li><span class="part">Evening </span>Farewell-eve dinner at Rodney Scott's BBQ</li>
+            <li><span class="part">Night </span>Charleston Escape Room Challenge, then out on the town</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day Four</p>
+          <p class="day-label mb-3">Sunday</p>
+          <ul>
+            <li><span class="part">Morning </span>Slow start with spa treatments at Woodhouse</li>
+            <li><span class="part">Midday </span>Farewell brunch and last photos on the porch</li>
+            <li><span class="part">Afternoon </span>Pack up, check out, and head to the airport</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="disclosure mt-4 mb-0">Build in at least one unscheduled block per day — the best bach weekends leave room to wander.</p>
+  </div>
+</section>
+ 
+
+<!-- BEST FOR -->
+<section class="content">
+  <div class="container">
+    <p class="eyebrow">Remember this last</p>
+    <h2 class="mb-4" style="font-weight:800;">Charleston is best for brides who...</h2>
+    <div class="row g-3">
+      <div class="col-md-3 col-sm-6">
+        <div class="pick-card">
+          <h4>🌊 Love a beach day</h4>
+          <p class="mb-0">Base yourselves downtown and take a 25-minute ride out to Sullivan's Island or Isle of Palms for a laid-back beach afternoon between parties.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="pick-card">
+          <h4>🍸 Live for a good cocktail</h4>
+          <p class="mb-0">Charleston's bar scene runs deep — think barrel-aged old fashioneds and rooftop lounges with harbor views.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="pick-card">
+          <h4>🦪 Appreciate real seafood</h4>
+          <p class="mb-0">Fresh-shucked oysters, she-crab soup, and dockside dining are non-negotiable on a Charleston bach weekend.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="pick-card">
+          <h4>🏛️ Geek out on history</h4>
+          <p class="mb-0">Cobblestone streets, Rainbow Row, and centuries-old churches make the daytime hours just as memorable as the nights.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="cta">
+  <div class="container">
+    <h2>Planning a Charleston bachelorette?</h2>
+    <p class="mb-4" style="opacity:.85;">We're always adding new spots to this guide — reach out if you know a business the bride tribe needs to hear about.</p>
+    <a href="#top" class="btn-blush">Back to the top</a>
+  </div>
+</div>
+
+
+
+<footer>
+  <div class="container text-center">
+    <p class="mb-1">Charleston Bachelorette Party Guide — an independent, locally-written resource. Not affiliated with any business listed above.</p>
+    <p class="mb-0">&copy; 2026 Charleston Bachelorette Party Guide</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
