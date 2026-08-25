@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Beth | Your Local Charleston Bachelorette Guide</title>
+<meta name="description" content="Meet Beth, the local Charleston guide behind this site — planning, activities, restaurants, and where to stay for your bachelorette weekend.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  :root{
+    --pink:#F0A0B0;
+    --pink-dark:#D9788C;
+    --marigold:#F2B341;
+    --marigold-dark:#D6952A;
+    --harbor:#4C82A3;
+    --harbor-dark:#376283;
+    --palmetto:#5C8367;
+    --palmetto-dark:#436049;
+    --ink:#26313D;
+    --cream:#E9F2F1;
+    --cream-2:#DCEAE8;
+  }
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Karla', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,h4,.display-font{ font-family:'Fraunces', serif; }
+
+  .eyebrow{
+    font-family:'Karla', sans-serif;
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.78rem;
+  }
+
+  /* ---------- NAV ---------- */
+  .cbg-nav{ background:var(--cream); border-bottom:3px solid var(--ink); }
+  .cbg-nav .navbar-brand{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.2rem;
+    color:var(--ink);
+    text-align:center;
+  }
+  .back-link{
+    font-weight:800;
+    font-size:.85rem;
+    letter-spacing:.03em;
+    color:var(--pink-dark);
+    text-decoration:none;
+  }
+  .back-link:hover{ color:var(--ink); }
+
+  /* ---------- ABOUT HERO ---------- */
+  .about-hero{
+    background:var(--marigold);
+    border-bottom:3px solid var(--ink);
+    padding:3.5rem 0 3rem;
+  }
+  .about-hero h1{
+    font-weight:900;
+    font-size:clamp(2rem, 6vw, 3.2rem);
+    line-height:1.05;
+  }
+  .about-hero .lede{
+    font-size:1.1rem;
+    max-width:520px;
+    color:#3a2f14;
+  }
+
+  /* ---------- PHOTO PLACEHOLDER ---------- */
+  .photo-frame{
+    background:#fff;
+    border:2.5px solid var(--ink);
+    border-radius:6px;
+    box-shadow:8px 8px 0 var(--ink);
+    padding:.6rem;
+    max-width:340px;
+    margin:0 auto;
+  }
+  .photo-blank{
+    background:var(--cream-2);
+    border:2px dashed var(--ink);
+    border-radius:4px;
+    aspect-ratio:4/5;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#6b7580;
+    font-weight:700;
+    font-size:.85rem;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    padding:1rem;
+  }
+  .photo-caption{
+    text-align:center;
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.1rem;
+    margin-top:.85rem;
+  }
+  .photo-caption span{
+    display:block;
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    font-size:.78rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#6b7580;
+    margin-top:.15rem;
+  }
+
+  section.content{ padding:3rem 0; }
+
+  article p{ color:#3a4450; font-size:1.02rem; }
+
+  /* ---------- WHAT I HELP WITH ---------- */
+  .help-card{
+    background:#fff;
+    border:2.5px solid var(--ink);
+    border-radius:4px;
+    height:100%;
+    padding:1.4rem;
+    box-shadow:5px 5px 0 var(--ink);
+  }
+  .help-card h3{ font-size:1.1rem; font-weight:700; margin-bottom:.4rem; }
+  .help-card p{ font-size:.95rem; margin-bottom:0; }
+  .help-tag{
+    display:inline-block;
+    font-weight:800;
+    font-size:.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:.2rem .55rem;
+    border-radius:20px;
+    margin-bottom:.6rem;
+  }
+  .tag-plan{ background:var(--palmetto); color:#fff; }
+  .tag-do{ background:var(--marigold); color:var(--ink); }
+  .tag-eat{ background:var(--pink); color:var(--ink); }
+  .tag-stay{ background:var(--harbor); color:#fff; }
+
+  /* ---------- CTA / FOOTER ---------- */
+  .cta{ background:var(--ink); color:var(--cream); padding:3rem 0; text-align:center; }
+  .cta h2{ color:#fff; font-weight:800; font-size:clamp(1.5rem, 6vw, 2.2rem); }
+  .btn-blush{
+    background:var(--pink);
+    border:2.5px solid var(--cream);
+    color:var(--ink);
+    font-weight:800;
+    padding:.65rem 1.8rem;
+    border-radius:30px;
+    text-decoration:none;
+    display:inline-block;
+  }
+  .btn-blush:hover{ background:var(--marigold); color:var(--ink); }
+
+  footer{ background:var(--cream-2); padding:1.8rem 0; font-size:.85rem; color:#5a6470; }
+  .disclosure{ font-size:.82rem; color:#6b7580; font-style:italic; }
+
+  @media (max-width:576px){
+    .about-hero{ padding:2.25rem 0 2rem; text-align:center; }
+    .about-hero .lede{ margin:0 auto; }
+    section.content{ padding:2rem 0; }
+    .help-card{ padding:1.2rem; box-shadow:4px 4px 0 var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar cbg-nav sticky-top py-3">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <a href="charleston-bachelorette-guide.html" class="back-link">&larr; Back to the Guide</a>
+    <a class="navbar-brand mb-0" href="charleston-bachelorette-guide.html">The Best Charleston Bachelorette Activities</a>
+    <a href="charleston-bachelorette-guide.html#eat" class="back-link">Eat &amp; Drink Picks &rarr;</a>
+  </div>
+</nav>
+
+<header class="about-hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-lg-7">
+        <p class="eyebrow mb-2">About This Guide</p>
+        <h1 class="mb-3">Hi, I'm Beth — Your Local Charleston Guide.</h1>
+        <p class="lede">I live here, I plan here, and I've spent more Saturdays than I can count helping bride tribes figure out where to eat, what to book, and where to crash for the weekend. This site is everything I'd tell a friend if she called me up and said "we're doing the bachelorette in Charleston — where do we even start?"</p>
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="photo-frame">
+          <img src="" alt="">
+          <p class="photo-caption">Beth<span>Local Charleston Guide</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="content">
+  <div class="container">
+    <article class="mx-auto" style="max-width:720px;">
+      <p>I didn't set out to become the person everyone texts before their Charleston trip — it just sort of happened. Between planning my own group's weekends downtown and fielding the same questions over and over from out-of-town brides ("is it walkable?", "where do we even eat with 12 people?", "is King Street worth it?"), I figured it was easier to write it all down in one place.</p>
+      <p>So that's what this site is. Not a sponsored listicle, not a hotel's idea of "local favorites" — just the honest version, from someone who actually lives here and has watched enough bachelorette weekends go right (and a few go sideways) to know what actually works for a group.</p>
+      <p>When I'm not adding new spots to this guide, I'm probably down at Shem Creek at sunset, arguing about which restaurant has the best she-crab soup, or helping some poor maid of honor talk her group out of trying to do six activities in one day.</p>
+    </article>
+  </div>
+</section>
+
+<section class="content" style="padding-top:0;">
+  <div class="container">
+    <p class="eyebrow mb-2">What I Help With</p>
+    <h2 class="mb-4" style="font-weight:800;">The Same Questions, Every Weekend</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="help-card">
+          <span class="help-tag tag-plan">Planning</span>
+          <h3>Full Itineraries</h3>
+          <p>Mapping out a weekend that actually flows — not six activities crammed into one exhausted afternoon.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="help-card">
+          <span class="help-tag tag-do">Activities</span>
+          <h3>What To Actually Book</h3>
+          <p>Kayak tours, distillery visits, escape rooms — the ones worth your money and your Saturday.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="help-card">
+          <span class="help-tag tag-eat">Eat &amp; Drink</span>
+          <h3>Group-Friendly Tables</h3>
+          <p>Which restaurants can actually seat a group of 10-16, and which pretty spots will make you wait two hours.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="help-card">
+          <span class="help-tag tag-stay">Where To Stay</span>
+          <h3>Group Rentals &amp; Hotels</h3>
+          <p>Rowhouses that sleep everyone under one roof, and boutique hotels close enough to walk everywhere.</p>
+        </div>
+      </div>
+    </div>
+    <p class="disclosure mt-4 mb-0">Everything on this site is written independently — no business listed here has paid for a spot on this guide.</p>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="container">
+    <h2>Ready to start planning?</h2>
+    <p class="mb-4" style="opacity:.85;">Head back to the full guide for the itinerary, the restaurant list, and where to stay.</p>
+    <a href="charleston-bachelorette-guide.html" class="btn-blush">&larr; Back to the Full Guide</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container text-center">
+    <p class="mb-1">Charleston Bachelorette Party Guide — an independent, locally-written resource. Not affiliated with any business listed above.</p>
+    <p class="mb-0">&copy; 2026 Charleston Bachelorette Party Guide</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
