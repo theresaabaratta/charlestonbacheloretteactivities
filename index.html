@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Charleston Bachelorette Party Things To Do | Where To Eat, Play &amp; Stay in the Holy City | Charleston Bachelorette Activities</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
 <meta name="description" content="The local's guide to a Charleston bachelorette weekend — where to eat and drink, things to do, where to stay, and who to call for decor and planning.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,17 +58,75 @@
   .cbg-nav .navbar-brand{
     font-family:'Fraunces', serif;
     font-weight:700;
-    font-size:1.35rem;
+    font-size:1.2rem;
     color:var(--ink);
     white-space:normal;
-    text-align:center;
+    display:flex;
+    align-items:center;
+    gap:.6rem;
   }
-  .cbg-nav .nav-link{
+  .nav-logo-box{
+    width:40px;
+    height:40px;
+    flex:0 0 auto;
+    border:2px dashed var(--ink);
+    border-radius:8px;
+    background:var(--cream-2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.62rem;
+    font-weight:800;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    color:#6b7580;
+    font-family:'Karla', sans-serif;
+    overflow:hidden;
+  }
+  .nav-logo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .cbg-nav .nav-links{
+    display:flex;
+    align-items:center;
+    gap:1.4rem;
+    flex-wrap:wrap;
+  }
+  .cbg-nav .nav-link-custom{
+    font-weight:800;
+    font-size:.9rem;
+    letter-spacing:.02em;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .cbg-nav .nav-link-custom:hover{ color:var(--pink-dark); }
+  .cbg-nav .dropdown-toggle::after{
+    vertical-align:.15em;
+  }
+  .cbg-nav .dropdown-menu{
+    background:var(--cream);
+    border:2.5px solid var(--ink);
+    border-radius:6px;
+    box-shadow:5px 5px 0 var(--ink);
+    padding:.4rem;
+    margin-top:.6rem !important;
+  }
+  .cbg-nav .dropdown-item{
+    font-family:'Karla', sans-serif;
     font-weight:700;
-    color:var(--ink) !important;
-    margin:0 .4rem;
+    font-size:.88rem;
+    color:var(--ink);
+    border-radius:4px;
+    padding:.5rem .7rem;
+    white-space:normal;
   }
-  .cbg-nav .nav-link:hover{ color:var(--pink-dark) !important; }
+  .cbg-nav .dropdown-item:hover,
+  .cbg-nav .dropdown-item:focus{
+    background:var(--pink);
+    color:var(--ink);
+  }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -307,8 +367,22 @@
 <body>
 
 <nav class="navbar cbg-nav sticky-top py-3">
-  <div class="container d-flex justify-content-center">
-    <a class="navbar-brand mb-0" href="#top">The Best Charleston Bachelorette Activities</a>
+  <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <a class="navbar-brand mb-0" href="index.html">
+      <span class="nav-logo-box">Logo</span>
+      <!-- Swap the span above for: <img src="img/logo.png" alt="Charleston Bachelorette Activities logo"> -->
+      The Best Charleston Bachelorette Activities
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link-custom">Home</a>
+      <a href="about.html" class="nav-link-custom">About</a>
+      <div class="dropdown">
+        <a href="#" class="nav-link-custom dropdown-toggle" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+        <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+          <li><a class="dropdown-item" href="blogs/best-resturants-in-charleston.html">Best Restaurants for a Charleston Bachelorette</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>
 
