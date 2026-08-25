@@ -55,44 +55,46 @@
     background:var(--cream);
     border-bottom:3px solid var(--ink);
   }
+  .cbg-nav .container{
+    flex-wrap:nowrap;
+  }
   .cbg-nav .navbar-brand{
     font-family:'Fraunces', serif;
     font-weight:700;
-    font-size:1.2rem;
+    font-size:1.15rem;
+    line-height:1.15;
     color:var(--ink);
     white-space:normal;
     display:flex;
     align-items:center;
     gap:.6rem;
+    flex:1 1 auto;
+    min-width:0;
   }
-  .nav-logo-box{
-    width:40px;
-    height:40px;
-    flex:0 0 auto;
-    border:2px dashed var(--ink);
+  .nav-logo{
+    width:42px;
+    height:42px;
+    flex:0 0 42px;
     border-radius:8px;
-    background:var(--cream-2);
+    overflow:hidden;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:.62rem;
-    font-weight:800;
-    letter-spacing:.03em;
-    text-transform:uppercase;
-    color:#6b7580;
-    font-family:'Karla', sans-serif;
-    overflow:hidden;
+    background:#fff;
+    border:2px solid var(--ink);
   }
-  .nav-logo-box img{
+  .nav-logo img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;
+    display:block;
   }
   .cbg-nav .nav-links{
     display:flex;
     align-items:center;
     gap:1.4rem;
-    flex-wrap:wrap;
+    flex:0 0 auto;
+    white-space:nowrap;
   }
   .cbg-nav .nav-link-custom{
     font-weight:800;
@@ -126,6 +128,12 @@
   .cbg-nav .dropdown-item:focus{
     background:var(--pink);
     color:var(--ink);
+  }
+
+  @media (max-width:767px){
+    .cbg-nav .container{ flex-wrap:wrap; }
+    .cbg-nav .navbar-brand{ font-size:1rem; }
+    .cbg-nav .nav-links{ gap:1rem; width:100%; justify-content:center; }
   }
 
   /* ---------- HERO ---------- */
@@ -367,11 +375,10 @@
 <body>
 
 <nav class="navbar cbg-nav sticky-top py-3">
-  <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+  <div class="container d-flex justify-content-between align-items-center gap-3">
     <a class="navbar-brand mb-0" href="index.html">
-      <span class="nav-logo-box">Logo</span>
-      <!-- Swap the span above for: <img src="img/logo.png" alt="Charleston Bachelorette Activities logo"> -->
-      The Best Charleston Bachelorette Activities
+      <span class="nav-logo"><img src="img/logo.png" alt="Charleston Bachelorette Activities logo"></span>
+      <span>The Best Charleston Bachelorette Activities</span>
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link-custom">Home</a>
