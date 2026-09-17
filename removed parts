@@ -1,0 +1,58 @@
+<!-- ITINERARY -->
+<section class="content" id="itinerary">
+  <div class="container">
+    <p class="eyebrow">Sample weekend</p>
+    <h2 class="mb-2" style="font-weight:800;">Charleston Bachelorette Activities: A 4-Day Itinerary</h2>
+    <img src="img/prettyimage.png" class="img-fluid" alt="4 day planner">
+    <p class="mb-4" style="max-width:620px;color:#4a5560;">A fuller weekend than a quick in-and-out — arrive Thursday, ease in, and give the group a real mix of water, food, and downtime before everyone flies home Sunday.</p>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day One</p>
+          <p class="day-label mb-3">Thursday</p>
+          <ul>
+            <li><span class="part">Afternoon </span>Check into your East Bay rowhouse rental — decor already set up by Southern Soirée</li>
+            <li><span class="part">Evening </span>Low-key dinner at the house while stragglers land</li>
+            <li><span class="part">Night </span>Porch drinks and a group toast to kick off the weekend</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day Two</p>
+          <p class="day-label mb-3">Friday</p>
+          <ul>
+            <li><span class="part">Morning </span>Brunch at Basic Kitchen</li>
+            <li><span class="part">Afternoon </span>High Wire Distilling Tour, then a Paint &amp; Sip class</li>
+            <li><span class="part">Evening </span>Dinner at The Ordinary</li>
+            <li><span class="part">Night </span>Drinks at The Watch Rooftop</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day Three</p>
+          <p class="day-label mb-3">Saturday</p>
+          <ul>
+            <li><span class="part">Morning </span>Sunrise paddle at Shem Creek</li>
+            <li><span class="part">Afternoon </span>Charleston Culinary Walking Tour</li>
+            <li><span class="part">Evening </span>Shem Creek walk and eat at Reds</li>
+            <li><span class="part">Night </span>Charleston Escape Room Challenge, then out on the town</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="ticket">
+          <p class="eyebrow mb-1">Day Four</p>
+          <p class="day-label mb-3">Sunday</p>
+          <ul>
+            <li><span class="part">Morning </span>Slow start with spa treatments at Woodhouse</li>
+            <li><span class="part">Midday </span>Farewell brunch and last photos on the porch</li>
+            <li><span class="part">Afternoon </span>Pack up, check out, and head to the airport</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="disclosure mt-4 mb-0">Build in at least one unscheduled block per day — the best bach weekends leave room to wander.</p>
+  </div>
+</section>
