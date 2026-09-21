@@ -1,273 +1,568 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Folly Beach Bachelorette Guide — Eats, Activities & Where to Stay</title>
-<meta name="description" content="A simple directory for planning a Folly Beach bachelorette weekend: where to eat, what to do on the beach, and where to stay.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Main keyword: folly beach bachelorette activities -->
+  <title>Folly Beach Bachelorette Activities: Eat, Play &amp; Stay</title>
+  <meta name="description" content="Folly Beach bachelorette activities for your group: beach days, Center Street bars, where to eat, golf cart and beach rules, and where to stay near the pier.">
+  <link rel="canonical" href="https://charlestonbacheloretteactivities.com/blogs/folly-beach-trip.html">
 
-<style>
-  :root{
-    --sand: #FBF6EC;
-    --dune: #EFE4CC;
-    --ocean: #3E7C8C;
-    --ocean-deep: #2A5763;
-    --coral: #E1795A;
-    --ink: #2B2822;
-  }
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Folly Beach Bachelorette Activities: Eat, Play &amp; Stay">
+  <meta property="og:description" content="Beach days, Center Street bars, where to eat, the local rules, and where to stay for a Folly Beach bachelorette weekend.">
+  <meta property="og:url" content="https://charlestonbacheloretteactivities.com/blogs/folly-beach-trip.html">
+  <meta property="og:image" content="https://charlestonbacheloretteactivities.com/img/folly-beach-one.png">
 
-  body{
-    background:var(--sand);
-    color:var(--ink);
-    font-family:'Nunito Sans', sans-serif;
-  }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  h1, h2, .display-face{
-    font-family:'Fraunces', serif;
-  }
+  <style>
+    :root {
+      --salt: #F3F8F7;
+      --tide: #12303F;
+      --tide-soft: #3B5867;
+      --seafoam: #CFEAE3;
+      --harbor: #2A9D8F;
+      --flamingo: #E8506F;
+      --flamingo-ink: #B92C4B;
+      --sand: #EFE3CC;
+      --line: rgba(18, 48, 63, .18);
+      --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+      --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
 
-  .hero{
-    background:var(--ocean);
-    color:#fff;
-    padding:3rem 0 2.5rem;
-  }
-  .hero h1{
-    font-weight:600;
-    font-size:clamp(2.1rem, 4.5vw, 3rem);
-    margin-bottom:0.6rem;
-  }
-  .hero p{
-    max-width:50ch;
-    opacity:0.92;
-    font-size:1.05rem;
-  }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-  .section-label{
-    display:inline-block;
-    background:var(--coral);
-    color:#fff;
-    font-weight:700;
-    font-size:0.78rem;
-    letter-spacing:0.03em;
-    padding:0.25rem 0.7rem;
-    border-radius:100px;
-    margin-bottom:0.75rem;
-  }
+    body {
+      background: var(--salt);
+      color: var(--tide);
+      font-family: var(--body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
 
-  .section-heading{
-    font-weight:600;
-    color:var(--ocean-deep);
-    margin-bottom:0.35rem;
-  }
-  .section-intro{
-    max-width:60ch;
-    color:#55524a;
-    margin-bottom:1.75rem;
-  }
+    h1, h2, h3 {
+      font-family: var(--display);
+      font-stretch: 88%;
+      letter-spacing: -.015em;
+      line-height: 1.08;
+      color: var(--tide);
+    }
+    h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; margin: 0 0 .6rem; }
+    h3 { font-size: 1.25rem; font-weight: 700; margin: 0 0 .35rem; }
 
-  .listing{
-    background:#fff;
-    border:1px solid var(--dune);
-    border-radius:10px;
-    padding:1.25rem 1.4rem;
-    height:100%;
-  }
-  .listing h3{
-    font-family:'Fraunces', serif;
-    font-size:1.15rem;
-    font-weight:600;
-    margin-bottom:0.35rem;
-    color:var(--ink);
-  }
-  .listing .tag{
-    font-size:0.78rem;
-    text-transform:uppercase;
-    letter-spacing:0.02em;
-    color:var(--ocean);
-    font-weight:700;
-  }
-  .listing p{
-    font-size:0.94rem;
-    color:#4a473f;
-    margin-bottom:0;
-  }
+    a { color: var(--tide); text-decoration-color: var(--flamingo); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    a:hover { color: var(--flamingo-ink); }
+    :focus-visible { outline: 3px solid var(--flamingo); outline-offset: 3px; border-radius: 2px; }
 
-  section.block{
-    padding:3rem 0;
-  }
-  section.block + section.block{
-    border-top:1px solid var(--dune);
-  }
+    .skip { position: absolute; left: -999px; top: 0; background: var(--tide); color: #fff; padding: .6rem 1rem; z-index: 2000; }
+    .skip:focus { left: 0; }
 
-  footer{
-    background:var(--ocean-deep);
-    color:#fff;
-    padding:1.75rem 0;
-    font-size:0.9rem;
+    .wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+    .block { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+    .lead-in { max-width: 44rem; color: var(--tide-soft); margin-bottom: 1.75rem; }
+
+    /* Header (swap for your existing site header if it differs) */
+    .site-nav { background: var(--salt); border-bottom: 1px solid var(--line); }
+    .site-nav .navbar-brand { font-family: var(--display); font-weight: 700; font-size: 1.05rem; color: var(--tide); display: flex; align-items: center; gap: .6rem; }
+    .site-nav .navbar-brand img { height: 36px; width: auto; }
+    .site-nav .nav-link { color: var(--tide); font-weight: 500; }
+    .site-nav .nav-link:hover, .site-nav .nav-link.active { color: var(--flamingo-ink); }
+    .site-nav .dropdown-menu { background: var(--salt); border: 1px solid var(--line); border-radius: 10px; }
+    .site-nav .dropdown-item { color: var(--tide); white-space: normal; }
+    .site-nav .dropdown-item:hover, .site-nav .dropdown-item.active { background: var(--seafoam); color: var(--tide); }
+
+    /* Hero */
+    .hero {
+      position: relative; isolation: isolate; color: #fff;
+      min-height: clamp(440px, 74vh, 660px);
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+    .hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: rgba(18, 48, 63, .56); z-index: -1; }
+    .hero__inner { padding-block: 4.5rem 7rem; }
+    .crumbs { font-size: .92rem; margin-bottom: 1.1rem; color: rgba(255, 255, 255, .88); }
+    .crumbs a { color: #fff; }
+    .hero h1 { color: #fff; font-weight: 800; font-size: clamp(2.7rem, 8.5vw, 6.25rem); line-height: .96; max-width: 12ch; margin: 0 0 1.25rem; }
+    .hero__lede { font-size: clamp(1.1rem, 2.2vw, 1.4rem); max-width: 34rem; margin: 0; }
+    .hero__wave { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(40px, 7vw, 90px); display: block; z-index: 1; }
+
+    /* At a glance */
+    .glance dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .glance dl > div { padding: 1.1rem 1.25rem 1.1rem 0; }
+    .glance dl > div + div { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+    .glance dt { font-family: var(--display); font-weight: 700; font-size: 1.1rem; line-height: 1.2; margin-bottom: .2rem; }
+    .glance dd { margin: 0; color: var(--tide-soft); font-size: .98rem; line-height: 1.45; }
+    @media (max-width: 991px) {
+      .glance dl { grid-template-columns: 1fr 1fr; }
+      .glance dl > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+      .glance dl > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    }
+    @media (max-width: 575px) {
+      .glance dl { grid-template-columns: 1fr; }
+      .glance dl > div { padding-left: 0 !important; border-left: 0 !important; }
+      .glance dl > div + div { border-top: 1px solid var(--line); }
+    }
+
+    .intro p { font-size: 1.2rem; max-width: 44rem; margin-bottom: 1rem; }
+
+    /* Photos (each falls back to a plain seafoam block until the image file exists) */
+    .photo { margin: 0 0 2rem; }
+    .photo__frame { aspect-ratio: 21 / 9; background: var(--seafoam); border-radius: 10px; overflow: hidden; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo.is-empty img { display: none; }
+    .photo figcaption { font-size: .92rem; color: var(--tide-soft); margin-top: .5rem; }
+    @media (max-width: 767px) { .photo__frame { aspect-ratio: 4 / 3; } }
+
+    /* Activities as photo tiles */
+    .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+    .tile { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+    .tile__photo { margin: 0; aspect-ratio: 4 / 3; background: var(--seafoam); }
+    .tile__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .tile__photo.is-empty img { display: none; }
+    .tile__body { display: flex; flex-direction: column; gap: .6rem; padding: 1.25rem 1.25rem 1.4rem; flex: 1; }
+    .tile__body h3 { margin: 0; }
+    .tile__body p { margin: 0; }
+    .tile__body .note { margin-top: auto; }
+    .note { border-left: 3px solid var(--flamingo); padding-left: .8rem; font-size: .97rem; color: var(--tide-soft); }
+    .note strong { color: var(--tide); }
+    @media (max-width: 991px) { .tiles { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 575px) { .tiles { grid-template-columns: 1fr; } }
+
+    /* Eat and drink */
+    .daypart { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem 2rem; padding: 1.5rem 0; border-top: 1px solid var(--line); }
+    .daypart > h3 { font-weight: 800; font-size: 1.5rem; }
+    .daypart ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; }
+    .daypart li { max-width: 46rem; }
+    .place { font-weight: 700; }
+    .addr { display: block; font-size: .88rem; color: var(--tide-soft); }
+    @media (max-width: 767px) { .daypart { grid-template-columns: 1fr; gap: .5rem; } }
+
+    /* Stay */
+    .stay { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem; margin-bottom: 1.5rem; }
+    .stay > div { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+    .stay p { margin-bottom: .6rem; }
+    @media (max-width: 767px) { .stay { grid-template-columns: 1fr; } }
+
+    /* Itinerary */
+    .timeline { list-style: none; margin: 0; padding: 0 0 0 1.75rem; border-left: 2px solid var(--harbor); max-width: 44rem; }
+    .timeline li { position: relative; padding-bottom: 1.4rem; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before { content: ""; position: absolute; left: calc(-1.75rem - 8px); top: .5rem; width: 14px; height: 14px; border-radius: 50%; background: var(--flamingo); border: 2px solid var(--salt); }
+    .timeline .when { font-family: var(--display); font-weight: 700; font-size: 1.1rem; display: block; }
+
+    /* Rules */
+    .rules { background: var(--sand); border-radius: 18px; padding: clamp(1.5rem, 4vw, 2.5rem); }
+    .rules__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1.5rem; }
+    .rules ul { padding-left: 1.1rem; margin: 0; }
+    .rules li { margin-bottom: .45rem; }
+    .rules .src { margin: 1.5rem 0 0; font-size: .92rem; color: var(--tide-soft); }
+    @media (max-width: 991px) { .rules__grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+    /* Related */
+    .related { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
+    .related a { display: block; padding: 1rem 0; border-top: 1px solid var(--line); text-decoration: none; height: 100%; }
+    .related a:hover strong { text-decoration: underline; text-decoration-color: var(--flamingo); text-decoration-thickness: 2px; }
+    .related strong { font-family: var(--display); font-size: 1.15rem; font-weight: 700; display: block; }
+    .related span { color: var(--tide-soft); font-size: .97rem; }
+    @media (max-width: 767px) { .related { grid-template-columns: 1fr; } }
+
+    .site-foot { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--tide-soft); font-size: .95rem; }
+    .site-foot p { margin: 0 0 .4rem; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Folly Beach Bachelorette Activities: Eat, Play & Stay",
+        "description": "Folly Beach bachelorette activities for your group: beach days, Center Street bars, where to eat, golf cart and beach rules, and where to stay near the pier.",
+        "image": "https://charlestonbacheloretteactivities.com/img/folly-beach-one.png",
+        "dateModified": "2026-09-21",
+        "mainEntityOfPage": "https://charlestonbacheloretteactivities.com/blogs/folly-beach-trip.html",
+        "author": { "@type": "Organization", "name": "Charleston Bachelorette Activities" },
+        "publisher": { "@type": "Organization", "name": "Charleston Bachelorette Activities" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://charlestonbacheloretteactivities.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Folly Beach Bachelorette Activities" }
+        ]
+      }
+    ]
   }
-  footer a{ color:#fff; }
-</style>
+  </script>
 </head>
-<body>
 
-<header class="hero">
-  <div class="container">
-    <h1>Folly Beach Bachelorette</h1>
-    <img src="../img/folly-beach-one.png" class="img-fluid" alt="folly beach">
-    <p>A simple rundown of where to eat, what to do on the sand, and where the whole group can sleep — no fuss, just the good stuff.</p>
-  </div>
-</header>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
 
-<main>
-
-  <section class="block" id="eats">
-    <div class="container">
-      <span class="section-label">Eats</span>
-      <h2 class="section-heading">Where to Eat</h2>
-      <p class="section-intro">Folly keeps it casual — flip-flops-at-the-table casual — and these are the spots that feed a group without anyone needing a dinner reservation weeks out.</p>
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Breakfast</div>
-            <h3>Lost Dog Cafe</h3>
-            <p>The go-to morning stop before a beach day, known for big portions and a laid-back patio that fits a group.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Seafood</div>
-            <h3>Chico Feo</h3>
-            <p>An open-air spot with picnic tables, cheap tacos, and cold drinks — the easiest lunch for a group that doesn't want to sit still long.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Dinner</div>
-            <h3>Rita's Seaside Grille</h3>
-            <p>A solid sit-down dinner option right off the main strip, with a bar area that's easy to gather the whole party around.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Drinks</div>
-            <h3>Snapper Jack's Bar & Grill</h3>
-            <p>Rooftop-adjacent, always lively, and a reliable place to post up for happy hour before the night gets going.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Late Night</div>
-            <h3>Jack of Cups Saloon</h3>
-            <p>Folly's dive-bar staple — live music some nights, no pretense, and open late for whoever's still standing.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Sweet Stop</div>
-            <h3>Cool Runnings Ice Cream</h3>
-            <p>A short walk from the pier and the easiest way to end a beach afternoon on a sweet note.</p>
-          </div>
+  <!-- HEADER: replace with your existing site header if you have one -->
+  <header>
+    <nav class="navbar navbar-expand-lg site-nav" aria-label="Main">
+      <div class="wrap d-flex flex-wrap align-items-center justify-content-between w-100">
+        <a class="navbar-brand" href="https://charlestonbacheloretteactivities.com/index.html">
+          <img src="https://charlestonbacheloretteactivities.com/img/logo.png" alt="Charleston Bachelorette Activities logo">
+          The Best Charleston Bachelorette Activities
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="nav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="https://charlestonbacheloretteactivities.com/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://charlestonbacheloretteactivities.com/about.html">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://charlestonbacheloretteactivities.com/blogs/best-resturants-in-charleston.html">Best Restaurants for a Charleston Bachelorette</a></li>
+                <li><a class="dropdown-item" href="https://charlestonbacheloretteactivities.com/blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></li>
+                <li><a class="dropdown-item" href="https://charlestonbacheloretteactivities.com/blogs/charleston-hidden-secrets-eats.html">Best Hidden Eats</a></li>
+                <li><a class="dropdown-item active" aria-current="page" href="https://charlestonbacheloretteactivities.com/blogs/folly-beach-trip.html">Folly Beach Bachelorette Activities</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="https://charlestonbacheloretteactivities.com/contact.html">Contact</a></li>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="page-title">
+        <!-- Swap in your best wide beach photo. Update the alt text to describe what the photo shows. -->
+        <img class="hero__img" src="https://charlestonbacheloretteactivities.com/img/folly-beach-one.png" alt="Folly Beach, South Carolina, where bachelorette groups spend their beach days" width="1600" height="900" fetchpriority="high">
+        <div class="wrap hero__inner">
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <a href="https://charlestonbacheloretteactivities.com/index.html">Charleston bachelorette activities</a> / Folly Beach
+          </nav>
+          <h1 id="page-title">Folly Beach Bachelorette Activities</h1>
+          <p class="hero__lede">Sand, tacos, a rooftop, and a house big enough for the whole group. Here is how to fill a bachelorette weekend on the island known as the Edge of America.</p>
+        </div>
+        <svg class="hero__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0,45 C180,88 360,4 540,34 C720,64 900,92 1080,54 C1260,16 1350,34 1440,50 L1440,90 L0,90 Z" fill="#F3F8F7"/>
+        </svg>
+      </section>
+
+      <!-- AT A GLANCE -->
+      <section class="glance" aria-label="Folly Beach at a glance">
+        <div class="wrap">
+          <dl>
+            <div><dt>From downtown Charleston</dt><dd>About 12 miles, a 20 to 25 minute drive.</dd></div>
+            <div><dt>Best seasons</dt><dd>Spring and fall, when the weather suits a beach day and a porch night.</dd></div>
+            <div><dt>Home base</dt><dd>Center Street, walkable to the pier, the restaurants, and the bars.</dd></div>
+            <div><dt>Drinks on the sand</dt><dd>Not allowed. Keep them on the porch or the patio.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- INTRO -->
+      <section class="block intro">
+        <div class="wrap">
+          <p>The best Folly Beach bachelorette activities are simple: claim a stretch of public beach, work your way down Center Street for tacos and rooftop drinks, and stay close enough to walk everywhere.</p>
+          <p>This guide covers what to do, where to eat and drink, where to stay, and the local rules that catch bachelorette groups off guard. If you want to split the weekend with downtown, start with our full guide to <a href="https://charlestonbacheloretteactivities.com/index.html">Charleston bachelorette activities</a>.</p>
+        </div>
+      </section>
+
+      <!-- ACTIVITIES -->
+      <section class="block pt-0" id="activities" aria-labelledby="activities-title">
+        <div class="wrap">
+          <h2 id="activities-title">The best Folly Beach bachelorette activities</h2>
+          <p class="lead-in">Daytime plans first. Folly does its best work between breakfast and sunset.</p>
+
+          <ul class="tiles">
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-county-park.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-county-park.png" alt="Bachelorette group on the sand at Folly Beach County Park" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Set up at <a href="#">Folly Beach County Park</a></h3>
+                <p>At the west end of the island, the county park has wide sand, restrooms and showers at the Dunes House, and the Wish Tree, covered in shells and wishes. Walk around the bend at low tide for more room to spread out.</p>
+              <p class="note"><strong>Good to know:</strong> the park is at 1100 W Ashley Ave and charges an entrance fee, so check the Charleston County Parks site before you go.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <figure class="tile__photo">
+                <img src="../img/michael.jpg" alt="Bachelorette Folly Beach" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3><a href="#">Michael At Your Plaace</a></h3>
+                <p>Get quality interactive fun at your location since there is a lack of clubs for this.</p>
+              <p class="note"><strong>Good to know:</strong> 200$ up to 90min usually last 60min</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-pier.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-pier.png" alt="Bachelorette group posing on the Folly Beach Pier at golden hour" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Walk the Folly Beach Pier at golden hour</h3>
+                <p>The pier sits at the ocean end of Center Street and makes the easiest group photo backdrop on the island. Walk out before sunset, then grab a drink at <a href="#">Pier 101</a>, the restaurant and bar on the pier.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-dunes-house-sunset.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-dunes-house-sunset.png" alt="Sunset view from the Dunes House deck at Folly Beach County Park" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Catch sunset from the Dunes House deck</h3>
+                <p>The upper deck of the Dunes House at the county park is one of the best sunset spots on the island. Bring the group up for a last look at the water before dinner.</p>
+              <p class="note"><strong>Good to know:</strong> sunset time shifts through the year, so check it before you book a dinner reservation.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-paddleboard.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-paddleboard.png" alt="Bachelorette group paddleboarding on the Folly River" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Paddleboard or kayak</h3>
+                <p>Several rental spots near the Folly River side make it easy to get the group out on the water for an hour or two, without any wave experience.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-surf-lesson.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-surf-lesson.png" alt="Bachelorette group taking a beginner surf lesson on Folly Beach" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Take a group surf lesson</h3>
+                <p>Folly is the Edge of America for surfers, and a beginner group lesson is an easy, low-stakes way to spend a morning.</p>
+              <p class="note"><strong>Good to know:</strong> from May 15 to Sept. 15, surfing is off limits between 2nd Street East and 3rd Street West from 10 a.m. to 6 p.m., and always within 200 feet of the pier. Ask your surf school where it teaches.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-golf-cart.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-golf-cart.png" alt="Bachelorette group riding a golf cart on Folly Beach" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Rent a golf cart, and drive it in daylight</h3>
+                <p>A cart is the easiest way to hop between the beach, lunch, and the pier without a car for every outing.</p>
+              <p class="note"><strong>Good to know:</strong> carts can cross Center Street and Folly Road but not drive on them, and they can&rsquo;t run at night or in the rain. After dark, use a rideshare. Full rules are in the section below.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-center-street-bars.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-center-street-bars.png" alt="Bachelorette group on a rooftop bar on Center Street in Folly Beach" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Bar-hop Center Street and East Ashley</h3>
+                <p>Start on the rooftop at <a href="#">Snapper Jack&rsquo;s</a>, move to the third-floor deck at <a href="#">Taco Boy</a>, and finish in the beer garden at <a href="#">St. James Gate Irish Pub</a>. It is all within a few blocks, so nobody needs a car.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-center-street-shops.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-center-street-shops.png" alt="Bachelorette group next to the giant shark on Center Street in Folly Beach" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Shop Center Street and find the shark</h3>
+                <p>Boutiques and surf shops fill the main strip, which makes for easy browsing between the beach and dinner. The giant fiberglass shark head above the shop next to City Hall is a classic group photo stop.</p>
+              </div>
+            </li>
+            <li class="tile">
+              <!-- PHOTO: save as img/folly-beach-charleston-boat-day.png (1200 x 900 or larger). Update the alt text to match your photo. -->
+              <figure class="tile__photo">
+                <img src="../img/folly-beach-charleston-boat-day.png" alt="Bachelorette group on a party boat in Charleston Harbor" width="1200" height="900" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+              </figure>
+              <div class="tile__body">
+                <h3>Add a boat day in Charleston</h3>
+                <p>Folly is a beach-and-patio island. If the group also wants a harbor cruise, a floating tiki bar, or a pedal boat, those are covered in our <a href="https://charlestonbacheloretteactivities.com/index.html">Charleston bachelorette activities</a> guide.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- EAT AND DRINK -->
+      <section class="block pt-0" id="eat-drink" aria-labelledby="eat-title">
+        <div class="wrap">
+          <h2 id="eat-title">Where to eat and drink on Folly</h2>
+          <p class="lead-in">Folly stays casual, flip-flops-at-the-table casual. Most of these spots are on or just off Center Street.</p>
+
+          <!-- PHOTO 2: tacos, a patio table, or a rooftop drink. Save as img/folly-beach-center-street-eats.png -->
+          <figure class="photo">
+            <div class="photo__frame">
+              <img src="../img/folly-beach-center-street-eats.png" alt="Bachelorette group sharing tacos and drinks at a Folly Beach patio" width="1600" height="686" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+            </div>
+            <figcaption>Tacos and drinks on a Folly Beach patio.</figcaption>
+          </figure>
+
+          <div class="daypart">
+            <h3>Morning</h3>
+            <ul>
+              <li><span class="place"><a href="#">Lost Dog Cafe</a></span><span class="addr">106 W Huron Ave</span>The go-to breakfast before a beach day, with big portions and a laid-back patio that fits a group.</li>
+            </ul>
+          </div>
+
+          <div class="daypart">
+            <h3>Lunch and supplies</h3>
+            <ul>
+              <li><span class="place"><a href="#">Chico Feo</a></span><span class="addr">122 E Ashley Ave</span>An open-air spot with picnic tables, tacos, rice bowls, and live music on some days. It is outdoors, so it closes when it rains.</li>
+              <li><span class="place"><a href="#">Taco Boy</a></span><span class="addr">106 E Ashley Ave</span>Tacos and happy hour drinks on a third-floor deck.</li>
+              <li><span class="place"><a href="#">Loggerhead's Beach Grill</a></span><span class="addr">123 W Ashley Ave</span>A big deck and an outdoor bar steps from the beach.</li>
+              <li><span class="place"><a href="#">Bert's Market</a></span>A one-block-from-the-beach grocery and deli that stays open around the clock, useful for stocking the rental.</li>
+              <li><span class="place"><a href="#">Dolce Banana Cafe</a></span>Frozen yogurt, milkshakes, smoothies, and boba for an easy sweet stop.</li>
+            </ul>
+          </div>
+
+          <div class="daypart">
+            <h3>Sunset</h3>
+            <ul>
+              <li><span class="place"><a href="#">Snapper Jack's Seafood &amp; Raw Bar</a></span><span class="addr">10 Center St</span>A three-level building with an ocean-view rooftop patio, an oyster and raw bar, and live music.</li>
+              <li><span class="place"><a href="#">Pier 101</a></span><span class="addr">101 E Arctic Ave, on the pier</span>Drinks and dinner with an ocean panorama, best right before sunset.</li>
+            </ul>
+          </div>
+
+          <div class="daypart">
+            <h3>Dinner</h3>
+            <ul>
+              <li><span class="place"><a href="#">Jack of Cups Saloon</a></span><span class="addr">34 Center St</span>Globally inspired comfort food with a rotating seasonal menu, known for its curries and plenty of vegetarian options. There is a full bar and a back courtyard for a group.</li>
+              <li><span class="place"><a href="#">Rita's Seaside Grille</a></span>A solid sit-down dinner near the main strip, with a bar area that is easy to gather around.</li>
+            </ul>
+          </div>
+
+          <div class="daypart">
+            <h3>After dark</h3>
+            <ul>
+              <li><span class="place"><a href="#">St. James Gate Irish Pub</a></span><span class="addr">11 Center St</span>A back beer garden that works for a group that wants to sit, not stand.</li>
+              <li><span class="place">Center Street bar-hop</span>Between Snapper Jack's, Jack of Cups, and St. James Gate you can cover the strip on foot. Save a rideshare for the trip home.</li>
+            </ul>
+          </div>
+
+          <p class="mt-3 mb-0" style="font-size:.95rem;color:var(--tide-soft)">All picks are our own. No business paid to be listed. For more meals on the mainland, see our guide to the <a href="https://charlestonbacheloretteactivities.com/blogs/best-resturants-in-charleston.html">best restaurants for a Charleston bachelorette</a>.</p>
+        </div>
+      </section>
+
+      <!-- WHERE TO STAY -->
+      <section class="block pt-0" id="stay" aria-labelledby="stay-title">
+        <div class="wrap">
+          <h2 id="stay-title">Where to stay for a Folly Beach bachelorette weekend</h2>
+          <p class="lead-in">Most groups do better in a house than a hotel block, and closer to Center Street is better than farther.</p>
+
+          <!-- PHOTO 3: a rental house porch or living room. Save as img/folly-beach-group-rental.png -->
+          <figure class="photo">
+            <div class="photo__frame">
+              <img src="https://charlestonbacheloretteactivities.com/img/folly-beach-group-rental.png" alt="Beach house porch on Folly Beach for a bachelorette group stay" width="1600" height="686" loading="lazy" onerror="this.closest('figure').classList.add('is-empty')">
+            </div>
+            <figcaption>A porch big enough for the whole group.</figcaption>
+          </figure>
+
+          <div class="stay">
+            <div>
+              <h3>Rent a house near Center Street</h3>
+              <p>A house within a few blocks of Center Street puts the pier, the restaurants, and the bars on foot. Look for a big porch and enough bedrooms that nobody sleeps on the couch.</p>
+              <p class="note"><strong>Good to know:</strong> many rental listings ban parties or sit in noise-sensitive areas, so read the house rules and tell the host it is a bachelorette group. In peak summer, some houses only rent by the week.</p>
+            </div>
+            <div>
+              <h3>Book <a href="#">Tides Folly Beach</a></h3>
+              <p>An oceanfront hotel at 1 Center St, steps from the pier, with a heated oceanfront pool and on-site dining and bars. It suits groups that would rather have separate rooms than one big house.</p>
+              <p class="note"><strong>Good to know:</strong> Tides lists a minimum check-in age of 21, so confirm who is booking the rooms.</p>
+            </div>
+          </div>
+          <p class="mb-0">Some groups split the trip, a night or two downtown and a night or two on Folly. If that is your plan, see where to stay in our <a href="https://charlestonbacheloretteactivities.com/index.html">Charleston bachelorette activities</a> guide.</p>
+        </div>
+      </section>
+
+      <!-- ITINERARY -->
+      <section class="block pt-0" id="itinerary" aria-labelledby="itinerary-title">
+        <div class="wrap">
+          <h2 id="itinerary-title">A one-day Folly Beach bachelorette itinerary</h2>
+          <p class="lead-in">Adjust the times to your group. The order is what matters: daytime activities while golf carts and Chico Feo are available, then Center Street once the sun is down.</p>
+          <ol class="timeline">
+            <li><span class="when">Morning</span>Breakfast at Lost Dog Cafe, then head to Folly Beach County Park to set up chairs.</li>
+            <li><span class="when">Late morning</span>Beach time, or a group surf lesson away from the swimming zone.</li>
+            <li><span class="when">Lunch</span>Tacos at Chico Feo if the weather holds, or Loggerhead's Beach Grill if it does not, since it has indoor seating.</li>
+            <li><span class="when">Afternoon</span>Paddleboards or kayaks on the Folly River side. Return golf carts before dark.</li>
+            <li><span class="when">Golden hour</span>Walk the Folly Beach Pier for the group photos.</li>
+            <li><span class="when">Dinner</span>Curries and cocktails at Jack of Cups, or seafood at Snapper Jack's.</li>
+            <li><span class="when">Night</span>Rooftop drinks, then the beer garden at St. James Gate Irish Pub.</li>
+            <li><span class="when">Late</span>Rideshare back to the house. Carts are for daylight only.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- RULES -->
+      <section class="block pt-0" id="rules" aria-labelledby="rules-title">
+        <div class="wrap">
+          <div class="rules">
+            <h2 id="rules-title">Know before you go</h2>
+            <p class="mb-0">Folly enforces its rules, and a few of them affect bachelorette plans directly.</p>
+            <div class="rules__grid">
+              <div>
+                <h3>On the beach</h3>
+                <ul>
+                  <li>No alcohol, including opened drinks in cups.</li>
+                  <li>No glass.</li>
+                  <li>No balloons, plastic bags, or Styrofoam, so skip the balloon arch and bring fabric banners.</li>
+                  <li>No smoking or vaping on the sand, and no open fires or fireworks.</li>
+                  <li>Tents, coolers, and umbrellas left after sunset can be removed.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Golf carts</h3>
+                <ul>
+                  <li>Rental carts must display SC DMV and City of Folly Beach stickers.</li>
+                  <li>Drivers must be 16 or older with a license and proof of insurance.</li>
+                  <li>Carts can cross Center Street and Folly Road but cannot drive on them.</li>
+                  <li>No driving at night, in the rain, or when visibility is limited.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Parking and getting home</h3>
+                <ul>
+                  <li>Park all four tires off the pavement and with the flow of traffic.</li>
+                  <li>Stay off yellow curbs, dunes, and crosswalks.</li>
+                  <li>Several paid lots serve the beach, including the county lot at the pier.</li>
+                  <li>Plan a rideshare for nights out, especially after drinking.</li>
+                </ul>
+              </div>
+            </div>
+            <p class="src">Rules come from the City of Folly Beach and can change. Check the city&rsquo;s website for current rules before your trip.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEEP PLANNING -->
+      <section class="block pt-0" id="keep-planning" aria-labelledby="planning-title">
+        <div class="wrap">
+          <h2 id="planning-title">Keep planning your bachelorette weekend</h2>
+          <ul class="related">
+            <li><a href="https://charlestonbacheloretteactivities.com/index.html"><strong>Charleston bachelorette activities</strong><span>Harbor cruises, decor planners, nightlife, and a 4-day itinerary.</span></a></li>
+            <li><a href="https://charlestonbacheloretteactivities.com/blogs/bachelorettes-best-time-visit-charleston.html"><strong>Best time to visit</strong><span>Weather, crowds, and seasons for a bachelorette trip.</span></a></li>
+            <li><a href="https://charlestonbacheloretteactivities.com/blogs/best-resturants-in-charleston.html"><strong>Best restaurants for a Charleston bachelorette</strong><span>Group-friendly dinners and brunches downtown.</span></a></li>
+            <li><a href="https://charlestonbacheloretteactivities.com/blogs/charleston-hidden-secrets-eats.html"><strong>Best hidden eats</strong><span>Local spots that skip the tourist lines.</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER: replace with your existing site footer if you have one -->
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>Folly Beach Bachelorette Activities, an independent, locally-written resource. We are not affiliated with any business listed.</p>
+      <p>&copy; 2026 Charleston Bachelorette Party Guide. <a href="#top">Back to top</a></p>
     </div>
-  </section>
+  </footer>
 
-  <section class="block" id="activities">
-    <div class="container">
-      <span class="section-label">Beach & Activities</span>
-      <h2 class="section-heading">What to Do</h2>
-      <p class="section-intro">The beach itself does most of the work, but here's what fills the rest of the day.</p>
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Beach Day</div>
-            <h3>Folly Beach County Park</h3>
-            <p>Quieter than the main strip, with wide sand and easy parking — a good home base for setting up chairs for the day.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Landmark</div>
-            <h3>Folly Beach Pier</h3>
-            <p>Walkable, photogenic, and worth a sunset stroll no matter how the rest of the itinerary shakes out.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">On the Water</div>
-            <h3>Paddleboard or Kayak Rental</h3>
-            <p>Several rental spots near the Folly River side make it easy to get the group out on the water for an hour or two.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Learn Something</div>
-            <h3>Surf Lesson</h3>
-            <p>Folly's known as the Edge of America for surfers — a beginner group lesson is an easy, low-stakes group activity.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Shopping</div>
-            <h3>Center Street Shops</h3>
-            <p>A few blocks of boutiques and surf shops for casual browsing between the beach and dinner.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Golf Cart</div>
-            <h3>Golf Cart Rental</h3>
-            <p>A popular way to get the group around the island without needing a car for every outing.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="stay">
-    <div class="container">
-      <span class="section-label">Places to Stay</span>
-      <h2 class="section-heading">Where to Sleep</h2>
-      <p class="section-intro">Most groups do better in a house than a hotel block — more room to actually hang out together.</p>
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Group House</div>
-            <h3>Vacation Rental on Folly</h3>
-            <p>Beach houses near the county park or the pier tend to book fastest — look for one with a porch big enough for the whole crew.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Hotel</div>
-            <h3>Tides Folly Beach</h3>
-            <p>The island's main hotel option, oceanfront with a rooftop bar — a good pick if the group prefers separate rooms over one big house.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="listing">
-            <div class="tag">Nearby Option</div>
-            <h3>Downtown Charleston Stay</h3>
-            <p>Some groups split the trip — a night or two downtown, a night or two on Folly — and stay somewhere central for the drive over.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container d-flex flex-wrap justify-content-between">
-    <p class="mb-0">A quick planning guide for a Folly Beach bachelorette weekend.</p>
-    <a href="#" class="mb-0">Back to top ↑</a>
-  </div>
-</footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
