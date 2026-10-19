@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tiny Tassel Private Shopping Party | Charleston Bachelorette</title>
+<meta name="description" content="After-hours private shopping at The Tiny Tassel's Charleston flagship, one block off King Street. Zero-proof drinks, personal styling, $50 deposit returned as a gift card.">
+<link rel="canonical" href="https://charlestonbacheloretteactivities.com/experiences/0082cf9a-6d41-58d6-a9ab-3ddc105c3728/">
+<meta property="og:title" content="The Tiny Tassel Private Shopping Party | Charleston Bachelorette">
+<meta property="og:description" content="After-hours private shopping at The Tiny Tassel's Charleston flagship, one block off King Street.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://charlestonbacheloretteactivities.com/experiences/0082cf9a-6d41-58d6-a9ab-3ddc105c3728/">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf6ef;
+    --paper:#ffffff;
+    --ink:#2a2420;
+    --muted:#6f655c;
+    --green:#2f4a3a;      /* live-oak green */
+    --clay:#c45d3c;       /* terracotta */
+    --clay-dark:#a54a2d;
+    --line:#e6ddcf;
+  }
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--cream);color:var(--ink)}
+  a{color:var(--green)}
+  .serif{font-family:"Fraunces",Georgia,serif}
+
+  /* nav */
+  .nav-wrap{background:var(--green)}
+  .nav-wrap a{color:#f3ede2;text-decoration:none}
+  .brand{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.15rem}
+  .nav-links a{margin-left:1.5rem;font-size:.92rem;opacity:.9}
+  .nav-links a:hover{opacity:1;text-decoration:underline}
+  .crumbs{font-size:.85rem;color:var(--muted)}
+  .crumbs a{color:var(--muted)}
+
+  /* gallery: 1 hero + 4 */
+  .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;height:clamp(170px,20vw,240px);max-width:720px;border-radius:12px;overflow:hidden}
+  .gallery .g-hero{grid-row:1/3}
+  .gallery > *{width:100%;height:100%;object-fit:cover;display:block;min-width:0;min-height:0;background:#e6ddcf}
+  .gallery > div > img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph{background:linear-gradient(140deg,#d9c9b0,#c9d4c4);display:flex;align-items:center;justify-content:center;color:#5b5348;font-size:.85rem;text-align:center;padding:8px}
+
+  /* header block */
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:600;color:var(--clay)}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:clamp(2rem,4.2vw,3rem);line-height:1.05}
+  .lede{font-size:1.1rem;color:var(--muted);max-width:56ch}
+
+  /* quick facts strip */
+  .quick{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:1.6rem 0}
+  .quick div{padding:14px 12px}
+  .quick div + div{border-left:1px solid var(--line)}
+  .quick small{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:var(--muted);font-weight:600}
+  .quick strong{font-weight:600}
+
+  h2{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.6rem;margin-top:2rem}
+  .incl{list-style:none;padding:0}
+  .incl li{padding:10px 0 10px 30px;position:relative;border-bottom:1px dashed var(--line)}
+  .incl li:before{content:"✦";position:absolute;left:4px;color:var(--clay)}
+
+  dl.details{display:grid;grid-template-columns:150px 1fr;gap:12px 20px;margin-top:1rem}
+  dl.details dt{font-weight:600;color:var(--green)}
+  dl.details dd{margin:0}
+
+  .founder{background:var(--green);color:#f3ede2;border-radius:16px;padding:22px 24px;margin-top:2rem}
+  .founder a{color:#f6c9a8}
+
+  /* booking card */
+  .book{position:sticky;top:20px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(42,36,32,.07)}
+  .book .price{font-family:"Fraunces",Georgia,serif;font-size:1.9rem;font-weight:700;line-height:1}
+  .btn-clay{background:var(--clay);color:#fff;font-weight:600;border-radius:12px;padding:.85rem;border:0}
+  .btn-clay:hover{background:var(--clay-dark);color:#fff}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink);border-radius:12px;padding:.75rem;background:transparent;font-weight:500}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+  .book hr{border-color:var(--line);opacity:1}
+  .addon{background:var(--cream);border-radius:12px;padding:12px 14px;font-size:.9rem}
+
+  .disclose{font-size:.85rem;color:var(--muted);font-style:italic;margin-top:2rem}
+  .more{background:var(--paper);border-top:1px solid var(--line)}
+  footer{color:var(--muted)}
+  footer a{color:var(--muted)}
+
+  @media (max-width:991px){.book{position:static}}
+  @media (max-width:640px){
+    .gallery{grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;height:auto}
+    .gallery .g-hero{grid-column:1/5!important}
+    .gallery .g-hero{grid-column:1/3;grid-row:auto;aspect-ratio:16/10}
+    .gallery > :not(.g-hero){aspect-ratio:1/1}
+    .quick{grid-template-columns:1fr}.quick div + div{border-left:0;border-top:1px solid var(--line)}
+    dl.details{grid-template-columns:1fr;gap:2px}dl.details dd{margin-bottom:12px}
+    .nav-links{display:none}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"The Tiny Tassel","url":"https://thetinytassel.com/","telephone":"+1-843-813-9920","email":"hello@thetinytassel.com","founder":{"@type":"Person","name":"Mimi Striplin"},"foundingDate":"2015","address":{"@type":"PostalAddress","streetAddress":"46 Spring Street, Unit B","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29403","addressCountry":"US"},"openingHours":["Mo-Fr 11:00-17:00","Sa 10:00-17:00"],"sameAs":["https://www.instagram.com/thetinytassel/","https://www.facebook.com/thetinytassel"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://charlestonbacheloretteactivities.com/"},{"@type":"ListItem","position":2,"name":"Experiences","item":"https://charlestonbacheloretteactivities.com/experiences/"},{"@type":"ListItem","position":3,"name":"The Tiny Tassel Private Shopping Party","item":"https://charlestonbacheloretteactivities.com/experiences/0082cf9a-6d41-58d6-a9ab-3ddc105c3728/"}]}
+</script>
+</head>
+<body>
+
+<header class="nav-wrap">
+  <div class="container d-flex align-items-center justify-content-between py-3">
+    <a class="brand" href="/">Charleston Bachelorette Activities</a>
+    <nav class="nav-links"><a href="/experiences/">Experiences</a><a href="/">Party Ideas</a></nav>
+  </div>
+</header>
+
+<main class="container py-4">
+  <div class="crumbs mb-3"><a href="/">Home</a> / <a href="/experiences/">Experiences</a> / Shopping</div>
+
+  <!-- Gallery: 1 hero + 4. Replace each .ph div with <img src="..." alt="..."> (keep the class names) using photos you have permission to use. -->
+  <div class="gallery mb-4">
+    <img class="g-hero" src="images/tiny-tassel-2.png" alt="Bachelorette group shopping at The Tiny Tassel in Charleston">
+    <img src="images/tiny-tassel-1.png" alt="Handmade tassel earrings at The Tiny Tassel">
+    <img src="images/tiny-tassel-3.png" alt="Inside The Tiny Tassel flagship boutique on Spring Street">
+    <img src="images/tiny-tassel-4.png" alt="Dresses and accessories at The Tiny Tassel">
+    <img src="images/tiny-tassel-5.png" alt="The Tiny Tassel storefront in Cannonborough-Elliotborough">
+  </div>
+
+  <div class="row g-4 g-lg-5">
+    <div class="col-lg-8">
+      <div class="eyebrow">Private Shopping · Cannonborough-Elliotborough</div>
+      <h1 class="mt-2 mb-3">The Tiny Tassel Private Shopping Party</h1>
+      <p class="lede">An after-hours shopping party at a handmade jewelry and clothing boutique, one block off King Street.</p>
+
+      <div class="quick">
+        <div><small>When</small><strong>Mon–Sat, 5–6:30 pm</strong></div>
+        <div><small>Deposit</small><strong>$50, back as a gift card</strong></div>
+        <div><small>Where</small><strong>46 Spring St, Unit B</strong></div>
+      </div>
+
+      <h2>About this experience</h2>
+      <p><a href="https://thetinytassel.com/" target="_blank" rel="noopener">The Tiny Tassel</a> closes its Charleston flagship to the public and opens it to your group. Their team styles the crew one-on-one while you browse handmade tassel earrings, jewelry, dresses and accessories, with complimentary zero-proof drinks.</p>
+      <p>It's a good pick for the bride who'd rather leave with matching earrings than a hangover. Everything is made in-house by a women-led team, and the shop is easy to fold into a day of brunch and boutique hopping. Planning the rest of the weekend? See our full list of <a href="https://charlestonbacheloretteactivities.com">Charleston bachelorette party ideas</a>.</p>
+
+      <h2>What's included</h2>
+      <ul class="incl">
+        <li>After-hours private access to the flagship store</li>
+        <li>Personal styling from the in-store team</li>
+        <li>Complimentary zero-proof drinks</li>
+      </ul>
+
+      <h2>Good to know</h2>
+      <dl class="details">
+        <dt>Perfect for</dt><dd>Bachelorettes, girls' nights, birthdays, sorority chapters</dd>
+        <dt>Location</dt><dd>46 Spring Street, Unit B, Charleston, SC 29403</dd>
+        <dt>Booking</dt><dd>Request a date through their form. They reply within 72 business hours.</dd>
+        <dt>Questions</dt><dd>(843) 813-9920 · hello@thetinytassel.com</dd>
+      </dl>
+
+      <div class="founder">
+        <div class="eyebrow" style="color:#f6c9a8">Meet the shop</div>
+        <p class="serif fs-5 mt-2 mb-2">Founded in 2015 by Mimi Striplin, The Tiny Tassel is a family-run team that still makes every tassel by hand in-house.</p>
+        <p class="mb-0 small">Follow along on Instagram <a href="https://www.instagram.com/thetinytassel/" target="_blank" rel="noopener">@thetinytassel</a></p>
+      </div>
+
+      <p class="disclose">Independent listing. Details are from The Tiny Tassel's website; confirm current availability and pricing when you book.</p>
+    </div>
+
+    <aside class="col-lg-4">
+      <div class="book">
+        <div class="small text-uppercase fw-semibold" style="letter-spacing:.12em;color:var(--muted)">Reserve with</div>
+        <div class="price my-1">$50 deposit</div>
+        <div class="small mb-3" style="color:var(--muted)">Returned to you as a gift card to spend that night</div>
+        <div class="d-grid gap-2">
+          <a class="btn btn-clay" href="https://thetinytassel.com/pages/privateshoppingexperience" target="_blank" rel="noopener">Check Availability</a>
+          <a class="btn btn-ghost" href="https://thetinytassel.com/" target="_blank" rel="noopener">Visit Website</a>
+          <button class="btn btn-ghost" id="shareBtn" type="button">Share with the group</button>
+        </div>
+        <hr class="my-4">
+        <div class="addon">
+          <strong>Add-on: Creative Workspace</strong><br>
+          A space for up to 10 guests to gather or have refreshments before or after shopping. $75/hour, 2-hour minimum.
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<section class="more py-4 mt-4">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span class="serif fs-5">Looking for more to book in Charleston?</span>
+    <a class="btn btn-clay px-4" href="/experiences/">Browse All Experiences</a>
+  </div>
+</section>
+
+<footer class="py-4">
+  <div class="container small"><a href="/">Charleston Bachelorette Activities</a> · <a href="/experiences/">Experiences</a></div>
+</footer>
+
+<script>
+  document.getElementById('shareBtn').addEventListener('click',function(){
+    var btn=this,d={title:document.title,url:location.href};
+    if(navigator.share){navigator.share(d).catch(function(){});}
+    else{try{navigator.clipboard.writeText(location.href);btn.textContent='Link copied';}catch(e){}}
+  });
+</script>
+</body>
+</html>
