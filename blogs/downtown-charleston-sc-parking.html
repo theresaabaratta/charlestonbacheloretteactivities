@@ -1,397 +1,564 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Downtown Charleston SC Parking Guide: Garages, Meters, Prices &amp; Uber</title>
   <meta name="description" content="Downtown Charleston, SC parking: garage locations and rates, meter prices and free hours, residential permits and 2-hour signs, monthly parking, and parking vs. Uber costs.">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&family=Yellowtail&display=swap" rel="stylesheet">
+
   <style>
-    :root { --plum: #7a2f45; --rose: #b04a68; --blush: #f7efe9; --ink: #2b2b2b; }
-    body { font-family: "Lato", sans-serif; color: var(--ink); background: #fff; }
-    h1, h2, h3, .navbar-brand { font-family: "Playfair Display", serif; }
-    .navbar-brand { color: var(--plum) !important; font-weight: 700; }
-    .bach-banner { background: var(--plum); color: #fff; font-size: .95rem; }
-    .bach-banner a { color: #ffd6e1; font-weight: 700; }
-    /* HERO: add your photo, e.g. url('images/charleston-parking-hero.jpg') in place of the second gradient */
-    .hero { background: linear-gradient(rgba(43,43,43,.55), rgba(43,43,43,.55)), linear-gradient(135deg, var(--plum), var(--rose)); background-size: cover; background-position: center; color: #fff; padding: 5rem 0 4rem; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; }
-    .hero p { font-size: 1.15rem; max-width: 680px; }
-    section { padding: 3.5rem 0; }
-    .bg-blush { background: var(--blush); }
-    .section-title { color: var(--plum); font-weight: 700; margin-bottom: 1rem; }
-    .lead-sm { font-size: 1.08rem; line-height: 1.7; }
-    .quick-stat { border-radius: 12px; background: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.06); padding: 1.5rem; height: 100%; border-top: 4px solid var(--rose); }
-    .quick-stat .num { font-family: "Playfair Display", serif; font-size: 2rem; color: var(--plum); font-weight: 700; line-height: 1; }
-    .table thead th { background: var(--plum); color: #fff; border-color: var(--plum); }
-    .table td, .table th { vertical-align: middle; }
-    .area-block { border-left: 4px solid var(--rose); padding-left: 1.25rem; height: 100%; }
-    .area-block h3 { font-size: 1.25rem; color: var(--plum); }
-    .map-wrap { border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
-    .map-wrap iframe { width: 100%; height: 420px; border: 0; display: block; }
-    .map-sm iframe { height: 240px; }
-    .step { display: flex; gap: 1rem; margin-bottom: 1rem; }
-    .step-num { flex: 0 0 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--plum); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; }
-    .decision { border-radius: 12px; padding: 1.25rem; height: 100%; background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.06); }
-    .decision .tag { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--rose); font-weight: 700; }
-    .decision h3 { font-size: 1.15rem; margin: .25rem 0 .5rem; color: var(--plum); }
-    .callout { background: #fff4f7; border: 1px solid #f1c6d3; border-radius: 12px; padding: 1.25rem 1.5rem; }
-    .photo-slot { background: #eee3dc; border: 2px dashed #c9a99b; border-radius: 12px; min-height: 220px; display: flex; align-items: center; justify-content: center; color: #8a6a5c; font-size: .9rem; text-align: center; padding: 1rem; }
-    .toc a { color: var(--rose); font-weight: 700; text-decoration: none; }
-    .sources a { color: var(--rose); word-break: break-word; }
-    footer { background: var(--ink); color: #ccc; padding: 2rem 0; font-size: .9rem; }
+    :root{
+      --bg:#121212;
+      --black:#000;
+      --blue:#4a8fd6;
+      --blue-light:#7db7f0;
+      --pink:#ff1f8f;
+      --yellow:#f8de22;
+      --text:#f1f1f1;
+      --muted:#b9b9b9;
+    }
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:'Open Sans',sans-serif;font-weight:300;font-size:1.12rem;line-height:1.75;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.5px;line-height:1.1;}
+    p{margin-bottom:1.1rem;}
+    strong{font-weight:600;color:#fff;}
+
+    /* ---------- Neon wordmark ---------- */
+    .neon-logo{font-family:'Yellowtail',cursive;line-height:.85;text-decoration:none;display:inline-block;transform:rotate(-6deg);}
+    .neon-logo .top{display:block;color:#ff6fbc;font-size:2.1rem;text-shadow:0 0 4px var(--pink),0 0 12px var(--pink),0 0 22px var(--pink);}
+    .neon-logo .bottom{display:block;color:#a8d4ff;font-size:1.8rem;margin-left:1.2rem;text-shadow:0 0 4px var(--blue),0 0 12px var(--blue),0 0 22px var(--blue);}
+    .neon-logo.lg .top{font-size:3.4rem;}
+    .neon-logo.lg .bottom{font-size:2.9rem;margin-left:2rem;}
+
+    /* ---------- Header ---------- */
+    .topbar{background:var(--black);padding:1.1rem 0;}
+    .topbar .plan-link{color:var(--yellow);font-family:'Montserrat',sans-serif;font-weight:700;text-decoration:none;font-size:1rem;}
+    .topbar .plan-link i{margin-right:.45rem;}
+    .mainnav{background:var(--blue);}
+    .mainnav .nav-link{color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;text-transform:uppercase;font-size:.92rem;letter-spacing:-.2px;padding:.95rem .7rem !important;}
+    .mainnav .nav-link:hover,.mainnav .nav-link.active{color:var(--pink);}
+    .mainnav .dropdown-menu{background:var(--black);border:1px solid var(--blue);border-radius:0;}
+    .mainnav .dropdown-item{color:#fff;font-size:.95rem;}
+    .mainnav .dropdown-item:hover{background:var(--blue);color:#fff;}
+    .mainnav .navbar-toggler{border-color:rgba(255,255,255,.6);}
+    .mainnav .navbar-toggler-icon{filter:invert(1);}
+
+    /* ---------- Decorative shapes ---------- */
+    .page-wrap{position:relative;}
+    .shape{position:absolute;pointer-events:none;opacity:.55;z-index:0;}
+    .shape.sq{width:56px;height:56px;border:3px solid #8a4c86;transform:rotate(-8deg);}
+    .shape.ci{width:58px;height:58px;border:3px solid #5b4f8f;border-radius:50%;}
+    @media (max-width:991px){.shape{display:none;}}
+
+    /* ---------- Hero ---------- */
+    .crumbs{text-align:center;font-size:.92rem;color:var(--muted);margin-top:1.8rem;}
+    .crumbs a{color:var(--blue-light);text-decoration:none;}
+    .crumbs a:hover{color:var(--pink);}
+    .hero h1{color:var(--blue);font-size:clamp(2rem,5vw,3.6rem);text-align:center;margin:.8rem 0 1.4rem;}
+    .hero p{font-size:1.2rem;}
+    .notice{font-size:.95rem;color:var(--muted);text-align:center;margin-bottom:0;}
+
+    /* ---------- Content ---------- */
+    main{position:relative;z-index:1;}
+    .content-section{padding-top:2.4rem;}
+    .content-section h2{color:#fff;font-size:clamp(1.55rem,3vw,2.3rem);margin-bottom:1rem;}
+    .content-section h3{color:var(--blue-light);font-size:1.2rem;margin:1.6rem 0 .6rem;}
+    .content-section a,.hero a{color:var(--pink);font-weight:400;text-decoration:none;border-bottom:1px dotted rgba(255,31,143,.6);}
+    .content-section a:hover,.hero a:hover{color:#ff7cc0;border-bottom-style:solid;}
+    .lead-line{margin-bottom:.6rem;}
+    .note{font-size:.98rem;color:var(--muted);border-left:3px solid var(--yellow);padding-left:.9rem;margin:1.2rem 0 0;}
+
+    /* ---------- Tables ---------- */
+    .neon-table{
+      --bs-table-bg:#000;
+      --bs-table-color:#f1f1f1;
+      --bs-table-striped-bg:#0d0d0d;
+      --bs-table-striped-color:#f1f1f1;
+      --bs-table-border-color:#2d2d2d;
+      font-size:1rem;
+      margin-bottom:0;
+    }
+    .neon-table thead th{
+      background:var(--blue);
+      color:#fff;
+      font-family:'Montserrat',sans-serif;
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:.85rem;
+      letter-spacing:.3px;
+      border-color:var(--blue);
+    }
+    .neon-table td,.neon-table th{vertical-align:middle;padding:.7rem .8rem;}
+    .neon-table .deal{color:var(--yellow);font-weight:600;}
+    .county{display:inline-block;background:var(--pink);color:#fff;font-size:.7rem;font-weight:600;text-transform:uppercase;padding:.1rem .45rem;margin-left:.3rem;vertical-align:middle;}
+    .table-wrap{border:1px solid rgba(74,143,214,.55);box-shadow:0 0 14px rgba(74,143,214,.25);margin:1.2rem 0;}
+
+    /* ---------- Inline photos & map ---------- */
+    .photo{margin:1.6rem 0;border:1px solid rgba(74,143,214,.55);box-shadow:0 0 14px rgba(74,143,214,.3);background:var(--black);}
+    .photo.pink{border-color:rgba(255,31,143,.55);box-shadow:0 0 14px rgba(255,31,143,.3);}
+    .photo img{width:100%;height:320px;object-fit:cover;display:block;}
+    .photo figcaption{font-size:.85rem;color:var(--muted);padding:.55rem .9rem;}
+    .map-frame{border:1px solid rgba(255,31,143,.55);box-shadow:0 0 14px rgba(255,31,143,.3);margin:1.6rem 0;}
+    .map-frame iframe{width:100%;height:400px;border:0;display:block;}
+    @media (max-width:575px){.photo img{height:220px;}.map-frame iframe{height:300px;}}
+
+    /* ---------- Deal cards ---------- */
+    .deal-card{background:var(--black);border:1px solid rgba(255,31,143,.6);box-shadow:0 0 16px rgba(255,31,143,.25);padding:1.5rem;height:100%;display:flex;flex-direction:column;}
+    .deal-card.blue{border-color:rgba(74,143,214,.65);box-shadow:0 0 16px rgba(74,143,214,.25);}
+    .deal-card h3{color:#fff;font-size:1.3rem;margin:0 0 .2rem;}
+    .deal-card .sub{text-transform:uppercase;font-size:.95rem;color:var(--muted);margin-bottom:.8rem;}
+    .deal-card ul{list-style:none;padding:0;margin:0 0 1.2rem;}
+    .deal-card li{text-transform:uppercase;font-size:.88rem;font-weight:400;padding:.22rem 0 .22rem 1.1rem;position:relative;}
+    .deal-card li::before{content:"";position:absolute;left:0;top:.75rem;width:6px;height:6px;border-radius:50%;background:var(--pink);}
+    .deal-card .foot{margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.8rem;}
+    .btn-yellow{background:var(--yellow);color:#111 !important;border-radius:50px;padding:.55rem 1.5rem;font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;border:none !important;text-decoration:none;display:inline-block;font-size:.85rem;}
+    .btn-yellow:hover{background:#fff27a;}
+    .price{color:var(--yellow);font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;}
+
+    /* ---------- Sidebar ---------- */
+    .sidebar{background:var(--black);border:1px solid #2d2d2d;padding:1.6rem;position:sticky;top:1.2rem;}
+    .sidebar h4{font-size:1.5rem;color:#fff;margin-bottom:1rem;}
+    .tag{display:inline-block;background:var(--blue);color:#fff;font-size:.88rem;font-weight:400;padding:.35rem .8rem;margin:0 .35rem .5rem 0;text-decoration:none;}
+    .tag:hover{background:var(--pink);color:#fff;}
+    .side-block{border-top:1px solid #2d2d2d;margin-top:1.4rem;padding-top:1.4rem;font-size:.98rem;}
+    .side-block p{margin-bottom:.7rem;}
+    .side-block a{color:var(--blue-light);text-decoration:none;}
+    .side-block a:hover{color:var(--pink);}
+    .rate-num{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--yellow);font-size:1.4rem;line-height:1;display:block;}
+
+    /* ---------- Rules / callout box ---------- */
+    .rules{background:var(--black);border:1px solid rgba(248,222,34,.45);padding:1.8rem;margin-top:.4rem;}
+    .rules h3{color:var(--yellow);margin-top:1.2rem;}
+    .rules h3:first-of-type{margin-top:.4rem;}
+
+    /* ---------- Sources ---------- */
+    .sources a{word-break:break-word;}
+
+    /* ---------- Closing ---------- */
+    .closing{padding:2.6rem 0 3.5rem;}
+
+    /* ---------- Footer ---------- */
+    footer{background:var(--black);padding:3rem 0 0;}
+    footer h5{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;margin-bottom:1rem;}
+    footer ul{list-style:none;padding:0;margin:0;}
+    footer li{margin-bottom:.45rem;}
+    footer li a{color:#fff;text-decoration:none;font-weight:300;}
+    footer li a:hover{color:var(--pink);}
+    footer .contact-pink{color:var(--pink);}
+    .socials a{color:#fff;font-size:1.45rem;margin-left:1.1rem;}
+    .socials a:hover{color:var(--pink);}
+    .footer-bottom{border-top:1px solid #444;margin-top:2.5rem;padding:.9rem 0;text-align:center;font-size:.98rem;}
   </style>
 </head>
-<body>
+<body id="top">
 
-<!-- Bachelorette site notice -->
-<div class="bach-banner py-2">
-  <div class="container text-center">
-    This is a party planner site, but this guide works for anyone parking downtown.
-  </div>
-</div>
-
-<nav class="navbar navbar-expand-lg bg-white border-bottom">
-  <div class="container">
-    <a class="navbar-brand" href="#">Charleston Bachelorette</a>
-    <div class="d-none d-md-flex gap-3 small">
-      <a class="text-decoration-none text-dark" href="#garages">Garages</a>
-      <a class="text-decoration-none text-dark" href="#meters">Meters</a>
-      <a class="text-decoration-none text-dark" href="#residential">Residential</a>
-      <a class="text-decoration-none text-dark" href="#uber">Parking vs. Uber</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="container">
-    <p class="text-uppercase small mb-2" style="letter-spacing:.12em;">Charleston, SC Parking Guide</p>
-    <h1>Downtown Charleston Parking</h1>
-    <p class="mt-3">Garages, meters, free hours, residential permits, 2-hour signs and parking vs. Uber.</p>
-  </div>
-</header>
-
-<!-- Quick stats -->
-<section class="bg-blush">
-  <div class="container">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3"><div class="quick-stat"><div class="num">$1</div><div class="mt-2">per 20 min in garages ($3/hr)</div></div></div>
-      <div class="col-6 col-lg-3"><div class="quick-stat"><div class="num">$24</div><div class="mt-2">garage daily max</div></div></div>
-      <div class="col-6 col-lg-3"><div class="quick-stat"><div class="num">$3/hr</div><div class="mt-2">street meters, 1-hr minimum</div></div></div>
-      <div class="col-6 col-lg-3"><div class="quick-stat"><div class="num">Free</div><div class="mt-2">meters Sundays, holidays, after 6 p.m.</div></div></div>
-    </div>
-    <p class="text-center small text-muted mt-4 mb-0">City of Charleston and Charleston County rates. Always check posted signs.</p>
-  </div>
-</section>
-
-<!-- Intro -->
-<section>
-  <div class="container" style="max-width: 860px;">
-    <h2 class="section-title">The Basics</h2>
-    <p class="lead-sm">Downtown is a small historic peninsula with narrow streets and limited spaces, so parking fills fast and gets expensive. There are four options: <strong>garages</strong>, <strong>street meters</strong>, <strong>metered lots</strong> and <strong>residential streets with time limits</strong>.</p>
-    <div class="toc mt-3">
-      <a href="#how-it-works">How it works</a> &middot;
-      <a href="#garages">Garages</a> &middot;
-      <a href="#best-parking">By area</a> &middot;
-      <a href="#meters">Meters</a> &middot;
-      <a href="#residential">Residential parking</a> &middot;
-      <a href="#monthly">Monthly</a> &middot;
-      <a href="#uber">Parking vs. Uber</a> &middot;
-      <a href="#visitors">Tips</a>
-    </div>
-  </div>
-</section>
-
-<!-- How it works -->
-<section id="how-it-works" class="bg-blush">
-  <div class="container">
-    <h2 class="section-title text-center mb-4">Where to Park, by How Long You're Staying</h2>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3"><div class="decision"><div class="tag">Under 2 hours</div><h3>Street Meter</h3><p class="mb-0">$3/hr, 1-hr minimum. Mon–Sat, 9 a.m.–6 p.m.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="decision"><div class="tag">2–8 hours</div><h3>Garage</h3><p class="mb-0">$1 per 20 min, $24 max. No time limit.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="decision"><div class="tag">Evenings</div><h3>Evening Flat Rate</h3><p class="mb-0">$5 after 5 p.m. at select garages. Meters free after 6 p.m.</p></div></div>
-      <div class="col-md-6 col-lg-3"><div class="decision"><div class="tag">Drinking / overnight</div><h3>Uber or Hotel</h3><p class="mb-0">Rideshare or hotel parking. Don't drive after drinking.</p></div></div>
-    </div>
-
-    <div class="row mt-5 g-4 align-items-center">
-      <div class="col-lg-6">
-        <div class="step"><div class="step-num">1</div><div><strong>Check the day and time.</strong> Sunday, a city holiday or after 6 p.m. means free meters.</div></div>
-        <div class="step"><div class="step-num">2</div><div><strong>Under 2 hours:</strong> meter. <strong>Longer:</strong> garage.</div></div>
-        <div class="step"><div class="step-num">3</div><div><strong>Read every sign.</strong> Meters and residential streets have extra restrictions.</div></div>
-        <div class="step"><div class="step-num">4</div><div><strong>Pay</strong> by card, text or app.</div></div>
-        <div class="step"><div class="step-num">5</div><div><strong>Keep your garage ticket.</strong> Lost tickets cost $50.</div></div>
-      </div>
-      <div class="col-lg-6">
-        <img src="/img/charleston-garage.png" class="img-fluid rounded" alt="Downtown Charleston parking garage">
+  <!-- Header -->
+  <header>
+    <div class="topbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="/index.html" class="neon-logo" aria-label="Charleston Bachelorette Activities home">
+          <span class="top">Charleston</span>
+          <span class="bottom">Bach Days</span>
+        </a>
+        <a href="/contact.html" class="plan-link"><i class="fa-solid fa-square-parking"></i> Downtown Parking <span class="d-none d-sm-inline ms-3"><i class="fa-solid fa-envelope"></i>Send Us a Tip</span></a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Garages -->
-<section id="garages">
-  <div class="container">
-    <h2 class="section-title">Parking Garages</h2>
-    <p class="lead-sm">City garages: <strong>$1 per 20 minutes</strong>, <strong>$24 daily max</strong>. County garages match that rate as of October 2025. The daily max runs midnight to midnight, so overnight stays can be charged twice.</p>
-
-    <div class="table-responsive mt-3">
-      <table class="table table-striped table-bordered align-middle">
-        <thead><tr><th>Garage</th><th>Address</th><th>Near</th><th>Payment</th><th>Evening Deal</th></tr></thead>
-        <tbody>
-          <tr><td>Aquarium</td><td>24 Calhoun St.</td><td>SC Aquarium, harbor boats</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
-          <tr><td>Camden/Exchange</td><td>35 John St.</td><td>Visitor Center, Upper King</td><td>Card</td><td>&mdash;</td></tr>
-          <tr><td>Charleston Place</td><td>85 Hasell St.</td><td>City Market, Middle King</td><td>Card</td><td>&mdash;</td></tr>
-          <tr><td>Charleston Tech Center</td><td>4 Conroy St.</td><td>Upper peninsula</td><td>Card</td><td>&mdash;</td></tr>
-          <tr><td>Concord/Cumberland</td><td>1 Cumberland St.</td><td>City Market, Waterfront Park</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
-          <tr><td>East Bay/Prioleau</td><td>25 Prioleau St.</td><td>Waterfront Park, Rainbow Row</td><td>Card</td><td><strong>$5 after 5 p.m.</strong></td></tr>
-          <tr><td>Gaillard Auditorium</td><td>32 Alexander St.</td><td>Gaillard Center</td><td>Card</td><td>&mdash;</td></tr>
-          <tr><td>Majestic</td><td>211 King St.</td><td>Lower/Middle King shopping</td><td>Card</td><td><strong>$5 after 5 p.m.</strong></td></tr>
-          <tr><td>Marion Square</td><td>399 King St.</td><td>Marion Square, Upper King</td><td>Card</td><td>&mdash;</td></tr>
-          <tr><td>Midtown</td><td>558 King St.</td><td>Upper King nightlife</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
-          <tr><td>93 Queen Street</td><td>93 Queen St.</td><td>French Quarter, Broad St.</td><td>Card</td><td><strong>$7 after 3 p.m. / $5 after 5 p.m.</strong></td></tr>
-          <tr><td>34 Saint Philip</td><td>34 St. Philip St.</td><td>College of Charleston</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
-          <tr><td>99 West Edge</td><td>99 West Edge St.</td><td>WestEdge, MUSC</td><td>Card</td><td>&mdash;</td></tr>
-          <tr><td>King and Queen <span class="badge bg-secondary">County</span></td><td>85 Queen St.</td><td>King St., courthouse</td><td>&mdash;</td><td>&mdash;</td></tr>
-          <tr><td>Cumberland <span class="badge bg-secondary">County</span></td><td>90 Cumberland St.</td><td>City Market</td><td>&mdash;</td><td>&mdash;</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="small text-muted">Evening rates end at 3 a.m. Private garages and lots set their own (often higher) prices.</p>
-
-    <div class="callout mt-3"><strong>Cost check:</strong> 6 hours = $18. Overnight can hit the $24 max more than once. Hotel valet and private lots cost more.</div>
-
-    <div class="map-wrap mt-4">
-      <iframe src="https://maps.google.com/maps?q=parking+garage+downtown+Charleston+SC&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Parking garages in downtown Charleston SC"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- Best parking by area -->
-<section id="best-parking" class="bg-blush">
-  <div class="container">
-    <h2 class="section-title mb-4">Best Parking Near Popular Areas</h2>
-    <div class="row g-5">
-      <div class="col-lg-6">
-        <div class="area-block">
-          <h3>Upper King (Bars &amp; Restaurants)</h3>
-          <p><strong>Park:</strong> Midtown (558 King), Marion Square (399 King), Camden/Exchange (35 John).</p>
-          <p>No street parking on King between Spring and John, 6 p.m.–3 a.m., Thu–Sat.</p>
-          <div class="map-wrap map-sm"><iframe src="https://maps.google.com/maps?q=558+King+St+Charleston+SC&amp;z=16&amp;output=embed" loading="lazy" title="Midtown Garage"></iframe></div>
+    <nav class="navbar navbar-expand-lg mainnav">
+      <div class="container">
+        <button class="navbar-toggler ms-auto my-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#garages">Garages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#meters">Meters</a></li>
+            <li class="nav-item"><a class="nav-link" href="#residential">Residential</a></li>
+            <li class="nav-item"><a class="nav-link" href="#monthly">Monthly</a></li>
+            <li class="nav-item"><a class="nav-link" href="#uber">Parking vs. Uber</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Planning Guides</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/blogs/best-resturants-in-charleston.html">Best Restaurants</a></li>
+                <li><a class="dropdown-item" href="/blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></li>
+                <li><a class="dropdown-item" href="/blogs/charleston-hidden-secrets-eats.html">Hidden Eats</a></li>
+                <li><a class="dropdown-item" href="/blogs/folly-beach-trip.html">Folly Beach Trip</a></li>
+                <li><a class="dropdown-item" href="/blogs/isle-of-palms-trip.html">Isle of Palms Trip</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+          </ul>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="area-block">
-          <h3>Lower &amp; Middle King (Shopping)</h3>
-          <p><strong>Park:</strong> Majestic (211 King), Charleston Place (85 Hasell), King and Queen (85 Queen).</p>
-          <p>Majestic is $5 after 5 p.m.</p>
-          <div class="map-wrap map-sm"><iframe src="https://maps.google.com/maps?q=211+King+St+Charleston+SC&amp;z=16&amp;output=embed" loading="lazy" title="Majestic Garage"></iframe></div>
+    </nav>
+  </header>
+
+  <div class="page-wrap">
+    <span class="shape sq" style="top:640px;right:4%;"></span>
+    <span class="shape ci" style="top:1700px;right:6%;"></span>
+    <span class="shape sq" style="top:2800px;left:2%;transform:rotate(14deg);"></span>
+    <span class="shape ci" style="top:3900px;left:3%;"></span>
+    <span class="shape sq" style="top:5000px;right:3%;"></span>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a> / Downtown Parking</nav>
+        <h1>Downtown Charleston Parking</h1>
+        <p>The peninsula is small, the streets are narrow, and spaces go fast. You have four choices: city and county <a href="#garages">garages</a>, <a href="#meters">street meters</a>, metered lots, and <a href="#residential">residential streets</a> with time limits. Pick by how long you're staying, read every sign, and when the night involves drinks, <a href="#uber">leave the car</a>.</p>
+        <p class="notice">We're a bachelorette planning site, but this guide works for anyone parking downtown.</p>
+      </div>
+    </section>
+
+    <main class="container">
+      <div class="row g-5">
+
+        <!-- Main column -->
+        <div class="col-lg-8">
+
+          <!-- How long -->
+          <section class="content-section" id="how-it-works">
+            <h2>Where to Park, by How Long You're Staying</h2>
+            <p class="lead-line"><strong>Under two hours:</strong> a street meter. They run $3 an hour with a one-hour minimum, Monday to Saturday from 9am to 6pm.</p>
+            <p class="lead-line"><strong>Two to eight hours:</strong> a garage. City garages charge $1 per 20 minutes with a $24 daily max and no time limit.</p>
+            <p class="lead-line"><strong>Evenings:</strong> a $5 flat rate after 5pm at select garages, and free meters after 6pm.</p>
+            <p><strong>Drinking or staying overnight:</strong> take a rideshare or use hotel parking. Don't drive after drinking.</p>
+
+            <figure class="photo">
+              <img src="/img/charleston-garage.png" alt="Downtown Charleston parking garage entrance" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>For anything longer than a quick stop, a city garage beats feeding a meter.</figcaption>
+            </figure>
+
+            <p>Before you pull in, check the day and the time, since Sundays, city holidays and anything after 6pm mean free meters. Read every posted sign, because meters and residential blocks often carry extra restrictions. Pay by card, text or app. If you use a garage, hang on to the ticket, because a lost one costs $50.</p>
+          </section>
+
+          <!-- Evening deals -->
+          <section class="content-section" id="evening-deals">
+            <h2>Three Garages With Evening Deals</h2>
+            <p>Coming downtown for dinner or a night out? These city garages switch to flat evening rates that run until 3am.</p>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="deal-card">
+                  <h3>Majestic</h3>
+                  <div class="sub">211 King St.</div>
+                  <ul>
+                    <li>Lower &amp; Middle King</li>
+                    <li>Shopping and dinner</li>
+                    <li>Card only</li>
+                  </ul>
+                  <div class="foot">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=211+King+St+Charleston+SC" class="btn-yellow" target="_blank" rel="noopener">Map</a>
+                    <span class="price">$5 After 5PM</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="deal-card blue">
+                  <h3>East Bay/Prioleau</h3>
+                  <div class="sub">25 Prioleau St.</div>
+                  <ul>
+                    <li>Waterfront Park</li>
+                    <li>Rainbow Row</li>
+                    <li>Card only</li>
+                  </ul>
+                  <div class="foot">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=25+Prioleau+St+Charleston+SC" class="btn-yellow" target="_blank" rel="noopener">Map</a>
+                    <span class="price">$5 After 5PM</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="deal-card">
+                  <h3>93 Queen Street</h3>
+                  <div class="sub">93 Queen St.</div>
+                  <ul>
+                    <li>French Quarter</li>
+                    <li>Broad Street</li>
+                    <li>$7 after 3pm too</li>
+                  </ul>
+                  <div class="foot">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=93+Queen+St+Charleston+SC" class="btn-yellow" target="_blank" rel="noopener">Map</a>
+                    <span class="price">$5 After 5PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Garages -->
+          <section class="content-section" id="garages">
+            <h2>City and County Garages</h2>
+            <p>City garages charge <strong>$1 per 20 minutes</strong> with a <strong>$24 daily max</strong>. As of October 2025, county garages charge the same. The daily max resets at midnight, so an overnight stay can be billed twice. Private garages and lots set their own prices, which usually run higher.</p>
+
+            <div class="table-wrap table-responsive">
+              <table class="table table-striped table-bordered neon-table">
+                <thead><tr><th>Garage</th><th>Address</th><th>Near</th><th>Payment</th><th>Evening</th></tr></thead>
+                <tbody>
+                  <tr><td>Aquarium</td><td>24 Calhoun St.</td><td>SC Aquarium, harbor boats</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
+                  <tr><td>Camden/Exchange</td><td>35 John St.</td><td>Visitor Center, Upper King</td><td>Card</td><td>&mdash;</td></tr>
+                  <tr><td>Charleston Place</td><td>85 Hasell St.</td><td>City Market, Middle King</td><td>Card</td><td>&mdash;</td></tr>
+                  <tr><td>Charleston Tech Center</td><td>4 Conroy St.</td><td>Upper peninsula</td><td>Card</td><td>&mdash;</td></tr>
+                  <tr><td>Concord/Cumberland</td><td>1 Cumberland St.</td><td>City Market, Waterfront Park</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
+                  <tr><td>East Bay/Prioleau</td><td>25 Prioleau St.</td><td>Waterfront Park, Rainbow Row</td><td>Card</td><td class="deal">$5 after 5pm</td></tr>
+                  <tr><td>Gaillard Auditorium</td><td>32 Alexander St.</td><td>Gaillard Center</td><td>Card</td><td>&mdash;</td></tr>
+                  <tr><td>Majestic</td><td>211 King St.</td><td>Lower/Middle King shopping</td><td>Card</td><td class="deal">$5 after 5pm</td></tr>
+                  <tr><td>Marion Square</td><td>399 King St.</td><td>Marion Square, Upper King</td><td>Card</td><td>&mdash;</td></tr>
+                  <tr><td>Midtown</td><td>558 King St.</td><td>Upper King nightlife</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
+                  <tr><td>93 Queen Street</td><td>93 Queen St.</td><td>French Quarter, Broad St.</td><td>Card</td><td class="deal">$7 after 3pm / $5 after 5pm</td></tr>
+                  <tr><td>34 Saint Philip</td><td>34 St. Philip St.</td><td>College of Charleston</td><td>Cash &amp; card</td><td>&mdash;</td></tr>
+                  <tr><td>99 West Edge</td><td>99 West Edge St.</td><td>WestEdge, MUSC</td><td>Card</td><td>&mdash;</td></tr>
+                  <tr><td>King and Queen <span class="county">County</span></td><td>85 Queen St.</td><td>King St., courthouse</td><td>&mdash;</td><td>&mdash;</td></tr>
+                  <tr><td>Cumberland <span class="county">County</span></td><td>90 Cumberland St.</td><td>City Market</td><td>&mdash;</td><td>&mdash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">Six hours in a garage costs $18. An overnight stay can hit the $24 max more than once, and hotel valet and private lots cost more than both.</p>
+
+            <div class="map-frame">
+              <iframe src="https://maps.google.com/maps?q=parking+garage+downtown+Charleston+SC&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Parking garages in downtown Charleston SC"></iframe>
+            </div>
+          </section>
+
+          <!-- By area -->
+          <section class="content-section" id="best-parking">
+            <h2>Best Garage for Each Part of Downtown</h2>
+            <h3>Upper King Bars and Restaurants</h3>
+            <p>Use <a href="https://www.google.com/maps/search/?api=1&amp;query=558+King+St+Charleston+SC" target="_blank" rel="noopener">Midtown at 558 King</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=399+King+St+Charleston+SC" target="_blank" rel="noopener">Marion Square at 399 King</a>, or <a href="https://www.google.com/maps/search/?api=1&amp;query=35+John+St+Charleston+SC" target="_blank" rel="noopener">Camden/Exchange at 35 John</a>. Street parking on King between Spring and John is banned from 6pm to 3am, Thursday through Saturday.</p>
+
+            <h3>Lower and Middle King Shopping</h3>
+            <p>Use <a href="https://www.google.com/maps/search/?api=1&amp;query=211+King+St+Charleston+SC" target="_blank" rel="noopener">Majestic at 211 King</a>, which drops to $5 after 5pm, or <a href="https://www.google.com/maps/search/?api=1&amp;query=85+Hasell+St+Charleston+SC" target="_blank" rel="noopener">Charleston Place at 85 Hasell</a>. The county's King and Queen garage at 85 Queen also covers this stretch.</p>
+
+            <h3>City Market and East Bay Dining</h3>
+            <p>Street spots here go first, so head straight for <a href="https://www.google.com/maps/search/?api=1&amp;query=1+Cumberland+St+Charleston+SC" target="_blank" rel="noopener">Concord/Cumberland at 1 Cumberland</a>, the county's Cumberland garage at 90 Cumberland, or Charleston Place.</p>
+
+            <h3>Waterfront Park and the French Quarter</h3>
+            <p>Use <a href="https://www.google.com/maps/search/?api=1&amp;query=25+Prioleau+St+Charleston+SC" target="_blank" rel="noopener">East Bay/Prioleau at 25 Prioleau</a> or <a href="https://www.google.com/maps/search/?api=1&amp;query=93+Queen+St+Charleston+SC" target="_blank" rel="noopener">93 Queen</a>. Both have evening flat rates.</p>
+
+            <h3>SC Aquarium, Harbor Boats and the Gaillard</h3>
+            <p>The <a href="https://www.google.com/maps/search/?api=1&amp;query=24+Calhoun+St+Charleston+SC" target="_blank" rel="noopener">Aquarium garage at 24 Calhoun</a> takes cash and card and sits right by the harbor tour docks. For a Gaillard Center show, the <a href="https://www.google.com/maps/search/?api=1&amp;query=32+Alexander+St+Charleston+SC" target="_blank" rel="noopener">Gaillard garage at 32 Alexander</a> and the Auditorium metered lots have EV plug-ins, and both fill early on show nights.</p>
+          </section>
+
+          <!-- Meters -->
+          <section class="content-section" id="meters">
+            <h2>Meter Prices and Free Hours</h2>
+            <p>Street meters run <strong>$3 an hour</strong> with a <strong>one-hour minimum</strong>. They're enforced Monday through Saturday, 9am to 6pm, and free on Sundays, city holidays and after 6pm. Pay by card, by text, through the app or with a city SmartCard. Check the posts for extra restrictions, and skip bagged meters, which are reserved.</p>
+
+            <figure class="photo pink">
+              <img src="/img/charleston-meter.png" alt="Street parking meter in downtown Charleston" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>Meters are free on Sundays, city holidays and after 6pm.</figcaption>
+            </figure>
+
+            <p>The city's metered lots follow the same rules: $3 an hour, a one-hour minimum, 9am to 6pm, and free on Sundays and holidays.</p>
+            <div class="table-wrap table-responsive">
+              <table class="table table-striped table-bordered neon-table">
+                <thead><tr><th>Lot</th><th>Location</th></tr></thead>
+                <tbody>
+                  <tr><td>Auditorium Lots</td><td>1 George St., 34 &amp; 54 Alexander St.</td></tr>
+                  <tr><td>Beaufain/Archdale/Market</td><td>45 Archdale St.</td></tr>
+                  <tr><td>Market</td><td>33 Archdale St.</td></tr>
+                  <tr><td>Cone Street</td><td>Cone St.</td></tr>
+                  <tr><td>S. Adgers Wharf</td><td>19 S. Adgers Wharf</td></tr>
+                  <tr><td>Exchange</td><td>Gillon St.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">A disability placard or plate parks free at meters and at city, county and state garages and lots, and out-of-state placards count. It isn't valid at private garages.</p>
+          </section>
+
+          <!-- Residential -->
+          <section class="content-section" id="residential">
+            <h2>How Residential Parking Works</h2>
+            <p>Many downtown blocks are <strong>residential parking districts</strong>. Residents with a permit can park with no time limit, and everyone else gets the posted limit.</p>
+
+            <div class="rules">
+              <h3>Visitors and the 2-Hour Signs</h3>
+              <p class="lead-line"><strong>The rule:</strong> without a permit, stay only as long as the sign allows during the posted days and hours. That's usually two hours, though some blocks allow one or four.</p>
+              <p class="lead-line"><strong>Enforcement:</strong> permits are digital and plates are scanned, so don't count on a grace period.</p>
+              <p class="lead-line"><strong>Staying longer:</strong> get a one-day visitor pass from the resident you're visiting, or move to a garage.</p>
+              <p class="mb-0"><strong>Ticket traps:</strong> facing the wrong direction, yellow curbs, parking outside the painted lines and street-sweeping signs.</p>
+            </div>
+
+            <h3>Residents Getting a Permit</h3>
+            <div class="table-wrap table-responsive">
+              <table class="table table-bordered neon-table">
+                <thead><tr><th></th><th>Homeowner</th><th>Renter</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Cost</strong></td><td>$15 per vehicle</td><td>$10 per vehicle</td></tr>
+                  <tr><td><strong>Valid</strong></td><td>Calendar year (Jan 1&ndash;Dec 31)</td><td>6 months (Jan&ndash;Jun or Jul&ndash;Dec)</td></tr>
+                  <tr><td><strong>Max permits</strong></td><td colspan="2">2 per residential unit</td></tr>
+                  <tr><td><strong>Documents</strong></td><td>Property tax receipt, deed or mortgage document; vehicle registration</td><td>Lease of 6+ months; driver's license; SC registration (or proof of Charleston County registration fee), or student/military ID with registration</td></tr>
+                  <tr><td><strong>Visitor passes</strong></td><td>Up to 3 booklets of 30 single-day permits, $30 per booklet</td><td>Up to 14 one-day passes per unit every 6 months, $5 each</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Apply online at <a href="https://parkcharleston-sc.com/permit" target="_blank" rel="noopener">parkcharleston-sc.com/permit</a>, which activates on approval with a $2.50 card fee per item. You can also mail the application, documents and a check or money order to Revenue Collections, 180 Lockwood Blvd., Suite 234, Charleston, SC 29403, or apply in person by appointment.</p>
+            <p>Unpaid tickets have to be cleared before a permit is issued. Visitor booklets are mail or in-person only, paid by cash or check. A car that hasn't moved in seven days can be treated as abandoned, even with a permit. Questions go to 843-724-7375.</p>
+          </section>
+
+          <!-- Monthly -->
+          <section class="content-section" id="monthly">
+            <h2>Monthly Parking Downtown</h2>
+            <p>Downtown workers and residents without a driveway often rent by the month. The city currently has <strong>no monthly openings</strong> and no waiting list. The county's two garages offer 24/7 monthly access.</p>
+            <div class="table-wrap table-responsive">
+              <table class="table table-bordered neon-table">
+                <thead><tr><th>Garage</th><th>Monthly Rate</th></tr></thead>
+                <tbody>
+                  <tr><td>King and Queen, 85 Queen St.</td><td>$215</td></tr>
+                  <tr><td>Cumberland, 90 Cumberland St.</td><td>$175</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>At the top rate, that adds up to <strong>$2,580 a year</strong>. Private lots, businesses and homeowners also rent spaces monthly, often through parking-sharing apps, and prices vary.</p>
+          </section>
+
+          <!-- Uber -->
+          <section class="content-section" id="uber">
+            <h2>Parking vs. Uber</h2>
+            <div class="table-wrap table-responsive">
+              <table class="table table-striped table-bordered neon-table">
+                <thead><tr><th>Trip</th><th>Uber One Way</th><th>Uber Round Trip</th><th>Garage, 4 Hrs</th><th>Garage, All Day</th></tr></thead>
+                <tbody>
+                  <tr><td>Mount Pleasant &rarr; City Market</td><td>~$18</td><td>~$36</td><td>$12</td><td>$24</td></tr>
+                  <tr><td>North Charleston &harr; Downtown</td><td>~$32</td><td>~$64</td><td>$12</td><td>$24</td></tr>
+                  <tr><td>Airport (CHS) &harr; Downtown</td><td>~$35</td><td>~$70</td><td>$12</td><td>$24</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">These are Uber's published average UberX prices, not guaranteed fares. Expect surge pricing on weekend nights and event days.</p>
+            <p class="lead-line mt-3"><strong>One or two people:</strong> drive. For a daytime trip, a garage costs less than a round-trip Uber.</p>
+            <p class="lead-line"><strong>Four or more:</strong> it's close. A Mount Pleasant round trip split four ways is about $9 each, and UberXL seats six.</p>
+            <p><strong>Drinking:</strong> always Uber. It's cheaper than a ticket, a tow or worse.</p>
+          </section>
+
+          <!-- Tips -->
+          <section class="content-section" id="visitors">
+            <h2>Tips for Visitors and Off-Peninsula Locals</h2>
+            <p>Park once and ride CARTA's free DASH shuttle around downtown. Arrive after 5pm to get the $5 evening rate at Majestic, East Bay/Prioleau or 93 Queen, since the meters go free at 6. Sunday is the easiest day, when meters and metered lots cost nothing. Ask your hotel about overnight parking before you book. Driving something tall? Check the city's garage height clearances first. And pay any ticket on time to avoid late fees.</p>
+            <div class="rules">
+              <p class="mb-0"><strong>Here for a bachelorette weekend?</strong> Leave the cars at the rental and rideshare to dinner and the bars. Then plan the rest with our <a href="/index.html">Charleston bachelorette activities</a> guide.</p>
+            </div>
+          </section>
+
+          <!-- Sources -->
+          <section class="content-section sources" id="sources">
+            <h2>Sources</h2>
+            <p class="lead-line"><a href="https://charleston-sc.gov/1025/Where-to-Park" target="_blank" rel="noopener">City of Charleston: Where to Park</a></p>
+            <p class="lead-line"><a href="https://charleston-sc.gov/150/Residential-Parking-Decals" target="_blank" rel="noopener">City of Charleston: Residential Parking Permits</a></p>
+            <p class="lead-line"><a href="https://www.live5news.com/2025/08/18/charleston-county-roll-out-parking-garage-rate-hikes-october/" target="_blank" rel="noopener">Live 5 News: County garage rate changes</a></p>
+            <p class="lead-line"><a href="https://www.postandcourier.com/archives/parking-101-avoid-a-ticket-downtown/article_d02754c4-186b-5406-8b0e-7fabfc497286.html" target="_blank" rel="noopener">Post and Courier: Parking 101</a></p>
+            <p class="lead-line"><a href="https://www.uber.com/global/en/r/cities/charleston-sc-us/" target="_blank" rel="noopener">Uber: Charleston average prices</a></p>
+            <p class="note">Rates checked October 2026. Posted signs always win.</p>
+          </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <aside class="sidebar mt-lg-4">
+            <h4>Rates at a Glance</h4>
+            <p><span class="rate-num">$1 / 20 min</span>City garages, $3 an hour</p>
+            <p><span class="rate-num">$24</span>Garage daily max</p>
+            <p><span class="rate-num">$3 / hr</span>Street meters, 1-hour minimum</p>
+            <p class="mb-0"><span class="rate-num">Free</span>Meters on Sundays, holidays and after 6pm</p>
+
+            <div class="side-block">
+              <h4>Tags</h4>
+              <a href="#how-it-works" class="tag">Quick Guide</a>
+              <a href="#evening-deals" class="tag">Evening Deals</a>
+              <a href="#garages" class="tag">City Garages</a>
+              <a href="#garages" class="tag">County Garages</a>
+              <a href="#best-parking" class="tag">Upper King</a>
+              <a href="#best-parking" class="tag">City Market</a>
+              <a href="#best-parking" class="tag">French Quarter</a>
+              <a href="#best-parking" class="tag">Aquarium</a>
+              <a href="#meters" class="tag">Meters</a>
+              <a href="#meters" class="tag">Metered Lots</a>
+              <a href="#meters" class="tag">Free Parking</a>
+              <a href="#residential" class="tag">2-Hour Signs</a>
+              <a href="#residential" class="tag">Permits</a>
+              <a href="#monthly" class="tag">Monthly</a>
+              <a href="#uber" class="tag">Uber</a>
+            </div>
+
+            <div class="side-block">
+              <h4>More Guides</h4>
+              <p><a href="/index.html">Charleston Bach Weekend Guide</a></p>
+              <p><a href="/blogs/best-resturants-in-charleston.html">Best Restaurants</a></p>
+              <p><a href="/blogs/folly-beach-trip.html">Folly Beach Trip</a></p>
+              <p class="mb-0"><a href="/blogs/isle-of-palms-trip.html">Isle of Palms Trip</a></p>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Closing -->
+    <section class="closing">
+      <div class="container content-section">
+        <h2>Park Once, Then Walk</h2>
+        <p>Downtown Charleston is built for walking. Find a garage near where the day starts, leave the car there, and use the DASH shuttle or your feet for everything else. Once the drinks start, the car stays parked. <strong>Spot a rate change? <a href="/contact.html">Let us know.</a></strong></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <h5>Guide</h5>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blogs/best-resturants-in-charleston.html">Restaurants</a></li>
+            <li><a href="/blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h5>On This Page</h5>
+          <ul>
+            <li><a href="#garages">Garages</a></li>
+            <li><a href="#meters">Meters</a></li>
+            <li><a href="#residential">Residential</a></li>
+            <li><a href="#monthly">Monthly</a></li>
+            <li><a href="#uber">Parking vs. Uber</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Beach Trips</h5>
+          <ul>
+            <li><a href="/blogs/folly-beach-trip.html">Folly Beach</a></li>
+            <li><a href="/blogs/isle-of-palms-trip.html">Isle of Palms</a></li>
+          </ul>
+          <p class="contact-pink mt-3 mb-0">Charleston, SC</p>
+        </div>
+        <div class="col-md-3 text-md-end">
+          <a href="/index.html" class="neon-logo lg" aria-label="Back to home">
+            <span class="top">Charleston</span>
+            <span class="bottom">Bach Days</span>
+          </a>
+          <div class="socials mt-4">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="area-block">
-          <h3>City Market &amp; East Bay Dining</h3>
-          <p><strong>Park:</strong> Concord/Cumberland (1 Cumberland), Cumberland County Garage (90 Cumberland), Charleston Place (85 Hasell).</p>
-          <p>Street spots here fill first. Go straight to a garage.</p>
-          <div class="map-wrap map-sm"><iframe src="https://maps.google.com/maps?q=1+Cumberland+St+Charleston+SC&amp;z=16&amp;output=embed" loading="lazy" title="Concord/Cumberland Garage"></iframe></div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="area-block">
-          <h3>Waterfront Park &amp; French Quarter</h3>
-          <p><strong>Park:</strong> East Bay/Prioleau (25 Prioleau), 93 Queen St.</p>
-          <p>Both have evening flat rates.</p>
-          <div class="map-wrap map-sm"><iframe src="https://maps.google.com/maps?q=25+Prioleau+St+Charleston+SC&amp;z=16&amp;output=embed" loading="lazy" title="East Bay/Prioleau Garage"></iframe></div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="area-block">
-          <h3>SC Aquarium &amp; Harbor Boats</h3>
-          <p><strong>Park:</strong> Aquarium Garage (24 Calhoun). Cash and card.</p>
-          <div class="map-wrap map-sm"><iframe src="https://maps.google.com/maps?q=24+Calhoun+St+Charleston+SC&amp;z=16&amp;output=embed" loading="lazy" title="Aquarium Garage"></iframe></div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="area-block">
-          <h3>Gaillard Center</h3>
-          <p><strong>Park:</strong> Gaillard Garage (32 Alexander) or Auditorium metered lots. EV plug-ins available. Arrive early on show nights.</p>
-          <div class="map-wrap map-sm"><iframe src="https://maps.google.com/maps?q=32+Alexander+St+Charleston+SC&amp;z=16&amp;output=embed" loading="lazy" title="Gaillard Auditorium Garage"></iframe></div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
-
-<!-- Meters -->
-<section id="meters">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-7">
-        <h2 class="section-title">Meter Prices &amp; Free Hours</h2>
-        <ul class="lead-sm">
-          <li><strong>Rate:</strong> $3/hr, 1-hour minimum</li>
-          <li><strong>Enforced:</strong> Mon–Sat, 9 a.m.–6 p.m.</li>
-          <li><strong>Free:</strong> Sundays, city holidays, after 6 p.m.</li>
-          <li><strong>Pay:</strong> Card, pay by text, app or city SmartCard</li>
-          <li><strong>Watch for:</strong> Posted restrictions and bagged (reserved) meters</li>
-        </ul>
-        <h3 class="h5 mt-4" style="color:var(--plum);">City Metered Lots</h3>
-        <p>Same $3/hr, 1-hour minimum, 9 a.m.–6 p.m., free Sundays and holidays.</p>
-        <div class="table-responsive">
-          <table class="table table-sm table-bordered">
-            <thead><tr><th>Lot</th><th>Location</th></tr></thead>
-            <tbody>
-              <tr><td>Auditorium Lots</td><td>1 George St., 34 &amp; 54 Alexander St.</td></tr>
-              <tr><td>Beaufain/Archdale/Market</td><td>45 Archdale St.</td></tr>
-              <tr><td>Market</td><td>33 Archdale St.</td></tr>
-              <tr><td>Cone Street</td><td>Cone St.</td></tr>
-              <tr><td>S. Adgers Wharf</td><td>19 S. Adgers Wharf</td></tr>
-              <tr><td>Exchange</td><td>Gillon St.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="callout">
-          <h3 class="h5" style="color:var(--plum);">Free Parking</h3>
-          <p class="mb-2"><strong>Sundays:</strong> Meters and metered lots free all day.</p>
-          <p class="mb-2"><strong>After 6 p.m.:</strong> Meters free.</p>
-          <p class="mb-2"><strong>City holidays:</strong> Meters free.</p>
-          <p class="mb-0"><strong>Disability placard or plate:</strong> Free at meters and city, county and state garages and lots (out-of-state placards accepted). Not valid at private garages.</p>
-        </div>
-        <img src="/img/charleston-meter.png" class="img-fluid rounded" alt="Charleston parking meter"> 
-      </div>
+    <div class="footer-bottom">
+      &copy; 2026 Charleston Bachelorette Activities &middot; Downtown Charleston parking guide &middot; <a href="#top" style="color:#fff;">Back to top</a>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Residential parking -->
-<section id="residential" class="bg-blush">
-  <div class="container" style="max-width: 960px;">
-    <h2 class="section-title">How Residential Parking Works</h2>
-    <p class="lead-sm">Many downtown streets are <strong>residential parking districts</strong>. Residents with a permit can park with no time limit. Everyone else follows the posted limit.</p>
-
-    <h3 class="h4 mt-4" style="color:var(--plum);">For Visitors: The 2-Hour Signs</h3>
-    <div class="row g-4 mt-1">
-      <div class="col-md-6"><div class="decision"><h3>The Rule</h3><p class="mb-0">No permit? Park only for the posted limit (usually 2 hours; some streets 1 or 4) during the days and hours on the sign.</p></div></div>
-      <div class="col-md-6"><div class="decision"><h3>Enforcement</h3><p class="mb-0">Permits are digital and plates are scanned. Don't count on a grace period.</p></div></div>
-      <div class="col-md-6"><div class="decision"><h3>Staying Longer</h3><p class="mb-0">Get a one-day visitor pass from the resident you're visiting, or use a garage.</p></div></div>
-      <div class="col-md-6"><div class="decision"><h3>Ticket Traps</h3><p class="mb-0">Wrong-direction parking, yellow curbs, outside painted lines, street-sweeping signs.</p></div></div>
-    </div>
-
-    <h3 class="h4 mt-5" style="color:var(--plum);">For Residents: Getting a Permit</h3>
-    <div class="table-responsive mt-3">
-      <table class="table table-bordered bg-white">
-        <thead><tr><th></th><th>Homeowner</th><th>Renter</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Permit cost</strong></td><td>$15 per vehicle</td><td>$10 per vehicle</td></tr>
-          <tr><td><strong>Valid</strong></td><td>Calendar year (Jan 1–Dec 31)</td><td>6 months (Jan–Jun or Jul–Dec)</td></tr>
-          <tr><td><strong>Max permits</strong></td><td colspan="2">2 per residential unit</td></tr>
-          <tr><td><strong>Documents</strong></td><td>Property tax receipt, deed or mortgage document; vehicle registration</td><td>Lease of 6+ months; driver's license; SC registration (or proof of Charleston County registration fee), or student/military ID with registration</td></tr>
-          <tr><td><strong>Visitor passes</strong></td><td>Up to 3 booklets of 30 single-day permits, $30 per booklet</td><td>Up to 14 one-day passes per unit every 6 months, $5 each</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="row g-4 mt-1">
-      <div class="col-md-6">
-        <h3 class="h5" style="color:var(--plum);">How to Apply</h3>
-        <ul>
-          <li><strong>Online:</strong> <a href="https://parkcharleston-sc.com/permit" style="color:var(--rose);">parkcharleston-sc.com/permit</a> (active on approval; $2.50 card fee per item)</li>
-          <li><strong>Mail:</strong> Application, documents and check or money order to Revenue Collections, 180 Lockwood Blvd., Suite 234, Charleston, SC 29403</li>
-          <li><strong>In person:</strong> By appointment</li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <h3 class="h5" style="color:var(--plum);">Need to Know</h3>
-        <ul>
-          <li>Unpaid tickets must be paid before a permit is issued.</li>
-          <li>Visitor booklets are mail or in-person only, cash or check.</li>
-          <li>A car that hasn't moved in 7 days can be considered abandoned, even with a permit.</li>
-          <li>Questions: 843-724-7375.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Monthly -->
-<section id="monthly">
-  <div class="container" style="max-width: 900px;">
-    <h2 class="section-title">Monthly Parking</h2>
-    <p class="lead-sm">Downtown workers and residents without a driveway often pay monthly. The City has <strong>no monthly vacancies</strong> and no waiting list. County garages offer 24/7 monthly access:</p>
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead><tr><th>Garage</th><th>Monthly Rate</th></tr></thead>
-        <tbody>
-          <tr><td>King and Queen, 85 Queen St.</td><td>$215</td></tr>
-          <tr><td>Cumberland, 90 Cumberland St.</td><td>$175</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="lead-sm mb-0">That's up to <strong>$2,580 a year</strong>. Private lots, businesses and homeowners also rent spots monthly, often through parking-sharing apps. Prices vary.</p>
-  </div>
-</section>
-
-<!-- Uber -->
-<section id="uber" class="bg-blush">
-  <div class="container">
-    <h2 class="section-title">Parking vs. Uber</h2>
-    <div class="table-responsive mt-3">
-      <table class="table table-striped table-bordered bg-white">
-        <thead><tr><th>Trip</th><th>Uber (avg. one way)</th><th>Uber Round Trip</th><th>Garage, 4 Hours</th><th>Garage, All Day</th></tr></thead>
-        <tbody>
-          <tr><td>Mount Pleasant &rarr; City Market</td><td>~$18</td><td>~$36</td><td>$12</td><td>$24</td></tr>
-          <tr><td>North Charleston &harr; Downtown</td><td>~$32</td><td>~$64</td><td>$12</td><td>$24</td></tr>
-          <tr><td>Airport (CHS) &harr; Downtown</td><td>~$35</td><td>~$70</td><td>$12</td><td>$24</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="small text-muted">Uber's published average UberX prices; not guaranteed. Expect surge pricing on weekend nights and event days.</p>
-    <div class="row g-4 mt-1">
-      <div class="col-md-4"><div class="decision"><div class="tag">1–2 people</div><h3>Drive</h3><p class="mb-0">A garage beats a round-trip Uber for daytime trips.</p></div></div>
-      <div class="col-md-4"><div class="decision"><div class="tag">4+ people</div><h3>Uber Is Close</h3><p class="mb-0">Mount Pleasant round trip split 4 ways is about $9 each. UberXL seats 6.</p></div></div>
-      <div class="col-md-4"><div class="decision"><div class="tag">Drinking</div><h3>Uber</h3><p class="mb-0">Always. Cheaper than a ticket, a tow or worse.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Visitors -->
-<section id="visitors">
-  <div class="container" style="max-width: 900px;">
-    <h2 class="section-title">Tips for Visitors &amp; Off-Peninsula Locals</h2>
-    <ul class="lead-sm">
-      <li><strong>Park once.</strong> Use CARTA's free DASH shuttle to get around downtown.</li>
-      <li><strong>Come after 5.</strong> $5 evening rates at Majestic, East Bay/Prioleau and 93 Queen; meters free after 6.</li>
-      <li><strong>Sunday is easiest.</strong> Meters and metered lots are free.</li>
-      <li><strong>Ask your hotel</strong> about overnight parking costs before booking.</li>
-      <li><strong>Tall vehicle?</strong> Check the city's garage height clearances first.</li>
-      <li><strong>Pay tickets on time</strong> to avoid late fees.</li>
-    </ul>
-    <div class="callout mt-3">
-      <strong>Bachelorette weekend?</strong> Leave the cars at the rental and rideshare to dinner and the bars. Then plan the fun with our <a href="https://charlestonbacheloretteactivities.com/" style="color:var(--rose);font-weight:700;">Charleston bachelorette activities</a>.
-    </div>
-  </div>
-</section>
-
-<!-- Sources -->
-<section class="bg-blush sources">
-  <div class="container" style="max-width: 900px;">
-    <h2 class="h5" style="color:var(--plum);">Sources</h2>
-    <ul class="small mb-0">
-      <li><a href="https://charleston-sc.gov/1025/Where-to-Park">City of Charleston: Where to Park</a></li>
-      <li><a href="https://charleston-sc.gov/150/Residential-Parking-Decals">City of Charleston: Residential Parking Permits</a></li>
-      <li><a href="https://www.live5news.com/2025/08/18/charleston-county-roll-out-parking-garage-rate-hikes-october/">Live 5 News: County garage rate changes</a></li>
-      <li><a href="https://www.postandcourier.com/archives/parking-101-avoid-a-ticket-downtown/article_d02754c4-186b-5406-8b0e-7fabfc497286.html">Post and Courier: Parking 101</a></li>
-      <li><a href="https://www.uber.com/global/en/r/cities/charleston-sc-us/">Uber: Charleston average prices</a></li>
-    </ul>
-    <p class="small text-muted mt-3 mb-0">Rates checked October 2026. Follow posted signs.</p>
-  </div>
-</section>
-
-<footer>
-  <div class="container text-center">&copy; 2026 Charleston Bachelorette &middot; Downtown Charleston, SC parking guide.</div>
-</footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,1117 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charleston Bachelorette Activities: Things to Do, Eat &amp; Stay</title>
-<link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="apple-touch-icon" href="img/favicon.png">
-<meta name="description" content="A local's guide to planning a bachelorette weekend in Charleston, SC — the best things to do, where to eat and drink, where to stay, and who to call for decor and planning.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charleston Bachelorette Activities | Boats, Brunch, Bars &amp; Group Plans</title>
+  <meta name="description" content="Plan a Charleston, SC bachelorette weekend: harbor boat days, private entertainment, brunch spots, King Street nightlife, decor help, group rentals and a 4-day game plan.">
+  <link rel="canonical" href="https://charlestonbacheloretteactivities.com/">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@300;400;600&family=Yellowtail&display=swap" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#121212;
+      --black:#000;
+      --blue:#4a8fd6;
+      --blue-light:#7db7f0;
+      --pink:#ff1f8f;
+      --yellow:#f8de22;
+      --text:#f1f1f1;
+      --muted:#b9b9b9;
+    }
+    html{scroll-behavior:smooth;}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Open Sans',sans-serif;
+      font-weight:300;
+      font-size:1.12rem;
+      line-height:1.75;
+      overflow-x:hidden;
+    }
+    h1,h2,h3,h4{
+      font-family:'Montserrat',sans-serif;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:-.5px;
+      line-height:1.1;
+    }
+    p{margin-bottom:1.1rem;}
+    strong{font-weight:600;color:#fff;}
 
-<style>
-  :root{
-    --pink:#F0A0B0;      /* Blush Row - Eat & Drink */
-    --pink-dark:#D9788C;
-    --marigold:#F2B341;  /* Porch Yellow - Things To Do */
-    --marigold-dark:#D6952A;
-    --harbor:#4C82A3;    /* Harbor Blue - Where To Stay */
-    --harbor-dark:#376283;
-    --palmetto:#5C8367;  /* Palmetto Green - Planners */
-    --palmetto-dark:#436049;
-    --tide:#3F9C96;      /* Tide Teal - Tours & Excursions */
-    --tide-dark:#2C726D;
-    --ink:#26313D;
-    --cream:#E9F2F1;
-    --cream-2:#DCEAE8;
-  }
+    /* ---------- Neon wordmark ---------- */
+    .neon-logo{
+      font-family:'Yellowtail',cursive;
+      line-height:.85;
+      text-decoration:none;
+      display:inline-block;
+      transform:rotate(-6deg);
+    }
+    .neon-logo .top{
+      display:block;
+      color:#ff6fbc;
+      font-size:2.1rem;
+      text-shadow:0 0 4px var(--pink),0 0 12px var(--pink),0 0 22px var(--pink);
+    }
+    .neon-logo .bottom{
+      display:block;
+      color:#a8d4ff;
+      font-size:1.8rem;
+      margin-left:1.2rem;
+      text-shadow:0 0 4px var(--blue),0 0 12px var(--blue),0 0 22px var(--blue);
+    }
+    .neon-logo.lg .top{font-size:3.4rem;}
+    .neon-logo.lg .bottom{font-size:2.9rem;margin-left:2rem;}
 
-  html{scroll-behavior:smooth;}
+    /* ---------- Header ---------- */
+    .topbar{background:var(--black);padding:1.1rem 0;}
+    .topbar .plan-link{
+      color:var(--yellow);
+      font-family:'Montserrat',sans-serif;
+      font-weight:700;
+      text-decoration:none;
+      font-size:1rem;
+    }
+    .topbar .plan-link i{margin-right:.45rem;}
+    .mainnav{background:var(--blue);}
+    .mainnav .nav-link{
+      color:#fff;
+      font-family:'Montserrat',sans-serif;
+      font-weight:600;
+      text-transform:uppercase;
+      font-size:.92rem;
+      letter-spacing:-.2px;
+      padding:.95rem .7rem !important;
+    }
+    .mainnav .nav-link:hover,.mainnav .nav-link.active{color:var(--pink);}
+    .mainnav .dropdown-menu{background:var(--black);border:1px solid var(--blue);border-radius:0;}
+    .mainnav .dropdown-item{color:#fff;font-size:.95rem;}
+    .mainnav .dropdown-item:hover{background:var(--blue);color:#fff;}
+    .mainnav .navbar-toggler{border-color:rgba(255,255,255,.6);}
+    .mainnav .navbar-toggler-icon{filter:invert(1);}
 
-  body{
-    font-family:'Karla', sans-serif;
-    color:var(--ink);
-    background:var(--cream);
-    overflow-x:hidden;
-  }
+    /* ---------- Decorative shapes ---------- */
+    .page-wrap{position:relative;}
+    .shape{position:absolute;pointer-events:none;opacity:.55;z-index:0;}
+    .shape.sq{width:56px;height:56px;border:3px solid #8a4c86;transform:rotate(-8deg);}
+    .shape.ci{width:58px;height:58px;border:3px solid #5b4f8f;border-radius:50%;}
+    @media (max-width:991px){.shape{display:none;}}
 
-  h1,h2,h3,h4,.display-font{
-    font-family:'Fraunces', serif;
-  }
+    /* ---------- Hero ---------- */
+    .hero h1{
+      color:var(--blue);
+      font-size:clamp(2rem,5vw,3.6rem);
+      text-align:center;
+      margin:2.4rem 0 1.4rem;
+    }
+    .hero p{font-size:1.2rem;}
 
-  .eyebrow{
-    font-family:'Karla', sans-serif;
-    font-weight:800;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    font-size:.78rem;
-  }
+    /* ---------- Content ---------- */
+    main{position:relative;z-index:1;}
+    .content-section{padding-top:2.2rem;}
+    .content-section h2{
+      color:#fff;
+      font-size:clamp(1.55rem,3vw,2.3rem);
+      margin-bottom:1rem;
+    }
+    .content-section h3{
+      color:var(--blue-light);
+      font-size:1.2rem;
+      margin:1.6rem 0 .6rem;
+    }
+    .content-section a,.hero a{
+      color:var(--pink);
+      font-weight:400;
+      text-decoration:none;
+      border-bottom:1px dotted rgba(255,31,143,.6);
+    }
+    .content-section a:hover,.hero a:hover{color:#ff7cc0;border-bottom-style:solid;}
+    .lead-line{margin-bottom:.55rem;}
+    .note{
+      font-size:.98rem;
+      color:var(--muted);
+      border-left:3px solid var(--yellow);
+      padding-left:.9rem;
+      margin:1.2rem 0 0;
+    }
 
-  /* ---------- NAV ---------- */
-  .cbg-nav{
-    background:var(--cream);
-    border-bottom:3px solid var(--ink);
-  }
-  .cbg-nav .container{
-    flex-wrap:nowrap;
-  }
-  .cbg-nav .navbar-brand{
-    font-family:'Fraunces', serif;
-    font-weight:700;
-    font-size:1.15rem;
-    line-height:1.15;
-    color:var(--ink);
-    white-space:normal;
-    display:flex;
-    align-items:center;
-    gap:.6rem;
-    flex:1 1 auto;
-    min-width:0;
-  }
-  .nav-logo{
-    width:42px;
-    height:42px;
-    flex:0 0 42px;
-    border-radius:8px;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#fff;
-    border:2px solid var(--ink);
-  }
-  .nav-logo img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    display:block;
-  }
-  .cbg-nav .nav-links{
-    display:flex;
-    align-items:center;
-    gap:1.4rem;
-    flex:0 0 auto;
-    white-space:nowrap;
-  }
-  .cbg-nav .nav-link-custom{
-    font-weight:800;
-    font-size:.9rem;
-    letter-spacing:.02em;
-    color:var(--ink);
-    text-decoration:none;
-  }
-  .cbg-nav .nav-link-custom:hover{ color:var(--pink-dark); }
-  .cbg-nav .dropdown-toggle::after{
-    vertical-align:.15em;
-  }
-  .cbg-nav .dropdown-menu{
-    background:var(--cream);
-    border:2.5px solid var(--ink);
-    border-radius:6px;
-    box-shadow:5px 5px 0 var(--ink);
-    padding:.4rem;
-    margin-top:.6rem !important;
-  }
-  .cbg-nav .dropdown-item{
-    font-family:'Karla', sans-serif;
-    font-weight:700;
-    font-size:.88rem;
-    color:var(--ink);
-    border-radius:4px;
-    padding:.5rem .7rem;
-    white-space:normal;
-  }
-  .cbg-nav .dropdown-item:hover,
-  .cbg-nav .dropdown-item:focus{
-    background:var(--pink);
-    color:var(--ink);
-  }
+    /* ---------- Inline photos ---------- */
+    .photo{
+      margin:1.6rem 0;
+      border:1px solid rgba(74,143,214,.55);
+      box-shadow:0 0 14px rgba(74,143,214,.3);
+      background:var(--black);
+    }
+    .photo.pink{border-color:rgba(255,31,143,.55);box-shadow:0 0 14px rgba(255,31,143,.3);}
+    .photo img{width:100%;height:340px;object-fit:cover;display:block;}
+    .photo figcaption{font-size:.85rem;color:var(--muted);padding:.55rem .9rem;}
+    @media (max-width:575px){.photo img{height:230px;}}
 
-  @media (max-width:767px){
-    .cbg-nav .container{ flex-wrap:wrap; }
-    .cbg-nav .navbar-brand{ font-size:1rem; }
-    .cbg-nav .nav-links{ gap:1rem; width:100%; justify-content:center; }
-  }
+    /* ---------- Feature cards ---------- */
+    .feature{
+      background:var(--black);
+      border:1px solid rgba(255,31,143,.6);
+      box-shadow:0 0 16px rgba(255,31,143,.25);
+      margin-bottom:2.2rem;
+    }
+    .feature.blue{border-color:rgba(74,143,214,.65);box-shadow:0 0 16px rgba(74,143,214,.25);}
+    .feature .img-col img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block;}
+    .feature .body{padding:1.8rem 1.8rem 1.5rem;}
+    .feature h3{color:#fff;font-size:1.7rem;margin:0 0 .4rem;}
+    .feature .sub{
+      font-weight:300;
+      text-transform:uppercase;
+      font-size:1.25rem;
+      margin-bottom:.8rem;
+      color:#fff;
+    }
+    .feature ul{list-style:none;padding:0;margin:0 0 1.3rem;}
+    .feature li{
+      text-transform:uppercase;
+      font-size:.95rem;
+      font-weight:400;
+      padding:.28rem 0 .28rem 1.2rem;
+      position:relative;
+    }
+    .feature li::before{
+      content:"";
+      position:absolute;left:0;top:.85rem;
+      width:6px;height:6px;border-radius:50%;
+      background:var(--pink);
+    }
+    .btn-yellow{
+      background:var(--yellow);
+      color:#111;
+      border-radius:50px;
+      padding:.7rem 2.2rem;
+      font-family:'Montserrat',sans-serif;
+      font-weight:600;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      border:none;
+      text-decoration:none;
+      display:inline-block;
+    }
+    .btn-yellow:hover{background:#fff27a;color:#111;}
+    .price{
+      color:var(--yellow);
+      font-family:'Montserrat',sans-serif;
+      font-weight:700;
+      font-size:1.05rem;
+    }
 
-  /* ---------- HERO ---------- */
-  .hero{
-    background:var(--cream);
-    padding:3rem 0 2rem;
-    overflow:hidden;
-  }
-  .hero .stamp{
-    display:inline-block;
-    border:2px solid var(--ink);
-    border-radius:50%;
-    padding:.6rem 1rem;
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size:.8rem;
-    transform:rotate(-6deg);
-    background:var(--cream);
-  }
-  .hero h1{
-    font-weight:900;
-    font-size:clamp(2.2rem, 8vw, 4.4rem);
-    line-height:1.05;
-    letter-spacing:-.01em;
-  }
-  .hero h1 em{
-    font-style:italic;
-    color:var(--pink-dark);
-  }
-  .hero p.lede{
-    font-size:1.1rem;
-    max-width:540px;
-    color:#4a5560;
-  }
+    /* ---------- Sidebar ---------- */
+    .sidebar{
+      background:var(--black);
+      border:1px solid #2d2d2d;
+      padding:1.6rem;
+      position:sticky;
+      top:1.2rem;
+    }
+    .sidebar h4{font-size:1.5rem;color:#fff;margin-bottom:1rem;}
+    .tag{
+      display:inline-block;
+      background:var(--blue);
+      color:#fff;
+      font-size:.88rem;
+      font-weight:400;
+      padding:.35rem .8rem;
+      margin:0 .35rem .5rem 0;
+      text-decoration:none;
+    }
+    .tag:hover{background:var(--pink);color:#fff;}
+    .side-block{border-top:1px solid #2d2d2d;margin-top:1.4rem;padding-top:1.4rem;font-size:.98rem;}
+    .side-block p{margin-bottom:.7rem;}
+    .side-block a{color:var(--blue-light);text-decoration:none;}
+    .side-block a:hover{color:var(--pink);}
 
-  /* Read more toggle */
-  .read-more-wrap{
-    max-width:540px;
-  }
-  .read-more-text{
-    font-size:1rem;
-    color:#4a5560;
-  }
-  .read-more-text p:last-child{ margin-bottom:0; }
-  .read-more-text h3{
-    font-size:1.05rem;
-    font-weight:700;
-    color:var(--ink);
-    margin-top:1.1rem;
-    margin-bottom:.4rem;
-  }
-  .read-more-toggle{
-    display:inline-flex;
-    align-items:center;
-    gap:.35rem;
-    font-family:'Karla', sans-serif;
-    font-weight:800;
-    font-size:.85rem;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-    color:var(--pink-dark);
-    background:none;
-    border:none;
-    padding:0;
-    cursor:pointer;
-  }
-  .read-more-toggle:hover{ color:var(--ink); }
-  .read-more-toggle .chevron{
-    display:inline-block;
-    transition:transform .2s ease;
-  }
-  .read-more-toggle[aria-expanded="true"] .chevron{
-    transform:rotate(180deg);
-  }
-  .read-more-toggle .label-more{ display:inline; }
-  .read-more-toggle .label-less{ display:none; }
-  .read-more-toggle[aria-expanded="true"] .label-more{ display:none; }
-  .read-more-toggle[aria-expanded="true"] .label-less{ display:inline; }
+    /* ---------- Itinerary ---------- */
+    .day{
+      border-left:3px solid var(--pink);
+      padding:.2rem 0 .2rem 1.1rem;
+      margin-bottom:1.3rem;
+    }
+    .day:nth-child(even){border-left-color:var(--blue);}
+    .day .label{
+      font-family:'Montserrat',sans-serif;
+      font-weight:800;
+      text-transform:uppercase;
+      color:var(--yellow);
+      font-size:1rem;
+      margin-bottom:.2rem;
+    }
 
-  /* ---------- SECTION HEADER BANDS ---------- */
-  .band{
-    border-top:3px solid var(--ink);
-    border-bottom:3px solid var(--ink);
-    padding:2rem 0 1rem;
-  }
-  .band h2{
-    font-weight:900;
-    font-size:clamp(1.7rem, 6vw, 2.9rem);
-    margin-bottom:.25rem;
-  }
-  .band-eat{ background:var(--pink); }
-  .band-do{ background:var(--marigold); }
-  .band-stay{ background:var(--harbor); color:var(--cream); }
-  .band-stay .eyebrow{ color:var(--cream); opacity:.85; }
-  .band-plan{ background:var(--palmetto); color:var(--cream); }
-  .band-plan .eyebrow{ color:var(--cream); opacity:.85; }
-  .band-tour{ background:var(--tide); color:var(--cream); }
-  .band-tour .eyebrow{ color:var(--cream); opacity:.85; }
+    /* ---------- Closing ---------- */
+    .closing{padding:2.6rem 0 3.5rem;}
 
-  section.content{
-    padding:2.5rem 0 3rem;
-  }
-
-  /* ---------- CARDS ---------- */
-  .venue-card{
-    background:#fff;
-    border:2.5px solid var(--ink);
-    border-radius:4px;
-    height:100%;
-    padding:1.5rem;
-    box-shadow:6px 6px 0 var(--ink);
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .venue-card:hover{
-    transform:translate(-3px,-3px);
-    box-shadow:9px 9px 0 var(--ink);
-  }
-  .venue-tag{
-    display:inline-block;
-    font-family:'Karla',sans-serif;
-    font-weight:800;
-    font-size:.7rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    padding:.2rem .55rem;
-    border-radius:20px;
-    margin-bottom:.65rem;
-  }
-  .tag-eat{ background:var(--pink); color:var(--ink); }
-  .tag-do{ background:var(--marigold); color:var(--ink); }
-  .tag-stay{ background:var(--harbor); color:#fff; }
-  .tag-plan{ background:var(--palmetto); color:#fff; }
-  .tag-tour{ background:var(--tide); color:#fff; }
-
-  .venue-card h3{
-    font-size:1.28rem;
-    font-weight:700;
-    margin-bottom:.4rem;
-  }
-  .venue-card .neighborhood{
-    font-weight:700;
-    font-size:.85rem;
-    color:#6b7580;
-    margin-bottom:.6rem;
-  }
-  .venue-card p{
-    font-size:.96rem;
-    color:#3a4450;
-    margin-bottom:0;
-  }
-  .venue-card img{
-    margin-bottom:.75rem;
-    border-radius:3px;
-  }
-
-  /* ---------- BEST-FOR PICKS ---------- */
-  .pick-card{
-    border-left:5px solid var(--ink);
-    padding:1rem 1.2rem;
-    background:var(--cream-2);
-    height:100%;
-  }
-  .pick-card h4{
-    font-weight:700;
-    font-size:1.1rem;
-  }
-
-  /* ---------- ITINERARY (ticket style) ---------- */
-  .ticket{
-    background:#fff;
-    border:2.5px solid var(--ink);
-    border-radius:6px;
-    position:relative;
-    padding:1.6rem 1.6rem 1.4rem;
-    margin:0 4px;
-  }
-  .ticket::before, .ticket::after{
-    content:"";
-    position:absolute;
-    width:26px; height:26px;
-    background:var(--cream);
-    border:2.5px solid var(--ink);
-    border-radius:50%;
-    top:50%;
-    transform:translateY(-50%);
-    display:none;
-  }
-  @media (min-width:992px){
-    .ticket::before, .ticket::after{ display:block; }
-    .ticket::before{ left:-14px; }
-    .ticket::after{ right:-14px; }
-  }
-  .ticket .day-label{
-    font-family:'Fraunces', serif;
-    font-weight:900;
-    font-size:1.5rem;
-  }
-  .ticket ul{
-    list-style:none;
-    padding-left:0;
-    margin-bottom:0;
-  }
-  .ticket ul li{
-    padding:.35rem 0;
-    border-top:1px dashed #c9c0ad;
-    font-size:.95rem;
-  }
-  .ticket ul li:first-child{ border-top:none; }
-  .ticket ul li strong{ color:var(--pink-dark); }
-
-  /* ---------- CTA / FOOTER ---------- */
-  .cta{
-    background:var(--ink);
-    color:var(--cream);
-    padding:3rem 0;
-    text-align:center;
-  }
-  .cta h2{ color:#fff; font-weight:800; font-size:clamp(1.5rem, 6vw, 2.2rem); }
-  .btn-blush{
-    background:var(--pink);
-    border:2.5px solid var(--cream);
-    color:var(--ink);
-    font-weight:800;
-    padding:.65rem 1.8rem;
-    border-radius:30px;
-  }
-  .btn-blush:hover{ background:var(--marigold); color:var(--ink); }
-
-  footer{
-    background:var(--cream-2);
-    padding:1.8rem 0;
-    font-size:.85rem;
-    color:#5a6470;
-  }
-
-  .disclosure{
-    font-size:.82rem;
-    color:#6b7580;
-    font-style:italic;
-  }
-
-  /* ---------- NIGHTLIFE LIST ---------- */
-  .party-list{
-    list-style:none;
-    padding-left:0;
-    margin-bottom:0;
-  }
-  .party-list li{
-    border-bottom:1px dashed #c9c0ad;
-    padding:.55rem 0;
-  }
-  .party-list li:last-child{ border-bottom:none; }
-  .party-list a{
-    color:var(--ink);
-    font-weight:700;
-    text-decoration:none;
-  }
-  .party-list a:hover{
-    color:var(--pink-dark);
-    text-decoration:underline;
-  }
-
-  @media (max-width:576px){
-    .venue-card{ padding:1.2rem; box-shadow:4px 4px 0 var(--ink); }
-    .band{ padding:1.5rem 0 .75rem; }
-    section.content{ padding:2rem 0; }
-  }
-</style>
+    /* ---------- Footer ---------- */
+    footer{background:var(--black);padding:3rem 0 0;}
+    footer h5{
+      font-family:'Montserrat',sans-serif;
+      font-weight:700;
+      font-size:1.6rem;
+      color:#fff;
+      margin-bottom:1rem;
+    }
+    footer ul{list-style:none;padding:0;margin:0;}
+    footer li{margin-bottom:.45rem;}
+    footer li a{color:#fff;text-decoration:none;font-weight:300;}
+    footer li a:hover{color:var(--pink);}
+    footer .contact-pink{color:var(--pink);}
+    .socials a{color:#fff;font-size:1.45rem;margin-left:1.1rem;}
+    .socials a:hover{color:var(--pink);}
+    .footer-bottom{
+      border-top:1px solid #444;
+      margin-top:2.5rem;
+      padding:.9rem 0;
+      text-align:center;
+      font-size:.98rem;
+    }
+  </style>
 </head>
-<body>
+<body id="top">
 
-<nav class="navbar cbg-nav sticky-top py-3">
-  <div class="container d-flex justify-content-between align-items-center gap-3">
-    <a class="navbar-brand mb-0" href="index.html">
-      <span class="nav-logo"><img src="img/logo.png" alt=""></span>
-      <span>Bachelorette Party Guide</span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link-custom">Home</a>
-      <a href="about.html" class="nav-link-custom">About</a>
-      <div class="dropdown">
-        <a href="#" class="nav-link-custom dropdown-toggle" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-        <ul class="dropdown-menu" aria-labelledby="blogDropdown">
-          <li><a class="dropdown-item" href="blogs/best-resturants-in-charleston.html">Best Restaurants</a></li>
-          <li><a class="dropdown-item" href="blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></li>
-          <li><a class="dropdown-item" href="blogs/charleston-hidden-secrets-eats.html">Best Hidden Eats</a></li>
-          <li><a class="dropdown-item" href="blogs/folly-beach-trip.html">Visit Folly Beach</a></li>
-          <li><a class="dropdown-item" href="blogs/isle-of-palms-trip.html">Visit Isle of Palms</a></li>
-        </ul>
-      </div>
-      <a href="contact.html" class="nav-link-custom">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-7">
-        <span class="stamp">Activities & Excursions <em>Charleston SC</em></span>
-        <h1 class="mt-3">Charleston Bachelorette Activities & Party Ideas</h1>
-        <p class="lede mt-3">Charleston packs beaches, rooftop bars, harbor cruises and some of the South’s best food into one walkable city, which makes it an easy pick for a bachelorette weekend. Below are our top bachelorette party ideas, from daytime activities to late-night plans, so your crew can book the whole trip in one place.</p>
-
-        <div class="read-more-wrap mt-2">
-          <div class="collapse read-more-text" id="heroReadMore">
-            <p>Cobblestone streets, lowcountry cocktails, and a harbor made for a golden-hour toast — the Holy City is one of the best bach destinations in the South. Here's where to eat, who to call when you'd rather not lift a finger, where to crash, and what to do.</p>
-            <h3>When To Go</h3>
-            <p>The sweet spots are spring (March–May) and fall (September–November), when Charleston trades summer's heat and humidity for sunny, comfortable days that are perfect for porch drinks and walking tours alike.</p>
-            <p><strong>Spring:</strong> March starts cool and breezy in the upper 60s to low 70s (highs) and mid-40s (lows), warming through April (mid-70s highs, mid-50s lows) into a warm, summery May (low-to-mid 80s highs, low-60s lows).</p>
-            <p><strong>Fall:</strong> September still carries summer warmth, with highs in the mid-80s and lows around 68°F, cooling into October (upper 70s highs, upper 50s lows) and settling into crisp, comfortable November days (upper 60s to 70°F highs, mid-to-upper 40s lows).</p>
-          </div>
-          <button class="read-more-toggle mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#heroReadMore" aria-expanded="false" aria-controls="heroReadMore">
-            <span class="label-more">Read More</span>
-            <span class="label-less">Read Less</span>
-            <span class="chevron">&#9660;</span>
-          </button>
-        </div>
-
+  <!-- Header -->
+  <header>
+    <div class="topbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="neon-logo" aria-label="Charleston Bachelorette Activities home">
+          <span class="top">Charleston</span>
+          <span class="bottom">Bach Days</span>
+        </a>
+        <a href="contact.html" class="plan-link"><i class="fa-solid fa-location-dot"></i> Charleston, SC <span class="d-none d-sm-inline ms-3"><i class="fa-solid fa-envelope"></i>Send Us a Tip</span></a>
       </div>
     </div>
-  </div>
-</header>
 
-<!-- THINGS TO DO -->
-<section id="do">
-  <div class="band band-do">
-    <div class="container">
-      <h2>The Best Bachelorette Party Activity Ideas</h2>
-      <p class="mb-0">From harbor cruises to candle-making, heres some of the best bachelorette party ideas to keep the trip interesting.</p>
-    </div>
-  </div>
-  <div class="content">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">On The Water</span>
-            <a href="https://coastalexpeditions.com/shem-creek/"><h3>Shem Creek Sunset Kayak Tour</h3></a>
-            <img src="img/kayak-tours.png" class="img-fluid" alt="Kayakers paddling the Shem Creek salt marsh at sunset">
-            <p class="neighborhood">Mt Pleasant, SC</p>
-            <p>Paddle the saltmarsh at golden hour as the shrimp boats come in — a quieter, more scenic alternative to a booze cruise.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $45–$65 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">Tasting</span>
-            <a href="http://www.highwiredistilling.com/"><h3>High Wire Distilling Tour</h3></a>
-            <img src="img/distillery-tour.png" class="img-fluid" alt="High Wire Distilling tour and tasting room">
-            <p class="neighborhood">Old Naval Base / NoMo</p>
-            <p>A guided tasting through Charleston's own small-batch distillery, featuring spirits made from heirloom Southern grains.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $10 per person for the tour; tastings and cocktails extra</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-        <div class="venue-card">
-          <span class="venue-tag tag-do">Entertainment</span>
-          <a href="https://michaelatyourplace.com"><h3>Michael At Your Place</h3></a>
-          <img src="img/michael.jpg" class="img-fluid" alt="Michael At Your Place private bachelorette show in Charleston, SC">
-          <p class="neighborhood">Charleston, Mount Pleasant &amp; the Beaches</p>
-          <p>Private male entertainment that comes to your rental, for brunch or late-night shows. As interactive or as hands-off as your group prefers, and last-minute dates are welcome.</p>
-          <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $200 for up to 90 minutes, paid on arrival by cash, Venmo, or Cash App. Call or text 843-360-9438.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">Food Tour</span>
-            <a href="https://charlestonculinarytours.com/private-tours/bachelorette-bachelor-parties/"><h3>Charleston Culinary Walking Tour</h3></a>
-            <img src="img/culinary-walking-tours.png" class="img-fluid" style="width: 95%;" alt="Guided food tasting tour in the French Quarter">
-            <p class="neighborhood">French Quarter</p>
-            <p>A guided tasting crawl through historic Charleston eateries, with the stories behind the dishes served up alongside them.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $85–$95 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">Boat Charter</span>
-            <a href="https://charlestonyachttours.com/"><h3>Charleston Harbor Resort</h3></a>
-            <img src="img/harbor-tour.png" class="img-fluid" style="width:85%;" alt="Charter boat cruising Charleston Harbor">
-            <p class="neighborhood">Charleston Harbor</p>
-            <p>Book the group on a morning or full-day charter boat — the bride will thank you. Boat charters are always popular with bachelorette parties.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $130–$180 per person for a 50–80 minute treatment</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">Puzzle Room</span>
-            <a href="https://www.charlestonescapegames.com/about-us/"><h3>Charleston Escape Room Challenge</h3></a>
-            <img src="img/escape-room.png" class="img-fluid" alt="Themed escape room on Upper King Street">
-            <p class="neighborhood">Upper King</p>
-            <p>A themed hour of puzzle-solving with the crew before the night out — a fun, low-key way to kick off a Friday.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $30–$40 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">Shopping</span>
-            <h3>King Street Shopping</h3>
-            <img src="img/kingstreet.png" class="img-fluid" alt="Boutiques and storefronts along King Street in downtown Charleston">
-            <p class="neighborhood">King Street</p>
-            <p>Stroll down downtown's historic strip for chic local boutiques and retail therapy between the bigger group activities.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Free to browse — plan $50–$200+ per person if you're buying</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">Workshop</span>
-            <a href="https://www.candlefish.com/"><h3>Candlefish Candle-Making Class</h3></a>
-            <img src="img/candles.png" class="img-fluid" alt="Custom candles from a Candlefish candle-making class">
-            <p class="neighborhood">King Street</p>
-            <p>Create custom, take-home fragrances at Candlefish — a relaxed, hands-on hour that makes a great favor for the whole group.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $60 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-do">History</span>
-            <h3>Historic &amp; Ghost Tours</h3>
-            <img src="img/ghost.png" class="img-fluid" alt="Evening ghost tour through Charleston's historic district">
-            <p class="neighborhood">Historic District</p>
-            <p>Take a private horse-drawn carriage ride by day or an evening ghost tour through the historic district for something a little spookier.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $35–$50 per person (public tour); $250–$325 per group for a private carriage</p>
-          </div>
-        </div>
-      </div>
-      <p class="disclosure mt-4 mb-0">Book tours and classes 2–3 months ahead for peak spring and fall weekends.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TOURS & EXCURSIONS -->
-<section id="tours">
-  <div class="band band-tour">
-    <div class="container">
-      <h2>Guided Tours &amp; Excursions</h2>
-      <p class="mb-0">Let a captain, driver, or guide run the show — book one of these and the itinerary plans itself.</p>
-    </div>
-  </div>
-  <div class="content">
-    <div class="container">
-
-      <!-- DAY PARTIES ON THE WATER -->
-      <p class="eyebrow mb-1">&#9875; On The Water</p>
-      <h3 class="mb-2" style="font-weight:800;font-size:clamp(1.4rem,4.5vw,2rem);">Day Parties on the Water</h3>
-      <p class="mb-4" style="max-width:680px;color:#4a5560;">A boat day is one of the most-booked activities in Charleston. No bar lines, your own playlist, and on most boats your own drinks. Pick a private charter for the full crew, a shared cruise to party with other groups, or a small boat for a beach stop.</p>
-
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Private Yacht</span>
-            <a href="http://charlestonyachtclub.com/"><h3>Charleston Yacht Club</h3></a>
-            <img src="img/charleston-yacht-club.png" class="img-fluid" alt="Private yacht on the Ashley River near the downtown marina">
-            <p class="neighborhood">Ashley River / Downtown Marina</p>
-            <p>See Charleston's waterways in complete luxury on a private boat tour. An unforgettable trip past the landmarks and harbor views that make this town stand out.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $600–$1,000 per hour, up to 40 guests</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Party Catamaran</span>
-            <a href="#"><h3>Charleston Party Cat</h3></a>
-            <img src="img/charleston-party-cat.png" class="img-fluid" alt="Party catamaran on the Ashley River">
-            <p class="neighborhood">Ashley River / Downtown</p>
-            <p>Private catamaran charters with coolers, ice, floats, a big sound system, and an onboard restroom. Book three hours to add a beach stop. Smaller budgets can grab a seat on their shared DJ day party instead.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Private from $400/hr (1–8 guests) to $600/hr (13–20) plus gratuity; shared 3-hour DJ cruise around $140 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Tiki Boat</span>
-            <a href="https://tikitoursofcharleston.com/"><h3>Tiki Tours of Charleston</h3></a>
-            <img src="img/tiki-tours.png" class="img-fluid" alt="Floating tiki bar boat on Charleston Harbor">
-            <p class="neighborhood">Mount Pleasant / Charleston Harbor</p>
-            <p>Hop aboard the Friki Tiki, Charleston's floating tiki bar, for a 2.5-hour semi-private harbor cruise built specifically for bachelor and bachelorette crews, with a sound system, restroom, and a splash stop if you want to jump in.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Flat rate for up to 20 guests, roughly $500–$700 per group</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Shared Cruise</span>
-            <a href="#"><h3>Adults-Only Party Boat Cruise</h3></a>
-            <img src="img/shared-party-cruise.png" class="img-fluid" alt="Adults-only cocktail cruise in Charleston Harbor">
-            <p class="neighborhood">Charleston Harbor</p>
-            <p>A semi-private, captained cocktail cruise bookable through Greetwell. You share the deck with other celebrating groups — a good pick for smaller crews who want the party-boat energy without paying for the whole boat.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Priced per person — check Greetwell for current rates</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Beach Stop</span>
-            <a href="#"><h3>Small Boat &amp; Secluded Beach Trip</h3></a>
-            <img src="img/small-boat-beach.png" class="img-fluid" alt="Small boat anchored at a quiet beach near Folly Beach">
-            <p class="neighborhood">Charleston / Folly Beach</p>
-            <p>A private 3-hour cruise for groups of up to 6, booked through Experience Gifts. The route runs through Charleston and Folly Beach waterways with a stop at a quiet beach to swim and take group photos.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Priced per boat (up to 6 guests) — check Experience Gifts for current rates</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Pedal Boat</span>
-            <a href="https://saltwatercycle.com/"><h3>Saltwater Cycle</h3></a>
-            <img src="img/saltwater-cycle.png" class="img-fluid" alt="Saltwater Cycle pedal-powered party boat in the harbor">
-            <p class="neighborhood">Downtown Marina</p>
-            <p>Charleston's original pedal-powered party boat — 16 guests pedal (or don't, it's optional) around the harbor with a full bar top on board. A fun, lower-cost alternative to a private charter if you want the boat-party energy without the boat-party price tag.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $50–$55 per person for public tours; private charters start around $675</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">BYOB Pedal Boat</span>
-            <a href="#"><h3>Harbor Bar Boat Tours</h3></a>
-            <img src="img/harbor-bar.png" class="img-fluid" alt="BYOB pedal pontoon with the Ravenel Bridge in the background">
-            <p class="neighborhood">Ripley Light Marina / West Ashley</p>
-            <p>A 39-foot pontoon with 12 pedal seats lined up at the bar — a motor does the real work. It's BYOB with coolers on board, a Bluetooth stereo, and views of the Ravenel Bridge and downtown.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Around $60–$66 per person for public cruises; private boats available</p>
-          </div>
-        </div>
-      </div>
-      <p class="disclosure mt-4 mb-0">Boats book up fast for spring and fall weekends — reserve 4–6 weeks out. Afternoon departures are usually the better call for a bachelorette crew.</p>
-
-      <!-- LAND TOURS -->
-      <p class="eyebrow mb-1 mt-5">On Land</p>
-      <h3 class="mb-4" style="font-weight:800;font-size:clamp(1.4rem,4.5vw,2rem);">Driving Tours &amp; Bar Crawls</h3>
-
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Driving Tour</span>
-            <a href="https://www.charlestonblackcabcompany.com/"><h3>Charleston Black Cab Co.</h3></a>
-            <img src="img/black-cab.png" class="img-fluid" alt="Vintage London-style black cab parked in downtown Charleston">
-            <p class="neighborhood">Downtown / Peninsula-wide</p>
-            <p>Book their signature 5-hour package and let a private driver run your whole day — historic sightseeing, photo stops at Charleston landmarks, and transportation between whatever else is on the itinerary, all in one of their vintage London-style cabs.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Custom-quoted by group size and stops — request a bachelorette package quote</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-tour">Bar Crawl</span>
-            <a href="https://pubtourcharleston.com/"><h3>Pub Tour Charleston</h3></a>
-            <img src="img/pub-tour.png" class="img-fluid" alt="Guided walking pub tour through the historic district">
-            <p class="neighborhood">Historic District</p>
-            <p>A guided walking bar crawl built around tourist groups, weaving through downtown's historic taverns with a local guide who keeps the group moving, the stories coming, and the whole crew together between stops.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Group rates available — inquire directly for bachelorette packages</p>
-          </div>
-        </div>
-      </div>
-      <p class="disclosure mt-4 mb-0">Driving tours book up fast for spring and fall weekends — reserve 4–6 weeks out if you can.</p>
-    </div>
-  </div>
-</section>
-
-<!-- EAT & DRINK -->
-<section id="eat">
-  <div class="band band-eat">
-    <div class="container">
-      <h2>Where To Eat &amp; Drink</h2>
-      <p class="mb-0">Lowcountry classics, rooftop pours, and one seriously good bowl of grits. Here are some ideas on where to fill your belly.</p>
-    </div>
-  </div>
-  <div class="content">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Brunch</span>
-            <a href="#"><h3>Church &amp; Union</h3></a>
-            <img src="img/church-and-union.png" class="img-fluid" alt="Church and Union brunch in a converted church in Charleston">
-            <p class="neighborhood">North Market Street</p>
-            <p>Brunch inside a converted 100-year-old church with soaring vaulted ceilings and stained glass. Long tables fit big groups, and the mimosa flight is the move for the bride.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $25–$45 per person with drinks</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Brunch</span>
-            <a href="http://www.basickitchen.com/"><h3>Basic Kitchen</h3></a>
-            <img src="img/basic-kitchen.png" class="img-fluid" style="width: 85%;" alt="Plant-forward brunch at Basic Kitchen on King Street">
-            <p class="neighborhood">King Street</p>
-            <p>Bright, plant-forward brunch spot with a killer avocado toast and a rotating list of fresh-pressed cocktails — perfect for easing the crew into day two.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $15–$30 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Brunch</span>
-            <a href="https://www.poogansporch.com/"><h3>Poogan's Porch</h3></a>
-            <img src="img/poogan-porch.png" class="img-fluid" alt="Poogan's Porch Victorian house in the French Quarter">
-            <p class="neighborhood">French Quarter</p>
-            <p>A Charleston institution since 1976, set in an 1891 Victorian house with porch dining on two floors. Ask for an upstairs porch table, then go for the shrimp and grits or the buttermilk fried chicken and waffles.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $16–$30 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Brunch</span>
-            <a href="https://www.ironroserestaurant.com/"><h3>Iron Rose</h3></a>
-            <img src="img/iron-rose.png" class="img-fluid" alt="Iron Rose courtyard brunch at the Mills House">
-            <p class="neighborhood">Meeting Street / Mills House</p>
-            <p>A courtyard brunch inside the historic Mills House hotel, with live music on weekends and dishes like Tres Leches French Toast, Crab Benedict, and Chicken &amp; Waffles.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $15–$30 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Biscuits</span>
-            <a href="#"><h3>Callie's Hot Little Biscuit</h3></a>
-            <img src="img/callies-biscuit.png" class="img-fluid" alt="Callie's Hot Little Biscuit on Upper King Street Charleston">
-            <p class="neighborhood">Upper King Street</p>
-            <p>A tiny counter-service shop with scratch-made biscuits — pimento cheese, country ham, and hot honey chicken. The line moves, but order ahead on their app to skip it before a King Street shopping day.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $8–$15 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Treats</span>
-            <a href="https://www.sweetpalmcoffee.com/"><h3>Sweet Palm Coffee</h3></a>
-            <img src="img/sweet-palm.png" class="img-fluid" alt="Coffee and sweets at Sweet Palm Coffee on King Street">
-            <p class="neighborhood">King Street</p>
-            <p>House-made coffees, a breakfast-to-lunch menu, and plenty of sweets. The chicken Caesar wrap is the best.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $10–$20 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Bakery</span>
-            <a href="http://www.weltonstinybakeshop.com/"><h3>Welton's Tiny Bakeshop</h3></a>
-            <img src="img/weltons.png" class="img-fluid" alt="Southern baked goods from Welton's Tiny Bakeshop">
-            <p class="neighborhood">Downtown</p>
-            <p>Grab iconic Southern baked goods at Welton's before the day's activities kick off.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $10–$20 per person</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Rooftop</span>
-            <h3>Rooftop Crawl</h3>
-            <img src="img/rooftopbar.png" class="img-fluid" alt="Rooftop bar with views over downtown Charleston">
-            <p class="neighborhood">Downtown</p>
-            <p>Hop between Stars Rooftop for 360-degree city views, The Rooftop at Vendue, and The Watch Rooftop Kitchen for a moving pre-dinner happy hour with harbor views.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $40–$70 per person for drinks and shared bites across all three stops</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Dancing</span>
-            <a href="https://www.vernschs.com/"><h3>Vern's</h3></a>
-            <img src="img/verns.png" class="img-fluid" style="width: 85%;" alt="Craft cocktails at Vern's on Meeting Street">
-            <p class="neighborhood">Meeting Street</p>
-            <p>Craft cocktails upstairs, a moody speakeasy-style bar below — the kind of spot that quietly turns into the best part of the night.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $80–$120 per person with drinks</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Raw Bar</span>
-            <a href="#"><h3>167 Raw</h3></a>
-            <img src="img/167-raw.png" class="img-fluid" alt="167 Raw oyster bar on King Street Charleston">
-            <p class="neighborhood">King Street</p>
-            <p>The seafood pick if the bride loves oysters — raw bar, lobster rolls, and tuna burgers. No reservations, so put the group on the waitlist and wander King Street until your table's ready.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $40–$75 per person with drinks</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Fine Dining</span>
-            <a href="http://eattheordinary.com/"><h3>The Ordinary</h3></a>
-            <img src="img/the-oridinary.png" class="img-fluid" style="width: 90%;" alt="Raw bar tower at The Ordinary oyster hall on Upper King">
-            <p class="neighborhood">Upper King</p>
-            <p>An old bank vault turned oyster hall. Order the raw bar tower and split a bottle of something bubbly for the bride.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $60–$100+ per person, raw bar towers run extra</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-eat">Fine Dining</span>
-            <a href="https://www.oaksteakhouse.com/location/oak-steakhouse-charleston"><h3>Celebration Dinners: Oak Steakhouse</h3></a>
-            <img src="img/oaksteakhouse.png" class="img-fluid" alt="Oak Steakhouse dining room on Broad Street">
-            <p class="neighborhood">Broad Street</p>
-            <p>A classic steakhouse in a historic building — the pick for a proper celebration dinner with the whole crew dressed up.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $80–$150+ per person with drinks</p>
-          </div>
-        </div>
-      </div>
-      <p class="disclosure mt-4 mb-0">All picks are our own — no restaurant paid to be featured on this list.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PLANNERS -->
-<section id="plan">
-  <div class="band band-plan">
-    <div class="container">
-      <h2>Party Planners &amp; Decor</h2>
-      <p class="mb-0">For the maid of honor who'd rather not build a balloon arch at midnight.</p>
-    </div>
-  </div>
-  <div class="content">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-plan">Decor &amp; Setup</span>
-            <a href="https://bachbabes.com/"><h3>Last Fling Charleston</h3></a>
-            <img src="img/bach-babes.png" class="img-fluid" alt="Decorated vacation rental with a custom mimosa bar">
-            <p>Luxury Airbnb decor packages, custom mimosa bars, and VIP planning add-ons for a rental that photographs as good as it feels.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $865–$1,465 per party of 6 (package-based)</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-plan">Full-Service</span>
-            <a href="https://southernsoireechs.com/"><h3>Southern Soirée</h3></a>
-            <img src="img/southern-soiree.png" class="img-fluid" alt="Party setup and custom sugar cookies by Southern Soirée">
-            <p>A Charleston-born party planner and decorator known for custom sugar cookies and thoughtful, personal touches on every setup.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Packages start around $350, custom-quoted by group size and theme</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-plan">Concierge</span>
-            <a href="https://www.bienvenuechs.com/"><h3>Bienvenue Charleston</h3></a>
-            <img src="img/kayco-weekend.png" class="img-fluid" style="width: 85%;" alt="Balloon garland and photo backdrop in a styled rental house">
-            <p>Balloon garlands, Instagram-ready backdrops, and fridge-stocking service so your group can walk into a fully styled house in Charleston.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> Roughly $400–$1,000+ depending on package (comparable to similar local decor services — confirm with a quote)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHERE TO STAY -->
-<section id="stay">
-  <div class="band band-stay">
-    <div class="container">
-      <h2>Where To Stay</h2>
-      <p class="mb-0">Group-friendly lodging ideas that stays that keep everyone under one roof.</p>
-    </div>
-  </div>
-  <div class="content">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-stay">Boutique Hotel</span>
-            <a href="https://www.thevendue.com/"><h3>The Vendue</h3></a>
-            <img src="img/the-vendue.png" class="img-fluid" alt="The Vendue boutique hotel in the French Quarter">
-            <p class="neighborhood">French Quarter</p>
-            <p>An art-filled boutique hotel two blocks from the water, with a rooftop bar that makes a great home-base meeting point.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $250–$450+ per night, per room</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-stay">Historic Inn</span>
-            <a href="https://www.harbourviewcharleston.com/"><h3>HarbourView Inn</h3></a>
-            <img src="img/harbourview-inn.png" class="img-fluid" alt="HarbourView Inn on East Bay Street">
-            <p class="neighborhood">East Bay Street</p>
-            <p>Wake up to a harbor view and walk everywhere from here — the Market, Rainbow Row, and King Street are all under ten minutes on foot.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $250–$500+ per night, per room</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-stay">Group Rental</span>
-            <a href="https://eastbaycompany.com/"><h3>East Bay Rowhouse Rentals</h3></a>
-            <img src="img/east-bay-rentals.png" class="img-fluid" style="width: 90%;" alt="Historic rowhouse rental on East Bay Street">
-            <p class="neighborhood">East Bay Street</p>
-            <p>Multi-bedroom historic rowhomes that sleep 8–12, so nobody has to split off into separate hotel rooms.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $700–$1,200+ per night for the whole house (split across the group)</p>
-          </div>
-        </div>
-      </div>
-      <p class="disclosure mt-4 mb-0">Book your group stay 3+ months out — downtown weekends fill up fast, especially in fall wedding season.</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- NIGHTLIFE / PARTY SPOTS -->
-<section id="nightlife">
-  <div class="band band-eat">
-    <div class="container">
-      <h2>Nightlife &amp; Party Spots</h2>
-      <p class="mb-0">All venues listed below are 21+.</p>
-    </div>
-  </div>
-  <div class="content">
-    <div class="container">
-      <div class="row g-3">
-        <div class="col-12 col-md-6 col-lg-4">
-          <ul class="party-list">
-            <li>
-              <a href="https://www.ritualchs.com/" target="_blank" rel="noopener">Ritual</a>
-              <p>Tulum-inspired rooftop lounge on Calhoun Street with DJs, bottle service, and skyline views.</p>
+    <nav class="navbar navbar-expand-lg mainnav">
+      <div class="container">
+        <button class="navbar-toggler ms-auto my-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#daytime">Daytime</a></li>
+            <li class="nav-item"><a class="nav-link" href="#on-the-water">Boats</a></li>
+            <li class="nav-item"><a class="nav-link" href="#eat-drink">Eat &amp; Drink</a></li>
+            <li class="nav-item"><a class="nav-link" href="#nightlife">Nightlife</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stay">Stay</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Planning Guides</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="blogs/best-resturants-in-charleston.html">Best Restaurants</a></li>
+                <li><a class="dropdown-item" href="blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></li>
+                <li><a class="dropdown-item" href="blogs/charleston-hidden-secrets-eats.html">Hidden Eats</a></li>
+                <li><a class="dropdown-item" href="blogs/folly-beach-trip.html">Folly Beach Trip</a></li>
+                <li><a class="dropdown-item" href="blogs/isle-of-palms-trip.html">Isle of Palms Trip</a></li>
+              </ul>
             </li>
-            <li>
-              <a href="https://republicreign.com/" target="_blank" rel="noopener">Republic Reign</a>
-              <p>An indoor-outdoor garden lounge on King Street with live DJs, VIP tables, and a laid-back patio bar.</p>
-            </li>
-            <li>
-              <a href="https://www.triocharleston.com/" target="_blank" rel="noopener">Trio</a>
-              <p>Charleston's longtime EDM nightclub — live bands downstairs, DJs and a dance floor upstairs.</p>
-            </li>
-            <li>
-              <a href="https://www.belmond.com/hotels/north-america/usa/sc/charleston/belmond-charleston-place/dining" target="_blank" rel="noopener">Thoroughbred Club</a>
-              <p>A classic hotel bar inside Charleston Place with nightly live music and craft cocktails.</p>
-            </li>
-            <li>
-              <a href="https://www.thebangkoklounge.com/" target="_blank" rel="noopener">The Bangkok Lounge</a>
-              <p>Seven-nights-a-week karaoke bar on King Street with frozen drinks and a fun, no-judgment crowd.</p>
-            </li>
-            <li>
-              <a href="https://johnkinggrill.com/" target="_blank" rel="noopener">John King Grill &amp; Dueling Piano Bar</a>
-              <p>Smash burgers by day, dueling pianos Wednesday–Saturday — a rowdy, sing-along night out.</p>
-            </li>
-            <li>
-              <a href="https://www.hotelbennett.com/dining-and-lounges/camellias" target="_blank" rel="noopener">Camellias</a>
-              <p>Hotel Bennett's glamorous champagne bar — a dressy, Instagram-ready stop for the group.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <ul class="party-list">
-            <li>
-              <a href="https://bourbonnbubbles.com/" target="_blank" rel="noopener">Bourbon And Bubbles</a>
-              <p>A chic King Street cocktail bar known for its bourbon list, champagne, and elevated shared plates.</p>
-            </li>
-            <li>
-              <a href="https://babylonchs.com/" target="_blank" rel="noopener">Babylon</a>
-              <p>A global-beats lounge on Calhoun Street with salsa, bachata, and bottle service.</p>
-            </li>
-            <li>
-              <a href="https://www.prohibitioncharleston.com/" target="_blank" rel="noopener">Prohibition</a>
-              <p>A 1920s-style bar and restaurant with live jazz, swing, and DJs on weekend nights.</p>
-            </li>
-            <li>
-              <a href="https://onairchs.club/" target="_blank" rel="noopener">On Air</a>
-              <p>A three-floor King Street venue — Nashville-style honky-tonk downstairs, house music and a rooftop up top.</p>
-            </li>
-            <li>
-              <a href="https://www.lastsaintchs.com/" target="_blank" rel="noopener">Last Saint</a>
-              <p>An eastside cocktail bar with a moody front room and a quieter back room for conversation.</p>
-            </li>
-            <li>
-              <a href="https://www.acsbar.com/" target="_blank" rel="noopener">A.C.'s Bar &amp; Grill</a>
-              <p>A no-frills downtown dive bar — cheap drinks, pool tables, and a solid late-night burger.</p>
-            </li>
-            <li>
-              <a href="http://thecommodorechs.com/" target="_blank" rel="noopener">The Commodore</a>
-              <p>A retro, disco-ball dance bar on King Street built for a late night on the dance floor.</p>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
-      <p class="disclosure mt-3 mb-0">All nightlife bars & clubs listed above is 21+.</p>
-    </div>
-  </div>
-</section>
+    </nav>
+  </header>
 
-<!-- TRANSPORTATION -->
-<section id="transport">
-  <div class="band" style="background:var(--harbor);color:var(--cream);">
-    <div class="container">
-      <h2>Getting Around Charleston</h2>
-      <p class="mb-0">Downtown parking is tight and pricey — skip the hassle and let someone else drive.</p>
-    </div>
+  <div class="page-wrap">
+    <!-- decorative outline shapes -->
+    <span class="shape sq" style="top:620px;right:4%;"></span>
+    <span class="shape ci" style="top:1500px;right:7%;"></span>
+    <span class="shape sq" style="top:2600px;left:2%;transform:rotate(12deg);"></span>
+    <span class="shape ci" style="top:3700px;left:3%;"></span>
+    <span class="shape sq" style="top:4800px;right:3%;"></span>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Charleston Bachelorette Activities</h1>
+        <p>A bach weekend in Charleston runs on three things: time on the water, long meals, and a late night on King Street. Everything else is filler. This guide skips the filler and points you to the boats, tables, bars and local crews worth booking, with real prices so the group chat can settle the budget before anyone buys a flight.</p>
+        <p>Most groups land Thursday or Friday, stay downtown, and walk or rideshare everywhere. Plan one big daytime booking, one big dinner and one big night out per day, then leave space for porch drinks and wandering. That rhythm works for a crew of six or twenty.</p>
+      </div>
+    </section>
+
+    <main class="container">
+      <div class="row g-5">
+
+        <!-- Main column -->
+        <div class="col-lg-8">
+
+          <!-- Featured -->
+          <section class="content-section" id="featured">
+            <h2>Three Bookings That Anchor the Weekend</h2>
+            <p>If the planner only locks in three things before the trip, make it these. They fill up first and they set the tone for everything around them.</p>
+
+            <article class="feature">
+              <div class="row g-0">
+                <div class="col-md-5 img-col">
+                  <img src="img/charleston-party-cat.png" alt="Bachelorette group on a party catamaran in Charleston Harbor" loading="lazy">
+                </div>
+                <div class="col-md-7">
+                  <div class="body">
+                    <h3>Party Catamaran Day</h3>
+                    <div class="sub">Harbor Cruise + Beach Stop</div>
+                    <ul>
+                      <li>Private charter for the whole crew</li>
+                      <li>BYOB with coolers and ice on board</li>
+                      <li>Big sound system and floats</li>
+                      <li>Onboard restroom</li>
+                      <li>Island stop on 3-hour charters</li>
+                      <li>Shared DJ cruise for smaller groups</li>
+                    </ul>
+                    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+                      <a href="https://charlestonpartycat.com/" class="btn-yellow" target="_blank" rel="noopener">Book It</a>
+                      <span class="price">Private From $400/hr</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature blue">
+              <div class="row g-0">
+                <div class="col-md-5 img-col">
+                  <img src="img/michael.jpg" alt="Michael At Your Place private bachelorette show in Charleston" loading="lazy">
+                </div>
+                <div class="col-md-7">
+                  <div class="body">
+                    <h3>Michael At Your Place</h3>
+                    <div class="sub">Private Show at Your Rental</div>
+                    <ul>
+                      <li>Comes to your house, condo or hotel</li>
+                      <li>Brunch or late-night time slots</li>
+                      <li>Up to 90 minutes</li>
+                      <li>Cash, Venmo or Cash App on arrival</li>
+                      <li>Charleston, Mount Pleasant &amp; the beaches</li>
+                      <li>Last-minute dates welcome</li>
+                    </ul>
+                    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+                      <a href="https://michaelatyourplace.com" class="btn-yellow" target="_blank" rel="noopener">See Details</a>
+                      <span class="price">$200 Per Show</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature">
+              <div class="row g-0">
+                <div class="col-md-5 img-col">
+                  <img src="img/culinary-walking-tours.png" alt="Private food tasting tour through Charleston's French Quarter" loading="lazy">
+                </div>
+                <div class="col-md-7">
+                  <div class="body">
+                    <h3>Private Food Tour</h3>
+                    <div class="sub">French Quarter Tasting Walk</div>
+                    <ul>
+                      <li>Private tour just for your group</li>
+                      <li>Several tasting stops downtown</li>
+                      <li>Local guide with the backstory</li>
+                      <li>Works as a long, lazy lunch</li>
+                      <li>Easy walking pace</li>
+                    </ul>
+                    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+                      <a href="https://charlestonculinarytours.com/private-tours/bachelorette-bachelor-parties/" class="btn-yellow" target="_blank" rel="noopener">Book It</a>
+                      <span class="price">$85&ndash;$95 Per Person</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Daytime -->
+          <section class="content-section" id="daytime">
+            <h2>Daytime Plans Between Brunch and Dinner</h2>
+            <p>The afternoon is where a bach trip either drags or flies by. For something quiet and scenic, the <a href="https://coastalexpeditions.com/shem-creek/" target="_blank" rel="noopener">Coastal Expeditions sunset paddle on Shem Creek</a> puts the group in kayaks on the marsh while shrimp boats roll back into Mount Pleasant. Expect around $45&ndash;$65 a person, and book the last time slot of the day for the best light.</p>
+
+            <figure class="photo">
+              <img src="img/kayak-tours.png" alt="Kayakers on the Shem Creek salt marsh at sunset" loading="lazy">
+              <figcaption>Golden hour on the Shem Creek marsh, Mount Pleasant.</figcaption>
+            </figure>
+
+            <p>Groups that want a drink in hand can head to <a href="http://www.highwiredistilling.com/" target="_blank" rel="noopener">High Wire Distilling</a> in the NoMo area, where the tour runs about $10 and the tasting room pours spirits made from Southern heirloom grains. Pair it with an hour at <a href="https://www.charlestonescapegames.com/about-us/" target="_blank" rel="noopener">Charleston Escape Games</a> on Upper King ($30&ndash;$40 each) for a little friendly competition before dinner.</p>
+            <p>For a slower pace, the <a href="https://www.candlefish.com/" target="_blank" rel="noopener">Candlefish</a> candle studio on King Street runs hands-on classes for about $60 a person, and everyone leaves with a custom scent that doubles as a party favor. From there, King Street itself is the afternoon: boutiques, shoe stores and coffee stops stacked block after block. Browsing is free; budget $50&ndash;$200 if the crew actually shops.</p>
+            <p>After dark, a ghost walk through the historic district is a cheap, fun way to see the old streets ($35&ndash;$50 each), or book a private horse-drawn carriage during the day for roughly $250&ndash;$325 per group.</p>
+            <p class="note">Spring and fall weekends sell out early. Lock in tours and classes two to three months ahead.</p>
+          </section>
+
+          <!-- Water -->
+          <section class="content-section" id="on-the-water">
+            <h2>Boat Days on the Harbor</h2>
+            <p>Nothing gets booked faster in this city than a boat. No bar lines, your own playlist, and on most charters your own cooler. The right pick comes down to group size and budget.</p>
+            <p>For a dressed-up afternoon, <a href="http://charlestonyachtclub.com/" target="_blank" rel="noopener">Charleston Yacht Club</a> runs private yacht outings from the downtown marina on the Ashley River, roughly $600&ndash;$1,000 an hour for up to 40 guests. Smaller crews can look at <a href="https://charlestonyachttours.com/" target="_blank" rel="noopener">Charleston Yacht Tours</a> for morning or full-day charters out of the harbor.</p>
+
+            <figure class="photo pink">
+              <img src="img/tiki-tours.png" alt="Floating tiki bar boat cruising Charleston Harbor" loading="lazy">
+              <figcaption>A floating tiki bar is about as on-theme as a bach boat gets.</figcaption>
+            </figure>
+
+            <p>The <a href="https://tikitoursofcharleston.com/" target="_blank" rel="noopener">Friki Tiki from Tiki Tours of Charleston</a> is a 2.5-hour harbor cruise on a floating tiki bar, flat-rated at roughly $500&ndash;$700 for up to 20 people, with a sound system, a restroom and an optional splash stop. If the budget is tighter, <a href="https://saltwatercycle.com/" target="_blank" rel="noopener">Saltwater Cycle</a> is the pedal-powered party boat out of the downtown marina. Seats run $50&ndash;$55 on public trips, pedaling is optional, and private runs start near $675.</p>
+            <p class="lead-line"><strong>Group size:</strong> Under 10 people, a shared cruise or pedal boat is the best value. Over 15, a private charter usually works out cheaper per head.</p>
+            <p class="lead-line"><strong>Timing:</strong> Afternoon departures beat morning ones. Nobody wants to board a boat at 9am after night one.</p>
+            <p class="lead-line"><strong>Lead time:</strong> Reserve four to six weeks out for any spring or fall weekend.</p>
+          </section>
+
+          <!-- Getting around -->
+          <section class="content-section" id="getting-around">
+            <h2>Rides, Drivers and Bar Crawls</h2>
+            <p>Downtown parking is tight and expensive, so let someone else drive. <a href="https://www.charlestonblackcabcompany.com/" target="_blank" rel="noopener">Charleston Black Cab Co.</a> books vintage London-style cabs with a private driver for a five-hour day of sightseeing, photo stops and rides between plans, quoted by group size. For the night, <a href="https://pubtourcharleston.com/" target="_blank" rel="noopener">Pub Tour Charleston</a> leads walking crawls through the old taverns downtown and keeps the group together between stops.</p>
+            <p>Short hops around the peninsula are easy on <a href="https://www.lyft.com/rider/cities/charleston-sc" target="_blank" rel="noopener">Lyft</a> or <a href="https://www.uber.com/global/en/r/cities/charleston-sc-us/" target="_blank" rel="noopener">Uber</a>, usually $8&ndash;$20 a ride. Bigger crews that want to stay in one vehicle all night should price a party bus or limo at around $200&ndash;$400 an hour.</p>
+          </section>
+
+          <!-- Eat & drink -->
+          <section class="content-section" id="eat-drink">
+            <h2>Brunch, Biscuits and Big Dinners</h2>
+            <p>Brunch is a group sport here. <a href="https://www.churchandunion.com/" target="_blank" rel="noopener">Church &amp; Union</a> on North Market seats big parties under the vaulted ceilings and stained glass of a century-old church, and the mimosa flight belongs in front of the bride ($25&ndash;$45 with drinks). <a href="https://www.poogansporch.com/" target="_blank" rel="noopener">Poogan's Porch</a> has been serving out of an 1891 Victorian in the French Quarter since 1976; ask for the upstairs porch and order shrimp and grits. <a href="https://www.ironroserestaurant.com/" target="_blank" rel="noopener">Iron Rose</a> at the Mills House does courtyard brunch with live weekend music, and <a href="http://www.basickitchen.com/" target="_blank" rel="noopener">Basic Kitchen</a> is the lighter, plant-forward reset for day two.</p>
+
+            <figure class="photo">
+              <img src="img/church-and-union.png" alt="Group brunch inside Church and Union, a converted church in downtown Charleston" loading="lazy">
+              <figcaption>Brunch under stained glass at Church &amp; Union.</figcaption>
+            </figure>
+
+            <p>For grab-and-go mornings, <a href="https://calliesbiscuits.com/pages/hot-little-biscuit-landing" target="_blank" rel="noopener">Callie's Hot Little Biscuit</a> on Upper King makes scratch biscuits stuffed with pimento cheese, country ham or hot honey chicken. Order ahead in their app to skip the line. <a href="https://www.sweetpalmcoffee.com/" target="_blank" rel="noopener">Sweet Palm Coffee</a> covers house coffee, sweets and a breakfast-to-lunch menu where the chicken Caesar wrap is the order, and <a href="http://www.weltonstinybakeshop.com/" target="_blank" rel="noopener">Welton's Tiny Bakeshop</a> handles the Southern pastries.</p>
+            <p>Seafood lovers should put their names down at <a href="https://167raw.com/" target="_blank" rel="noopener">167 Raw</a> on King Street (no reservations) and wander until the table is ready; oysters, lobster rolls and tuna burgers run $40&ndash;$75 with drinks. <a href="http://eattheordinary.com/" target="_blank" rel="noopener">The Ordinary</a> turns an old bank into an oyster hall where the raw bar tower and a bottle of bubbles make the celebration dinner. For the dressed-up night, <a href="https://www.oaksteakhouse.com/location/oak-steakhouse-charleston" target="_blank" rel="noopener">Oak Steakhouse</a> on Broad Street is the classic call at $80&ndash;$150 a person.</p>
+            <p>Before dinner, string together a rooftop happy hour: Stars Rooftop for the 360-degree view, the rooftop at <a href="https://www.thevendue.com/" target="_blank" rel="noopener">The Vendue</a>, then The Watch for harbor views. Plan $40&ndash;$70 each across all three. Close the night at <a href="https://www.vernschs.com/" target="_blank" rel="noopener">Vern's</a> on Meeting Street, where craft cocktails upstairs give way to a dim speakeasy bar below.</p>
+            <p class="note">Every pick here is our own. No restaurant pays to be included.</p>
+          </section>
+
+          <!-- Nightlife -->
+          <section class="content-section" id="nightlife">
+            <h2>Where the Night Goes</h2>
+            <p>Start somewhere pretty, end somewhere loud. <a href="https://www.hotelbennett.com/dining-and-lounges/camellias" target="_blank" rel="noopener">Camellias</a>, the pink champagne bar inside Hotel Bennett, is the photo stop. <a href="https://www.ritualchs.com/" target="_blank" rel="noopener">Ritual</a> on Calhoun brings a Tulum-style rooftop with DJs and bottle service, while <a href="https://republicreign.com/" target="_blank" rel="noopener">Republic Reign</a> on King mixes a garden patio with VIP tables. <a href="https://bourbonnbubbles.com/" target="_blank" rel="noopener">Bourbon N Bubbles</a> sits in between with a long bourbon list and champagne by the glass.</p>
+
+            <figure class="photo pink">
+              <img src="img/rooftopbar.png" alt="Rooftop bar overlooking downtown Charleston at dusk" loading="lazy">
+              <figcaption>Rooftop drinks first, dance floor later.</figcaption>
+            </figure>
+
+            <p>When it's time to dance, <a href="https://onairchs.club/" target="_blank" rel="noopener">On Air</a> stacks three floors on King Street, with honky-tonk downstairs and house music up top. <a href="http://thecommodorechs.com/" target="_blank" rel="noopener">The Commodore</a> is all disco ball, and <a href="https://www.triocharleston.com/" target="_blank" rel="noopener">Trio</a> keeps live bands on one floor and DJs on another. <a href="https://babylonchs.com/" target="_blank" rel="noopener">Babylon</a> leans into salsa and bachata, and <a href="https://www.prohibitioncharleston.com/" target="_blank" rel="noopener">Prohibition</a> brings 1920s swing and jazz on weekend nights.</p>
+            <p>For a sing-along, <a href="https://johnkinggrill.com/" target="_blank" rel="noopener">John King Grill</a> runs dueling pianos Wednesday through Saturday, and <a href="https://www.thebangkoklounge.com/" target="_blank" rel="noopener">The Bangkok Lounge</a> does karaoke and frozen drinks every night of the week. Quieter options include the <a href="https://www.belmond.com/hotels/north-america/usa/sc/charleston/belmond-charleston-place/dining" target="_blank" rel="noopener">Thoroughbred Club</a> at Charleston Place and <a href="https://www.lastsaintchs.com/" target="_blank" rel="noopener">Last Saint</a> on the east side. And when someone needs a late burger and a pool table, <a href="https://www.acsbar.com/" target="_blank" rel="noopener">A.C.'s Bar &amp; Grill</a> is the dive that never lets anyone down.</p>
+            <p class="note">Every bar and club in this section is 21+. Bring ID for the whole group.</p>
+          </section>
+
+          <!-- Decor -->
+          <section class="content-section" id="decor">
+            <h2>Decor, Setup and Planning Help</h2>
+            <p>For the maid of honor who doesn't want to inflate balloons at midnight, a few local teams will style the rental before anyone arrives. <a href="https://bachbabes.com/" target="_blank" rel="noopener">Last Fling Charleston</a> sells decor packages with mimosa bars and VIP add-ons, running about $865&ndash;$1,465 for a party of six. <a href="https://southernsoireechs.com/" target="_blank" rel="noopener">Southern Soir&eacute;e</a> is a Charleston-born planner known for custom sugar cookies and personal details, with packages from around $350. <a href="https://www.bienvenuechs.com/" target="_blank" rel="noopener">Bienvenue Charleston</a> handles balloon garlands, photo backdrops and fridge stocking so the house is ready when the group walks in. Get a quote, but most setups land between $400 and $1,000.</p>
+          </section>
+
+          <!-- Stay -->
+          <section class="content-section" id="stay">
+            <h2>Places That Keep the Group Together</h2>
+            <p>The best home base is one where nobody needs a car. <a href="https://www.thevendue.com/" target="_blank" rel="noopener">The Vendue</a> is an art-filled boutique hotel two blocks from the water, and its rooftop makes an easy meeting spot ($250&ndash;$450+ a room per night). <a href="https://www.harbourviewcharleston.com/" target="_blank" rel="noopener">HarbourView Inn</a> on East Bay puts the Market, Rainbow Row and King Street all within a ten-minute walk.</p>
+
+            <figure class="photo">
+              <img src="img/east-bay-rentals.png" alt="Historic rowhouse rental on East Bay Street in Charleston" loading="lazy">
+              <figcaption>A rowhouse rental keeps the whole crew under one roof.</figcaption>
+            </figure>
+
+            <p>For groups of eight to twelve, a whole house beats a block of rooms. <a href="https://eastbaycompany.com/" target="_blank" rel="noopener">East Bay Company</a> rents historic multi-bedroom rowhouses for about $700&ndash;$1,200+ a night, which splits nicely across a full crew.</p>
+            <p class="note">Downtown fills up fast, especially during fall wedding season. Book lodging three or more months out.</p>
+          </section>
+
+          <!-- Itinerary -->
+          <section class="content-section" id="itinerary">
+            <h2>A Four-Day Game Plan</h2>
+            <p>A Thursday-to-Sunday trip gives the group enough time to do the big things without rushing any of them.</p>
+            <div class="day">
+              <div class="label">Thursday &middot; Arrive</div>
+              <p class="mb-0">Check into the rowhouse with decor already set up, order in while the late flights land, and toast on the porch.</p>
+            </div>
+            <div class="day">
+              <div class="label">Friday &middot; Warm Up</div>
+              <p class="mb-0">Brunch at Basic Kitchen, a distillery tour and a paint-and-sip in the afternoon, dinner at The Ordinary, then drinks at The Watch.</p>
+            </div>
+            <div class="day">
+              <div class="label">Saturday &middot; Big Day</div>
+              <p class="mb-0">Sunrise paddle at Shem Creek, the food tour after lunch, an early dinner at Red's on the creek, then an escape room before the night out.</p>
+            </div>
+            <div class="day">
+              <div class="label">Sunday &middot; Recover</div>
+              <p class="mb-0">Spa time at Woodhouse, one last brunch with photos on the porch, then pack up and head to the airport.</p>
+            </div>
+            <p class="note">Leave one open block every day. The best moments of a bach trip usually aren't on the schedule.</p>
+          </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <aside class="sidebar mt-lg-4">
+            <h4>Tags</h4>
+            <a href="#featured" class="tag">Top Bookings</a>
+            <a href="#on-the-water" class="tag">Boat Charters</a>
+            <a href="#on-the-water" class="tag">Party Boats</a>
+            <a href="#daytime" class="tag">Kayak Tours</a>
+            <a href="#daytime" class="tag">Distillery</a>
+            <a href="#daytime" class="tag">Candle Making</a>
+            <a href="#daytime" class="tag">Escape Rooms</a>
+            <a href="#featured" class="tag">Private Shows</a>
+            <a href="#featured" class="tag">Food Tours</a>
+            <a href="#eat-drink" class="tag">Brunch</a>
+            <a href="#eat-drink" class="tag">Oyster Bars</a>
+            <a href="#eat-drink" class="tag">Rooftops</a>
+            <a href="#nightlife" class="tag">Dance Clubs</a>
+            <a href="#nightlife" class="tag">Karaoke</a>
+            <a href="#nightlife" class="tag">Piano Bars</a>
+            <a href="#decor" class="tag">Decor</a>
+            <a href="#stay" class="tag">Group Rentals</a>
+            <a href="#getting-around" class="tag">Party Bus</a>
+            <a href="blogs/folly-beach-trip.html" class="tag">Folly Beach</a>
+            <a href="blogs/isle-of-palms-trip.html" class="tag">Isle of Palms</a>
+
+            <div class="side-block">
+              <h4>When To Go</h4>
+              <p><strong>Spring:</strong> March sits around 70&deg; by day and mid-40s at night. April warms into the mid-70s, and May feels like early summer in the low 80s.</p>
+              <p><strong>Fall:</strong> September still runs mid-80s. October drops to the upper 70s, and November settles into crisp days near 70&deg;.</p>
+              <p class="mb-0">Summer works too, but plan boats and walking tours for early or late in the day.</p>
+            </div>
+
+            <div class="side-block">
+              <h4>More Guides</h4>
+              <p><a href="blogs/best-resturants-in-charleston.html">Best Restaurants in Charleston</a></p>
+              <p><a href="blogs/bachelorettes-best-time-visit-charleston.html">Best Time for a Bach Trip</a></p>
+              <p><a href="blogs/charleston-hidden-secrets-eats.html">Hidden Eats Locals Love</a></p>
+              <p><a href="blogs/folly-beach-trip.html">Folly Beach Day Trip</a></p>
+              <p class="mb-0"><a href="blogs/isle-of-palms-trip.html">Isle of Palms Day Trip</a></p>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Closing -->
+    <section class="closing">
+      <div class="container content-section">
+        <h2>Start Planning the Weekend</h2>
+        <p>Charleston rewards groups that book early and keep the schedule loose. Pick one boat, one big dinner and one late night, then fill the gaps with brunch and King Street. <strong>Know a local spot that belongs on this page? <a href="contact.html">Send it our way</a> and we'll take a look.</strong></p>
+      </div>
+    </section>
   </div>
-  <div class="content">
+
+  <!-- Footer -->
+  <footer>
     <div class="container">
       <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-stay">Rideshare</span>
-            <a href="https://www.lyft.com/rider/cities/charleston-sc"><h3>Lyft</h3></a>
-            <img src="img/lyft.png" class="img-fluid" style="width: 90%;" alt="Lyft rideshare logo">
-            <p>The easiest way to hop between houses, restaurants, and bars downtown without worrying about parking or a designated driver.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $8–$20 per ride for short trips around downtown</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-stay">Rideshare</span>
-            <a href="https://www.uber.com/global/en/r/cities/charleston-sc-us/"><h3>Uber</h3></a>
-            <img src="img/uber.png" class="img-fluid" style="width: 90%;" alt="Uber rideshare logo">
-            <p>Widely available throughout the peninsula and Mount Pleasant — a solid backup or alternative any time Lyft wait times run long.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $8–$20 per ride for short trips around downtown</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="venue-card">
-            <span class="venue-tag tag-plan">Group Transport</span>
-            <h3>Party Bus</h3>
-            <img src="img/party-bus.png" class="img-fluid" style="width: 90%;" alt="Party bus for a group night out">
-            <p>For bigger crews who want to keep the party going between stops, a party bus or limo keeps everyone together for the night — no splitting into separate cars.</p>
-            <p class="mt-2 mb-0"><strong>Estimated cost:</strong> $200–$400 per hour</p>
-          </div>
-        </div>
-      </div>
-      <p class="disclosure mt-4 mb-0">For groups of any size, rideshares or a party bus are almost always cheaper and easier than driving and parking yourselves.</p>
-    </div>
-  </div>
-</section>
-
-<div class="cta">
-  <div class="container">
-    <h4>Planning a Charleston bachelorette?</h4>
-    <p class="mb-4" style="opacity:.85;">We're always adding new spots to this guide — reach out if you know a business the bride tribe needs to hear about.</p>
-    <a href="#top" class="btn-blush">Back to the top</a>
-  </div>
-</div>
-<!-- ITINERARY -->
-<section class="content" id="itinerary">
-  <div class="container">
-    <p class="eyebrow">Sample weekend</p>
-    <h4 class="mb-2" style="font-weight:800;">A 4-Day Charleston Itinerary</h4>
-    <img src="img/prettyimage.png" class="img-fluid" alt="Sample 4-day Charleston weekend plan">
-    <p class="mb-4" style="max-width:620px;color:#4a5560;">A fuller weekend than a quick in-and-out — arrive Thursday, ease in, and give the group a real mix of water, food, and downtime before everyone flies home Sunday.</p>
-    <div class="row g-4">
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="ticket">
-          <p class="eyebrow mb-1">Day One</p>
-          <p class="day-label mb-3">Thursday</p>
+        <div class="col-6 col-md-3">
+          <h5>Guide</h5>
           <ul>
-            <li><span class="part">Afternoon </span>Check into your East Bay rowhouse rental — decor already set up by Southern Soirée</li>
-            <li><span class="part">Evening </span>Low-key dinner at the house while stragglers land</li>
-            <li><span class="part">Night </span>Porch drinks and a group toast to kick off the weekend</li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blogs/best-resturants-in-charleston.html">Restaurants</a></li>
+            <li><a href="blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></li>
+            <li><a href="blogs/charleston-hidden-secrets-eats.html">Hidden Eats</a></li>
           </ul>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="ticket">
-          <p class="eyebrow mb-1">Day Two</p>
-          <p class="day-label mb-3">Friday</p>
+        <div class="col-6 col-md-3">
+          <h5>Plans</h5>
           <ul>
-            <li><span class="part">Morning </span>Brunch at Basic Kitchen</li>
-            <li><span class="part">Afternoon </span>High Wire Distilling Tour, then a Paint &amp; Sip class</li>
-            <li><span class="part">Evening </span>Dinner at The Ordinary</li>
-            <li><span class="part">Night </span>Drinks at The Watch Rooftop</li>
+            <li><a href="#on-the-water">Boat Days</a></li>
+            <li><a href="#daytime">Daytime</a></li>
+            <li><a href="#eat-drink">Brunch &amp; Dinner</a></li>
+            <li><a href="#nightlife">Nightlife</a></li>
+            <li><a href="#decor">Decor</a></li>
+            <li><a href="#stay">Where To Stay</a></li>
+            <li><a href="#itinerary">4-Day Plan</a></li>
           </ul>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="ticket">
-          <p class="eyebrow mb-1">Day Three</p>
-          <p class="day-label mb-3">Saturday</p>
+        <div class="col-md-3">
+          <h5>Beach Trips</h5>
           <ul>
-            <li><span class="part">Morning </span>Sunrise paddle at Shem Creek</li>
-            <li><span class="part">Afternoon </span>Charleston Culinary Walking Tour</li>
-            <li><span class="part">Evening </span>Shem Creek walk and eat at Reds</li>
-            <li><span class="part">Night </span>Charleston Escape Room Challenge, then out on the town</li>
+            <li><a href="blogs/folly-beach-trip.html">Folly Beach</a></li>
+            <li><a href="blogs/isle-of-palms-trip.html">Isle of Palms</a></li>
           </ul>
+          <p class="contact-pink mt-3 mb-0">Charleston, SC</p>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="ticket">
-          <p class="eyebrow mb-1">Day Four</p>
-          <p class="day-label mb-3">Sunday</p>
-          <ul>
-            <li><span class="part">Morning </span>Slow start with spa treatments at Woodhouse</li>
-            <li><span class="part">Midday </span>Farewell brunch and last photos on the porch</li>
-            <li><span class="part">Afternoon </span>Pack up, check out, and head to the airport</li>
-          </ul>
+        <div class="col-md-3 text-md-end">
+          <a href="index.html" class="neon-logo lg" aria-label="Back to home">
+            <span class="top">Charleston</span>
+            <span class="bottom">Bach Days</span>
+          </a>
+          <div class="socials mt-4">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
         </div>
       </div>
     </div>
-    <p class="disclosure mt-4 mb-0">Build in at least one unscheduled block per day — the best bach weekends leave room to wander.</p>
-  </div>
-</section>
+    <div class="footer-bottom">
+      &copy; 2026 Charleston Bachelorette Activities &middot; Written locally in Charleston, SC &middot; <a href="#top" style="color:#fff;">Back to top</a>
+    </div>
+  </footer>
 
-<footer>
-  <div class="container text-center">
-    <p class="mb-0">&copy; 2026 The Best Bachelorette Activities · A locally written guide to Charleston, SC</p>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
