@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charleston Bachelorette Activities | Boats, Brunch, Bars &amp; Group Plans</title>
-  <meta name="description" content="Plan a Charleston, SC bachelorette weekend: harbor boat days, private entertainment, brunch spots, King Street nightlife, decor help, group rentals and a 4-day game plan.">
+  <title>Charleston Bachelorette Activities | A Morning-to-Midnight Weekend Plan</title>
+  <meta name="description" content="A Charleston bachelorette weekend planned by time of day: biscuit runs and jazz brunch, party boats and beach days, Shem Creek sunsets, group dinners and Upper King nights.">
   <link rel="canonical" href="https://charlestonbacheloretteactivities.com/">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,69 +25,24 @@
       --muted:#b9b9b9;
     }
     html{scroll-behavior:smooth;}
-    body{
-      background:var(--bg);
-      color:var(--text);
-      font-family:'Open Sans',sans-serif;
-      font-weight:300;
-      font-size:1.12rem;
-      line-height:1.75;
-      overflow-x:hidden;
-    }
-    h1,h2,h3,h4{
-      font-family:'Montserrat',sans-serif;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:-.5px;
-      line-height:1.1;
-    }
+    body{background:var(--bg);color:var(--text);font-family:'Open Sans',sans-serif;font-weight:300;font-size:1.12rem;line-height:1.75;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Montserrat',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.5px;line-height:1.1;}
     p{margin-bottom:1.1rem;}
     strong{font-weight:600;color:#fff;}
 
     /* ---------- Neon wordmark ---------- */
-    .neon-logo{
-      font-family:'Yellowtail',cursive;
-      line-height:.85;
-      text-decoration:none;
-      display:inline-block;
-      transform:rotate(-6deg);
-    }
-    .neon-logo .top{
-      display:block;
-      color:#ff6fbc;
-      font-size:2.1rem;
-      text-shadow:0 0 4px var(--pink),0 0 12px var(--pink),0 0 22px var(--pink);
-    }
-    .neon-logo .bottom{
-      display:block;
-      color:#a8d4ff;
-      font-size:1.8rem;
-      margin-left:1.2rem;
-      text-shadow:0 0 4px var(--blue),0 0 12px var(--blue),0 0 22px var(--blue);
-    }
+    .neon-logo{font-family:'Yellowtail',cursive;line-height:.85;text-decoration:none;display:inline-block;transform:rotate(-6deg);}
+    .neon-logo .top{display:block;color:#ff6fbc;font-size:2.1rem;text-shadow:0 0 4px var(--pink),0 0 12px var(--pink),0 0 22px var(--pink);}
+    .neon-logo .bottom{display:block;color:#a8d4ff;font-size:1.8rem;margin-left:1.2rem;text-shadow:0 0 4px var(--blue),0 0 12px var(--blue),0 0 22px var(--blue);}
     .neon-logo.lg .top{font-size:3.4rem;}
     .neon-logo.lg .bottom{font-size:2.9rem;margin-left:2rem;}
 
     /* ---------- Header ---------- */
     .topbar{background:var(--black);padding:1.1rem 0;}
-    .topbar .plan-link{
-      color:var(--yellow);
-      font-family:'Montserrat',sans-serif;
-      font-weight:700;
-      text-decoration:none;
-      font-size:1rem;
-    }
+    .topbar .plan-link{color:var(--yellow);font-family:'Montserrat',sans-serif;font-weight:700;text-decoration:none;font-size:1rem;}
     .topbar .plan-link i{margin-right:.45rem;}
     .mainnav{background:var(--blue);}
-    .mainnav .nav-link{
-      color:#fff;
-      font-family:'Montserrat',sans-serif;
-      font-weight:600;
-      text-transform:uppercase;
-      font-size:.92rem;
-      letter-spacing:-.2px;
-      padding:.95rem .7rem !important;
-    }
+    .mainnav .nav-link{color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;text-transform:uppercase;font-size:.92rem;letter-spacing:-.2px;padding:.95rem .7rem !important;}
     .mainnav .nav-link:hover,.mainnav .nav-link.active{color:var(--pink);}
     .mainnav .dropdown-menu{background:var(--black);border:1px solid var(--blue);border-radius:0;}
     .mainnav .dropdown-item{color:#fff;font-size:.95rem;}
@@ -103,127 +58,56 @@
     @media (max-width:991px){.shape{display:none;}}
 
     /* ---------- Hero ---------- */
-    .hero h1{
-      color:var(--blue);
-      font-size:clamp(2rem,5vw,3.6rem);
-      text-align:center;
-      margin:2.4rem 0 1.4rem;
-    }
+    .hero h1{color:var(--blue);font-size:clamp(2rem,5vw,3.6rem);text-align:center;margin:2.4rem 0 .6rem;}
+    .hero .kicker{text-align:center;text-transform:uppercase;font-family:'Montserrat',sans-serif;font-weight:600;color:var(--pink);font-size:.95rem;letter-spacing:1px;margin-bottom:1.4rem;}
     .hero p{font-size:1.2rem;}
+    .clock-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:1.4rem 0 .4rem;}
+    .clock-strip a{border:1px solid rgba(74,143,214,.65);color:#fff;text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:600;text-transform:uppercase;font-size:.85rem;padding:.45rem .9rem;}
+    .clock-strip a i{color:var(--yellow);margin-right:.35rem;}
+    .clock-strip a:hover{border-color:var(--pink);color:var(--pink);}
 
     /* ---------- Content ---------- */
     main{position:relative;z-index:1;}
-    .content-section{padding-top:2.2rem;}
-    .content-section h2{
-      color:#fff;
-      font-size:clamp(1.55rem,3vw,2.3rem);
-      margin-bottom:1rem;
-    }
-    .content-section h3{
-      color:var(--blue-light);
-      font-size:1.2rem;
-      margin:1.6rem 0 .6rem;
-    }
-    .content-section a,.hero a{
-      color:var(--pink);
-      font-weight:400;
-      text-decoration:none;
-      border-bottom:1px dotted rgba(255,31,143,.6);
-    }
+    .content-section{padding-top:2.4rem;}
+    .content-section h2{color:#fff;font-size:clamp(1.55rem,3vw,2.3rem);margin-bottom:.3rem;}
+    .time-tag{font-family:'Montserrat',sans-serif;font-weight:700;text-transform:uppercase;color:var(--yellow);font-size:.85rem;letter-spacing:1px;margin-bottom:1rem;}
+    .time-tag i{margin-right:.4rem;}
+    .content-section h3{color:var(--blue-light);font-size:1.2rem;margin:1.6rem 0 .6rem;}
+    .content-section a,.hero a{color:var(--pink);font-weight:400;text-decoration:none;border-bottom:1px dotted rgba(255,31,143,.6);}
     .content-section a:hover,.hero a:hover{color:#ff7cc0;border-bottom-style:solid;}
-    .lead-line{margin-bottom:.55rem;}
-    .note{
-      font-size:.98rem;
-      color:var(--muted);
-      border-left:3px solid var(--yellow);
-      padding-left:.9rem;
-      margin:1.2rem 0 0;
-    }
+    .biz{font-weight:600;color:#fff;}
+    .lead-line{margin-bottom:.6rem;}
+    .note{font-size:.98rem;color:var(--muted);border-left:3px solid var(--yellow);padding-left:.9rem;margin:1.2rem 0 0;}
 
     /* ---------- Inline photos ---------- */
-    .photo{
-      margin:1.6rem 0;
-      border:1px solid rgba(74,143,214,.55);
-      box-shadow:0 0 14px rgba(74,143,214,.3);
-      background:var(--black);
-    }
+    .photo{margin:1.6rem 0;border:1px solid rgba(74,143,214,.55);box-shadow:0 0 14px rgba(74,143,214,.3);background:var(--black);}
     .photo.pink{border-color:rgba(255,31,143,.55);box-shadow:0 0 14px rgba(255,31,143,.3);}
     .photo img{width:100%;height:340px;object-fit:cover;display:block;}
     .photo figcaption{font-size:.85rem;color:var(--muted);padding:.55rem .9rem;}
     @media (max-width:575px){.photo img{height:230px;}}
 
     /* ---------- Feature cards ---------- */
-    .feature{
-      background:var(--black);
-      border:1px solid rgba(255,31,143,.6);
-      box-shadow:0 0 16px rgba(255,31,143,.25);
-      margin-bottom:2.2rem;
-    }
+    .feature{background:var(--black);border:1px solid rgba(255,31,143,.6);box-shadow:0 0 16px rgba(255,31,143,.25);margin-bottom:2.2rem;}
     .feature.blue{border-color:rgba(74,143,214,.65);box-shadow:0 0 16px rgba(74,143,214,.25);}
+    .feature .img-col{background:#0b0b0b;min-height:260px;}
     .feature .img-col img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block;}
     .feature .body{padding:1.8rem 1.8rem 1.5rem;}
     .feature h3{color:#fff;font-size:1.7rem;margin:0 0 .4rem;}
-    .feature .sub{
-      font-weight:300;
-      text-transform:uppercase;
-      font-size:1.25rem;
-      margin-bottom:.8rem;
-      color:#fff;
-    }
+    .feature .sub{font-weight:300;text-transform:uppercase;font-size:1.25rem;margin-bottom:.8rem;color:#fff;}
     .feature ul{list-style:none;padding:0;margin:0 0 1.3rem;}
-    .feature li{
-      text-transform:uppercase;
-      font-size:.95rem;
-      font-weight:400;
-      padding:.28rem 0 .28rem 1.2rem;
-      position:relative;
-    }
-    .feature li::before{
-      content:"";
-      position:absolute;left:0;top:.85rem;
-      width:6px;height:6px;border-radius:50%;
-      background:var(--pink);
-    }
-    .btn-yellow{
-      background:var(--yellow);
-      color:#111;
-      border-radius:50px;
-      padding:.7rem 2.2rem;
-      font-family:'Montserrat',sans-serif;
-      font-weight:600;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      border:none;
-      text-decoration:none;
-      display:inline-block;
-    }
-    .btn-yellow:hover{background:#fff27a;color:#111;}
-    .price{
-      color:var(--yellow);
-      font-family:'Montserrat',sans-serif;
-      font-weight:700;
-      font-size:1.05rem;
-    }
+    .feature li{text-transform:uppercase;font-size:.95rem;font-weight:400;padding:.28rem 0 .28rem 1.2rem;position:relative;}
+    .feature li::before{content:"";position:absolute;left:0;top:.85rem;width:6px;height:6px;border-radius:50%;background:var(--pink);}
+    .btn-yellow{background:var(--yellow);color:#111 !important;border-radius:50px;padding:.7rem 2.2rem;font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:2px;text-transform:uppercase;border:none !important;text-decoration:none;display:inline-block;}
+    .btn-yellow:hover{background:#fff27a;}
+    .price{color:var(--yellow);font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.05rem;}
+
+    /* ---------- Vibe box ---------- */
+    .rules{background:var(--black);border:1px solid rgba(248,222,34,.45);padding:1.8rem;margin-top:.4rem;}
 
     /* ---------- Sidebar ---------- */
-    .sidebar{
-      background:var(--black);
-      border:1px solid #2d2d2d;
-      padding:1.6rem;
-      position:sticky;
-      top:1.2rem;
-    }
+    .sidebar{background:var(--black);border:1px solid #2d2d2d;padding:1.6rem;position:sticky;top:1.2rem;}
     .sidebar h4{font-size:1.5rem;color:#fff;margin-bottom:1rem;}
-    .tag{
-      display:inline-block;
-      background:var(--blue);
-      color:#fff;
-      font-size:.88rem;
-      font-weight:400;
-      padding:.35rem .8rem;
-      margin:0 .35rem .5rem 0;
-      text-decoration:none;
-    }
+    .tag{display:inline-block;background:var(--blue);color:#fff;font-size:.88rem;font-weight:400;padding:.35rem .8rem;margin:0 .35rem .5rem 0;text-decoration:none;}
     .tag:hover{background:var(--pink);color:#fff;}
     .side-block{border-top:1px solid #2d2d2d;margin-top:1.4rem;padding-top:1.4rem;font-size:.98rem;}
     .side-block p{margin-bottom:.7rem;}
@@ -231,33 +115,16 @@
     .side-block a:hover{color:var(--pink);}
 
     /* ---------- Itinerary ---------- */
-    .day{
-      border-left:3px solid var(--pink);
-      padding:.2rem 0 .2rem 1.1rem;
-      margin-bottom:1.3rem;
-    }
+    .day{border-left:3px solid var(--pink);padding:.2rem 0 .2rem 1.1rem;margin-bottom:1.3rem;}
     .day:nth-child(even){border-left-color:var(--blue);}
-    .day .label{
-      font-family:'Montserrat',sans-serif;
-      font-weight:800;
-      text-transform:uppercase;
-      color:var(--yellow);
-      font-size:1rem;
-      margin-bottom:.2rem;
-    }
+    .day .label{font-family:'Montserrat',sans-serif;font-weight:800;text-transform:uppercase;color:var(--yellow);font-size:1rem;margin-bottom:.2rem;}
 
     /* ---------- Closing ---------- */
     .closing{padding:2.6rem 0 3.5rem;}
 
     /* ---------- Footer ---------- */
     footer{background:var(--black);padding:3rem 0 0;}
-    footer h5{
-      font-family:'Montserrat',sans-serif;
-      font-weight:700;
-      font-size:1.6rem;
-      color:#fff;
-      margin-bottom:1rem;
-    }
+    footer h5{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;margin-bottom:1rem;}
     footer ul{list-style:none;padding:0;margin:0;}
     footer li{margin-bottom:.45rem;}
     footer li a{color:#fff;text-decoration:none;font-weight:300;}
@@ -265,13 +132,7 @@
     footer .contact-pink{color:var(--pink);}
     .socials a{color:#fff;font-size:1.45rem;margin-left:1.1rem;}
     .socials a:hover{color:var(--pink);}
-    .footer-bottom{
-      border-top:1px solid #444;
-      margin-top:2.5rem;
-      padding:.9rem 0;
-      text-align:center;
-      font-size:.98rem;
-    }
+    .footer-bottom{border-top:1px solid #444;margin-top:2.5rem;padding:.9rem 0;text-align:center;font-size:.98rem;}
   </style>
 </head>
 <body id="top">
@@ -296,11 +157,11 @@
         <div class="collapse navbar-collapse justify-content-center" id="mainNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#daytime">Daytime</a></li>
-            <li class="nav-item"><a class="nav-link" href="#on-the-water">Boats</a></li>
-            <li class="nav-item"><a class="nav-link" href="#eat-drink">Eat &amp; Drink</a></li>
-            <li class="nav-item"><a class="nav-link" href="#nightlife">Nightlife</a></li>
-            <li class="nav-item"><a class="nav-link" href="#stay">Stay</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mornings">Mornings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#afternoons">Afternoons</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sunset">Sunset</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dinner">Dinner</a></li>
+            <li class="nav-item"><a class="nav-link" href="#late-night">Late Night</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Planning Guides</a>
               <ul class="dropdown-menu">
@@ -309,6 +170,7 @@
                 <li><a class="dropdown-item" href="blogs/charleston-hidden-secrets-eats.html">Hidden Eats</a></li>
                 <li><a class="dropdown-item" href="blogs/folly-beach-trip.html">Folly Beach Trip</a></li>
                 <li><a class="dropdown-item" href="blogs/isle-of-palms-trip.html">Isle of Palms Trip</a></li>
+                <li><a class="dropdown-item" href="downtown-charleston-parking.html">Downtown Parking</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -320,19 +182,26 @@
   </header>
 
   <div class="page-wrap">
-    <!-- decorative outline shapes -->
-    <span class="shape sq" style="top:620px;right:4%;"></span>
-    <span class="shape ci" style="top:1500px;right:7%;"></span>
-    <span class="shape sq" style="top:2600px;left:2%;transform:rotate(12deg);"></span>
-    <span class="shape ci" style="top:3700px;left:3%;"></span>
-    <span class="shape sq" style="top:4800px;right:3%;"></span>
+    <span class="shape ci" style="top:700px;right:4%;"></span>
+    <span class="shape sq" style="top:1650px;right:7%;"></span>
+    <span class="shape ci" style="top:2700px;left:2%;"></span>
+    <span class="shape sq" style="top:3800px;left:3%;transform:rotate(12deg);"></span>
+    <span class="shape ci" style="top:4900px;right:3%;"></span>
 
     <!-- Hero -->
     <section class="hero">
       <div class="container">
         <h1>Charleston Bachelorette Activities</h1>
-        <p>A bach weekend in Charleston runs on three things: time on the water, long meals, and a late night on King Street. Everything else is filler. This guide skips the filler and points you to the boats, tables, bars and local crews worth booking, with real prices so the group chat can settle the budget before anyone buys a flight.</p>
-        <p>Most groups land Thursday or Friday, stay downtown, and walk or rideshare everywhere. Plan one big daytime booking, one big dinner and one big night out per day, then leave space for porch drinks and wandering. That rhythm works for a crew of six or twenty.</p>
+        <div class="kicker">Planned by the clock, from biscuits to last call</div>
+        <p>Most Charleston guides hand you a list and leave you to sort it out. This one is built around the shape of an actual day: what to do when everyone's moving slow, where to be when the sun drops, and where the night ends up. Pick a lane for each block and the weekend plans itself.</p>
+        <p>It also leaves the peninsula. Some of the best hours of a bach trip happen on a boat in the harbor, on the sand at Folly or Isle of Palms, or on a Shem Creek deck in Mount Pleasant, so those are here too.</p>
+        <div class="clock-strip">
+          <a href="#mornings"><i class="fa-solid fa-mug-hot"></i>Morning</a>
+          <a href="#afternoons"><i class="fa-solid fa-sun"></i>Afternoon</a>
+          <a href="#sunset"><i class="fa-solid fa-water"></i>Sunset</a>
+          <a href="#dinner"><i class="fa-solid fa-utensils"></i>Dinner</a>
+          <a href="#late-night"><i class="fa-solid fa-moon"></i>Late Night</a>
+        </div>
       </div>
     </section>
 
@@ -344,29 +213,29 @@
 
           <!-- Featured -->
           <section class="content-section" id="featured">
-            <h2>Three Bookings That Anchor the Weekend</h2>
-            <p>If the planner only locks in three things before the trip, make it these. They fill up first and they set the tone for everything around them.</p>
+            <h2>Lock These In First</h2>
+            <div class="time-tag"><i class="fa-solid fa-calendar-check"></i>Book before the flights</div>
+            <p>Two bookings decide how the whole weekend feels, and both sell out on spring and fall weekends. Get them on the calendar, then fill in everything around them.</p>
 
             <article class="feature">
               <div class="row g-0">
                 <div class="col-md-5 img-col">
-                  <img src="img/charleston-party-cat.png" alt="Bachelorette group on a party catamaran in Charleston Harbor" loading="lazy">
+                  <img src="img/charleston-party-cat.png" alt="Party catamaran cruising Charleston Harbor with a bachelorette group" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="col-md-7">
                   <div class="body">
-                    <h3>Party Catamaran Day</h3>
-                    <div class="sub">Harbor Cruise + Beach Stop</div>
+                    <h3>Charleston Party Cat</h3>
+                    <div class="sub">Harbor Party Boats</div>
                     <ul>
-                      <li>Private charter for the whole crew</li>
-                      <li>BYOB with coolers and ice on board</li>
-                      <li>Big sound system and floats</li>
-                      <li>Onboard restroom</li>
-                      <li>Island stop on 3-hour charters</li>
-                      <li>Shared DJ cruise for smaller groups</li>
+                      <li>Private catamarans for big crews</li>
+                      <li>Lux Cat holds up to 45 guests</li>
+                      <li>3-hour beach bash with island stop</li>
+                      <li>BYOB, no glass beer bottles</li>
+                      <li>Shared "Disco Darty" DJ cruise</li>
                     </ul>
                     <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
                       <a href="https://charlestonpartycat.com/" class="btn-yellow" target="_blank" rel="noopener">Book It</a>
-                      <span class="price">Private From $400/hr</span>
+                      <span class="price">Shared Cruise ~$140 / Person</span>
                     </div>
                   </div>
                 </div>
@@ -376,19 +245,19 @@
             <article class="feature blue">
               <div class="row g-0">
                 <div class="col-md-5 img-col">
-                  <img src="img/michael.jpg" alt="Michael At Your Place private bachelorette show in Charleston" loading="lazy">
+                  <img src="img/michael.jpg" alt="Michael At Your Place private bachelorette show at a Charleston rental" loading="lazy" onerror="this.style.display='none'">
                 </div>
                 <div class="col-md-7">
                   <div class="body">
                     <h3>Michael At Your Place</h3>
-                    <div class="sub">Private Show at Your Rental</div>
+                    <div class="sub">The Show Comes to You</div>
                     <ul>
-                      <li>Comes to your house, condo or hotel</li>
-                      <li>Brunch or late-night time slots</li>
+                      <li>At your rental, condo or hotel</li>
+                      <li>Brunch slot or late night</li>
                       <li>Up to 90 minutes</li>
-                      <li>Cash, Venmo or Cash App on arrival</li>
-                      <li>Charleston, Mount Pleasant &amp; the beaches</li>
-                      <li>Last-minute dates welcome</li>
+                      <li>Pay on arrival: cash, Venmo, Cash App</li>
+                      <li>Downtown, Mount Pleasant &amp; beaches</li>
+                      <li>Call or text (843) 360-9438</li>
                     </ul>
                     <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
                       <a href="https://michaelatyourplace.com" class="btn-yellow" target="_blank" rel="noopener">See Details</a>
@@ -398,145 +267,112 @@
                 </div>
               </div>
             </article>
-
-            <article class="feature">
-              <div class="row g-0">
-                <div class="col-md-5 img-col">
-                  <img src="img/culinary-walking-tours.png" alt="Private food tasting tour through Charleston's French Quarter" loading="lazy">
-                </div>
-                <div class="col-md-7">
-                  <div class="body">
-                    <h3>Private Food Tour</h3>
-                    <div class="sub">French Quarter Tasting Walk</div>
-                    <ul>
-                      <li>Private tour just for your group</li>
-                      <li>Several tasting stops downtown</li>
-                      <li>Local guide with the backstory</li>
-                      <li>Works as a long, lazy lunch</li>
-                      <li>Easy walking pace</li>
-                    </ul>
-                    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
-                      <a href="https://charlestonculinarytours.com/private-tours/bachelorette-bachelor-parties/" class="btn-yellow" target="_blank" rel="noopener">Book It</a>
-                      <span class="price">$85&ndash;$95 Per Person</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
           </section>
 
-          <!-- Daytime -->
-          <section class="content-section" id="daytime">
-            <h2>Daytime Plans Between Brunch and Dinner</h2>
-            <p>The afternoon is where a bach trip either drags or flies by. For something quiet and scenic, the <a href="https://coastalexpeditions.com/shem-creek/" target="_blank" rel="noopener">Coastal Expeditions sunset paddle on Shem Creek</a> puts the group in kayaks on the marsh while shrimp boats roll back into Mount Pleasant. Expect around $45&ndash;$65 a person, and book the last time slot of the day for the best light.</p>
+          <!-- Mornings -->
+          <section class="content-section" id="mornings">
+            <h2>Mornings Worth Getting Up For</h2>
+            <div class="time-tag"><i class="fa-solid fa-mug-hot"></i>8am to noon</div>
+            <p>Nobody wants a full sit-down at 9am after night one, so start with a runner. Send one person up King Street to <a href="https://calliesbiscuits.com/pages/hot-little-biscuit-landing" target="_blank" rel="noopener">Callie's Hot Little Biscuit</a> with an order placed in the app, and bring back a box of ham and hot honey chicken biscuits for the porch. <a href="https://www.sweetpalmcoffee.com/" target="_blank" rel="noopener">Sweet Palm Coffee</a> handles the coffee run and a breakfast-to-lunch menu for anyone who wants more than a biscuit.</p>
+            <p>The proper brunch belongs to the morning after the big night. <a href="https://www.churchandunion.com/" target="_blank" rel="noopener">Church &amp; Union</a> is the one built for a crowd, with long tables under stained glass in a converted church on North Market, and it books on OpenTable. <span class="biz">High Cotton</span> on East Bay does a dressier Lowcountry brunch with live jazz. <span class="biz">Millers All Day</span> on Lower King is the photogenic pick for hot honey chicken and grits, but weekend lines get long, so call ahead with a big group.</p>
 
             <figure class="photo">
-              <img src="img/kayak-tours.png" alt="Kayakers on the Shem Creek salt marsh at sunset" loading="lazy">
-              <figcaption>Golden hour on the Shem Creek marsh, Mount Pleasant.</figcaption>
+              <img src="img/church-and-union.png" alt="Brunch tables under stained glass windows in a converted Charleston church" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>Brunch under a cathedral ceiling, no reservation stress.</figcaption>
             </figure>
 
-            <p>Groups that want a drink in hand can head to <a href="http://www.highwiredistilling.com/" target="_blank" rel="noopener">High Wire Distilling</a> in the NoMo area, where the tour runs about $10 and the tasting room pours spirits made from Southern heirloom grains. Pair it with an hour at <a href="https://www.charlestonescapegames.com/about-us/" target="_blank" rel="noopener">Charleston Escape Games</a> on Upper King ($30&ndash;$40 each) for a little friendly competition before dinner.</p>
-            <p>For a slower pace, the <a href="https://www.candlefish.com/" target="_blank" rel="noopener">Candlefish</a> candle studio on King Street runs hands-on classes for about $60 a person, and everyone leaves with a custom scent that doubles as a party favor. From there, King Street itself is the afternoon: boutiques, shoe stores and coffee stops stacked block after block. Browsing is free; budget $50&ndash;$200 if the crew actually shops.</p>
-            <p>After dark, a ghost walk through the historic district is a cheap, fun way to see the old streets ($35&ndash;$50 each), or book a private horse-drawn carriage during the day for roughly $250&ndash;$325 per group.</p>
-            <p class="note">Spring and fall weekends sell out early. Lock in tours and classes two to three months ahead.</p>
+            <p class="note">Booking the private show for brunch? Put it on the morning after the big night, while everyone is still in pajamas at the rental.</p>
           </section>
 
-          <!-- Water -->
-          <section class="content-section" id="on-the-water">
-            <h2>Boat Days on the Harbor</h2>
-            <p>Nothing gets booked faster in this city than a boat. No bar lines, your own playlist, and on most charters your own cooler. The right pick comes down to group size and budget.</p>
-            <p>For a dressed-up afternoon, <a href="http://charlestonyachtclub.com/" target="_blank" rel="noopener">Charleston Yacht Club</a> runs private yacht outings from the downtown marina on the Ashley River, roughly $600&ndash;$1,000 an hour for up to 40 guests. Smaller crews can look at <a href="https://charlestonyachttours.com/" target="_blank" rel="noopener">Charleston Yacht Tours</a> for morning or full-day charters out of the harbor.</p>
+          <!-- Afternoons -->
+          <section class="content-section" id="afternoons">
+            <h2>Afternoons on the Water and the Sand</h2>
+            <div class="time-tag"><i class="fa-solid fa-sun"></i>Noon to 5pm</div>
+
+            <h3>Out on the Harbor</h3>
+            <p>A boat is the single most popular afternoon in town, and the format matters more than the boat. The <a href="https://charlestonpartycat.com/" target="_blank" rel="noopener">Party Cat</a> crew runs private charters with a three-hour island stop, plus a shared DJ cruise for groups too small to fill a boat. The <a href="https://tikitoursofcharleston.com/" target="_blank" rel="noopener">Friki Tiki</a> is a floating tiki bar that takes up to 20 for a flat group rate, with a splash stop if anyone wants to jump in. Book an afternoon departure. Morning boats after a late night rarely go well.</p>
 
             <figure class="photo pink">
-              <img src="img/tiki-tours.png" alt="Floating tiki bar boat cruising Charleston Harbor" loading="lazy">
-              <figcaption>A floating tiki bar is about as on-theme as a bach boat gets.</figcaption>
+              <img src="img/tiki-tours.png" alt="Floating tiki bar boat on Charleston Harbor" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>Afternoon departures win every time.</figcaption>
             </figure>
 
-            <p>The <a href="https://tikitoursofcharleston.com/" target="_blank" rel="noopener">Friki Tiki from Tiki Tours of Charleston</a> is a 2.5-hour harbor cruise on a floating tiki bar, flat-rated at roughly $500&ndash;$700 for up to 20 people, with a sound system, a restroom and an optional splash stop. If the budget is tighter, <a href="https://saltwatercycle.com/" target="_blank" rel="noopener">Saltwater Cycle</a> is the pedal-powered party boat out of the downtown marina. Seats run $50&ndash;$55 on public trips, pedaling is optional, and private runs start near $675.</p>
-            <p class="lead-line"><strong>Group size:</strong> Under 10 people, a shared cruise or pedal boat is the best value. Over 15, a private charter usually works out cheaper per head.</p>
-            <p class="lead-line"><strong>Timing:</strong> Afternoon departures beat morning ones. Nobody wants to board a boat at 9am after night one.</p>
-            <p class="lead-line"><strong>Lead time:</strong> Reserve four to six weeks out for any spring or fall weekend.</p>
+            <h3>A Beach Day Instead</h3>
+            <p>Two islands, two moods. <a href="blogs/folly-beach-trip.html">Folly Beach</a> is the laid-back surf town, where <a href="https://islasurfschool-charleston.com/" target="_blank" rel="noopener">Isla Surf School</a> runs group lessons and <a href="https://charlestonsupsafaris.com/" target="_blank" rel="noopener">Charleston SUP Safaris</a> paddles the flat Folly River. <a href="blogs/isle-of-palms-trip.html">Isle of Palms</a> is quieter, with the big county park on Front Beach and <a href="https://nature-tours.com/" target="_blank" rel="noopener">Barrier Island Eco Tours</a> leaving the marina for Capers Island. Both are dry beaches, so the drinks stay on the porch.</p>
+
+            <h3>Staying Downtown</h3>
+            <p>For a group that would rather not leave the peninsula, take a guided paddle with <a href="https://coastalexpeditions.com/shem-creek/" target="_blank" rel="noopener">Coastal Expeditions</a> out of Shem Creek, or spend the afternoon working down King Street's boutiques before an early dinner.</p>
           </section>
 
-          <!-- Getting around -->
-          <section class="content-section" id="getting-around">
-            <h2>Rides, Drivers and Bar Crawls</h2>
-            <p>Downtown parking is tight and expensive, so let someone else drive. <a href="https://www.charlestonblackcabcompany.com/" target="_blank" rel="noopener">Charleston Black Cab Co.</a> books vintage London-style cabs with a private driver for a five-hour day of sightseeing, photo stops and rides between plans, quoted by group size. For the night, <a href="https://pubtourcharleston.com/" target="_blank" rel="noopener">Pub Tour Charleston</a> leads walking crawls through the old taverns downtown and keeps the group together between stops.</p>
-            <p>Short hops around the peninsula are easy on <a href="https://www.lyft.com/rider/cities/charleston-sc" target="_blank" rel="noopener">Lyft</a> or <a href="https://www.uber.com/global/en/r/cities/charleston-sc-us/" target="_blank" rel="noopener">Uber</a>, usually $8&ndash;$20 a ride. Bigger crews that want to stay in one vehicle all night should price a party bus or limo at around $200&ndash;$400 an hour.</p>
-          </section>
-
-          <!-- Eat & drink -->
-          <section class="content-section" id="eat-drink">
-            <h2>Brunch, Biscuits and Big Dinners</h2>
-            <p>Brunch is a group sport here. <a href="https://www.churchandunion.com/" target="_blank" rel="noopener">Church &amp; Union</a> on North Market seats big parties under the vaulted ceilings and stained glass of a century-old church, and the mimosa flight belongs in front of the bride ($25&ndash;$45 with drinks). <a href="https://www.poogansporch.com/" target="_blank" rel="noopener">Poogan's Porch</a> has been serving out of an 1891 Victorian in the French Quarter since 1976; ask for the upstairs porch and order shrimp and grits. <a href="https://www.ironroserestaurant.com/" target="_blank" rel="noopener">Iron Rose</a> at the Mills House does courtyard brunch with live weekend music, and <a href="http://www.basickitchen.com/" target="_blank" rel="noopener">Basic Kitchen</a> is the lighter, plant-forward reset for day two.</p>
+          <!-- Sunset -->
+          <section class="content-section" id="sunset">
+            <h2>Golden Hour Across the Bridge</h2>
+            <div class="time-tag"><i class="fa-solid fa-water"></i>5pm to 7pm</div>
+            <p>The best sunset in the area is a ten-minute ride over the Ravenel Bridge, on Shem Creek in Mount Pleasant. <a href="https://www.redsicehouse.com/" target="_blank" rel="noopener">Red's Ice House</a> is the old shrimp-boat icehouse turned deck bar, and the rooftop crow's nest looks straight down the creek as the boats come in. Order peel-and-eat shrimp and a bucket of beers. If the group wants to sit down, <a href="https://www.nicoshemcreek.com/" target="_blank" rel="noopener">NICO</a> next door has a wood-fired, French-leaning menu and the best oyster list on the creek.</p>
 
             <figure class="photo">
-              <img src="img/church-and-union.png" alt="Group brunch inside Church and Union, a converted church in downtown Charleston" loading="lazy">
-              <figcaption>Brunch under stained glass at Church &amp; Union.</figcaption>
+              <img src="img/kayak-tours.png" alt="Sunset over the Shem Creek marsh in Mount Pleasant" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>Shem Creek at golden hour.</figcaption>
             </figure>
 
-            <p>For grab-and-go mornings, <a href="https://calliesbiscuits.com/pages/hot-little-biscuit-landing" target="_blank" rel="noopener">Callie's Hot Little Biscuit</a> on Upper King makes scratch biscuits stuffed with pimento cheese, country ham or hot honey chicken. Order ahead in their app to skip the line. <a href="https://www.sweetpalmcoffee.com/" target="_blank" rel="noopener">Sweet Palm Coffee</a> covers house coffee, sweets and a breakfast-to-lunch menu where the chicken Caesar wrap is the order, and <a href="http://www.weltonstinybakeshop.com/" target="_blank" rel="noopener">Welton's Tiny Bakeshop</a> handles the Southern pastries.</p>
-            <p>Seafood lovers should put their names down at <a href="https://167raw.com/" target="_blank" rel="noopener">167 Raw</a> on King Street (no reservations) and wander until the table is ready; oysters, lobster rolls and tuna burgers run $40&ndash;$75 with drinks. <a href="http://eattheordinary.com/" target="_blank" rel="noopener">The Ordinary</a> turns an old bank into an oyster hall where the raw bar tower and a bottle of bubbles make the celebration dinner. For the dressed-up night, <a href="https://www.oaksteakhouse.com/location/oak-steakhouse-charleston" target="_blank" rel="noopener">Oak Steakhouse</a> on Broad Street is the classic call at $80&ndash;$150 a person.</p>
-            <p>Before dinner, string together a rooftop happy hour: Stars Rooftop for the 360-degree view, the rooftop at <a href="https://www.thevendue.com/" target="_blank" rel="noopener">The Vendue</a>, then The Watch for harbor views. Plan $40&ndash;$70 each across all three. Close the night at <a href="https://www.vernschs.com/" target="_blank" rel="noopener">Vern's</a> on Meeting Street, where craft cocktails upstairs give way to a dim speakeasy bar below.</p>
-            <p class="note">Every pick here is our own. No restaurant pays to be included.</p>
+            <p>On the beach islands, sunset is easy: walk drinks from <a href="https://www.pier101folly.com/" target="_blank" rel="noopener">Pier 101</a> out onto the Folly pier, or catch it from the deck at <a href="https://www.islander71.com/" target="_blank" rel="noopener">Islander 71</a> at the Isle of Palms marina.</p>
           </section>
 
-          <!-- Nightlife -->
-          <section class="content-section" id="nightlife">
-            <h2>Where the Night Goes</h2>
-            <p>Start somewhere pretty, end somewhere loud. <a href="https://www.hotelbennett.com/dining-and-lounges/camellias" target="_blank" rel="noopener">Camellias</a>, the pink champagne bar inside Hotel Bennett, is the photo stop. <a href="https://www.ritualchs.com/" target="_blank" rel="noopener">Ritual</a> on Calhoun brings a Tulum-style rooftop with DJs and bottle service, while <a href="https://republicreign.com/" target="_blank" rel="noopener">Republic Reign</a> on King mixes a garden patio with VIP tables. <a href="https://bourbonnbubbles.com/" target="_blank" rel="noopener">Bourbon N Bubbles</a> sits in between with a long bourbon list and champagne by the glass.</p>
+          <!-- Dinner -->
+          <section class="content-section" id="dinner">
+            <h2>Dinner for the Whole Crew</h2>
+            <div class="time-tag"><i class="fa-solid fa-utensils"></i>7pm to 9pm</div>
+            <p>Most famous Charleston dining rooms are built for four, so pick places that can hold you. For the dress-up night, <a href="https://www.michaelmina.net/restaurants/sorelle/" target="_blank" rel="noopener">Sorelle</a> on Broad Street has a third-floor private room for ten, with full buyouts for bigger groups, and books 60 days out. <a href="https://www.huskrestaurant.com/" target="_blank" rel="noopener">Husk</a> on Queen Street handles private events by email, so reach out the day the date is set.</p>
+            <p>On the casual nights, go loud. <a href="https://lewisbarbecue.com/" target="_blank" rel="noopener">Lewis Barbecue</a> in NoMo serves Texas brisket at the counter and has a side yard made for pitchers of margaritas. <a href="https://www.leonsoystershop.com/" target="_blank" rel="noopener">Leon's</a> on Upper King does fried chicken and chargrilled oysters on a patio, and <a href="https://www.xiaobaobiscuit.com/" target="_blank" rel="noopener">Xiao Bao Biscuit</a> serves bold Asian plates in a converted gas station. Spending the night in Mount Pleasant? <a href="https://www.pagesokragrill.com/" target="_blank" rel="noopener">Page's Okra Grill</a> takes reservations and has the shrimp and grits.</p>
+            <p class="note">The full breakdown of who can seat ten or more, and which famous spots to skip with a big group, is in our <a href="blogs/best-resturants-in-charleston.html">restaurant guide</a>.</p>
+          </section>
+
+          <!-- Late night -->
+          <section class="content-section" id="late-night">
+            <h2>Upper King After Dark</h2>
+            <div class="time-tag"><i class="fa-solid fa-moon"></i>9pm to last call</div>
+            <p>Start the night dressed up. <a href="https://www.hotelbennett.com/dining-and-lounges/camellias" target="_blank" rel="noopener">Camellias</a>, the pink champagne bar at Hotel Bennett, is the group photo, and the rooftop at <a href="https://www.ritualchs.com/" target="_blank" rel="noopener">Ritual</a> on Calhoun has DJs and tables with a skyline view.</p>
 
             <figure class="photo pink">
-              <img src="img/rooftopbar.png" alt="Rooftop bar overlooking downtown Charleston at dusk" loading="lazy">
-              <figcaption>Rooftop drinks first, dance floor later.</figcaption>
+              <img src="img/rooftopbar.png" alt="Rooftop bar lights over downtown Charleston" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>Rooftop first, dance floor second.</figcaption>
             </figure>
 
-            <p>When it's time to dance, <a href="https://onairchs.club/" target="_blank" rel="noopener">On Air</a> stacks three floors on King Street, with honky-tonk downstairs and house music up top. <a href="http://thecommodorechs.com/" target="_blank" rel="noopener">The Commodore</a> is all disco ball, and <a href="https://www.triocharleston.com/" target="_blank" rel="noopener">Trio</a> keeps live bands on one floor and DJs on another. <a href="https://babylonchs.com/" target="_blank" rel="noopener">Babylon</a> leans into salsa and bachata, and <a href="https://www.prohibitioncharleston.com/" target="_blank" rel="noopener">Prohibition</a> brings 1920s swing and jazz on weekend nights.</p>
-            <p>For a sing-along, <a href="https://johnkinggrill.com/" target="_blank" rel="noopener">John King Grill</a> runs dueling pianos Wednesday through Saturday, and <a href="https://www.thebangkoklounge.com/" target="_blank" rel="noopener">The Bangkok Lounge</a> does karaoke and frozen drinks every night of the week. Quieter options include the <a href="https://www.belmond.com/hotels/north-america/usa/sc/charleston/belmond-charleston-place/dining" target="_blank" rel="noopener">Thoroughbred Club</a> at Charleston Place and <a href="https://www.lastsaintchs.com/" target="_blank" rel="noopener">Last Saint</a> on the east side. And when someone needs a late burger and a pool table, <a href="https://www.acsbar.com/" target="_blank" rel="noopener">A.C.'s Bar &amp; Grill</a> is the dive that never lets anyone down.</p>
-            <p class="note">Every bar and club in this section is 21+. Bring ID for the whole group.</p>
+            <p>Then pick your energy. For dancing, <a href="https://onairchs.club/" target="_blank" rel="noopener">On Air</a> has three floors on King with honky-tonk on the bottom and house music up top, and <a href="http://thecommodorechs.com/" target="_blank" rel="noopener">The Commodore</a> is pure disco ball. For a sing-along, <a href="https://johnkinggrill.com/" target="_blank" rel="noopener">John King Grill</a> runs dueling pianos late in the week, and <a href="https://www.thebangkoklounge.com/" target="_blank" rel="noopener">The Bangkok Lounge</a> does karaoke every night.</p>
+            <p class="note">Everything in this section is 21+. Leave the cars parked and rideshare home. Our <a href="downtown-charleston-parking.html">downtown parking guide</a> covers where to leave them.</p>
           </section>
 
-          <!-- Decor -->
-          <section class="content-section" id="decor">
-            <h2>Decor, Setup and Planning Help</h2>
-            <p>For the maid of honor who doesn't want to inflate balloons at midnight, a few local teams will style the rental before anyone arrives. <a href="https://bachbabes.com/" target="_blank" rel="noopener">Last Fling Charleston</a> sells decor packages with mimosa bars and VIP add-ons, running about $865&ndash;$1,465 for a party of six. <a href="https://southernsoireechs.com/" target="_blank" rel="noopener">Southern Soir&eacute;e</a> is a Charleston-born planner known for custom sugar cookies and personal details, with packages from around $350. <a href="https://www.bienvenuechs.com/" target="_blank" rel="noopener">Bienvenue Charleston</a> handles balloon garlands, photo backdrops and fridge stocking so the house is ready when the group walks in. Get a quote, but most setups land between $400 and $1,000.</p>
-          </section>
-
-          <!-- Stay -->
+          <!-- Stay & decor -->
           <section class="content-section" id="stay">
-            <h2>Places That Keep the Group Together</h2>
-            <p>The best home base is one where nobody needs a car. <a href="https://www.thevendue.com/" target="_blank" rel="noopener">The Vendue</a> is an art-filled boutique hotel two blocks from the water, and its rooftop makes an easy meeting spot ($250&ndash;$450+ a room per night). <a href="https://www.harbourviewcharleston.com/" target="_blank" rel="noopener">HarbourView Inn</a> on East Bay puts the Market, Rainbow Row and King Street all within a ten-minute walk.</p>
+            <h2>Home Base and the Setup</h2>
+            <div class="time-tag"><i class="fa-solid fa-house"></i>Where the weekend lives</div>
+            <p>Pick a base based on which half of the weekend matters more. A downtown rowhouse from <a href="https://eastbaycompany.com/" target="_blank" rel="noopener">East Bay Company</a> sleeps eight to twelve within walking distance of King Street. For the beach version, <a href="https://www.tidesfollybeach.com/" target="_blank" rel="noopener">Tides Folly Beach</a> puts everyone in oceanfront rooms next to the pier, and <a href="https://www.wilddunesresort.com/" target="_blank" rel="noopener">Wild Dunes</a> on Isle of Palms has villas and homes with resort perks.</p>
 
             <figure class="photo">
-              <img src="img/east-bay-rentals.png" alt="Historic rowhouse rental on East Bay Street in Charleston" loading="lazy">
-              <figcaption>A rowhouse rental keeps the whole crew under one roof.</figcaption>
+              <img src="img/east-bay-rentals.png" alt="Historic rowhouse rental on East Bay Street in Charleston" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>One house, one porch, everyone together.</figcaption>
             </figure>
 
-            <p>For groups of eight to twelve, a whole house beats a block of rooms. <a href="https://eastbaycompany.com/" target="_blank" rel="noopener">East Bay Company</a> rents historic multi-bedroom rowhouses for about $700&ndash;$1,200+ a night, which splits nicely across a full crew.</p>
-            <p class="note">Downtown fills up fast, especially during fall wedding season. Book lodging three or more months out.</p>
+            <p>To walk into a house that's already decorated, <a href="https://southernsoireechs.com/" target="_blank" rel="noopener">Southern Soir&eacute;e</a> handles setups and custom cookies, and <a href="https://www.bienvenuechs.com/" target="_blank" rel="noopener">Bienvenue Charleston</a> does balloon garlands, backdrops and stocks the fridge before you land. Beach towns ban balloons on the sand, so keep the arch inside the rental.</p>
           </section>
 
           <!-- Itinerary -->
           <section class="content-section" id="itinerary">
-            <h2>A Four-Day Game Plan</h2>
-            <p>A Thursday-to-Sunday trip gives the group enough time to do the big things without rushing any of them.</p>
+            <h2>A Friday-to-Sunday Plan</h2>
+            <p>Three days, one boat, one beach, one big dinner. Swap pieces in from any section above.</p>
             <div class="day">
-              <div class="label">Thursday &middot; Arrive</div>
-              <p class="mb-0">Check into the rowhouse with decor already set up, order in while the late flights land, and toast on the porch.</p>
+              <div class="label">Friday &middot; Land and Loosen Up</div>
+              <p class="mb-0">Check in, then brisket and margaritas in the Lewis Barbecue side yard. Champagne at Camellias, then dancing at On Air.</p>
             </div>
             <div class="day">
-              <div class="label">Friday &middot; Warm Up</div>
-              <p class="mb-0">Brunch at Basic Kitchen, a distillery tour and a paint-and-sip in the afternoon, dinner at The Ordinary, then drinks at The Watch.</p>
+              <div class="label">Saturday &middot; The Big One</div>
+              <p class="mb-0">A biscuit run to Callie's, then an afternoon Party Cat charter with the island stop. Sunset at Red's on Shem Creek, the private room at Sorelle, and The Commodore to close it out.</p>
             </div>
             <div class="day">
-              <div class="label">Saturday &middot; Big Day</div>
-              <p class="mb-0">Sunrise paddle at Shem Creek, the food tour after lunch, an early dinner at Red's on the creek, then an escape room before the night out.</p>
+              <div class="label">Sunday &middot; Slow and Salty</div>
+              <p class="mb-0">A brunch-slot show at the rental, then Church &amp; Union. One last afternoon on the sand at Folly before the airport run.</p>
             </div>
-            <div class="day">
-              <div class="label">Sunday &middot; Recover</div>
-              <p class="mb-0">Spa time at Woodhouse, one last brunch with photos on the porch, then pack up and head to the airport.</p>
-            </div>
-            <p class="note">Leave one open block every day. The best moments of a bach trip usually aren't on the schedule.</p>
+            <p class="note">Leave a few hours open each day. The best stories from a bach trip usually happen between bookings.</p>
           </section>
 
         </div>
@@ -544,42 +380,40 @@
         <!-- Sidebar -->
         <div class="col-lg-4">
           <aside class="sidebar mt-lg-4">
-            <h4>Tags</h4>
-            <a href="#featured" class="tag">Top Bookings</a>
-            <a href="#on-the-water" class="tag">Boat Charters</a>
-            <a href="#on-the-water" class="tag">Party Boats</a>
-            <a href="#daytime" class="tag">Kayak Tours</a>
-            <a href="#daytime" class="tag">Distillery</a>
-            <a href="#daytime" class="tag">Candle Making</a>
-            <a href="#daytime" class="tag">Escape Rooms</a>
-            <a href="#featured" class="tag">Private Shows</a>
-            <a href="#featured" class="tag">Food Tours</a>
-            <a href="#eat-drink" class="tag">Brunch</a>
-            <a href="#eat-drink" class="tag">Oyster Bars</a>
-            <a href="#eat-drink" class="tag">Rooftops</a>
-            <a href="#nightlife" class="tag">Dance Clubs</a>
-            <a href="#nightlife" class="tag">Karaoke</a>
-            <a href="#nightlife" class="tag">Piano Bars</a>
-            <a href="#decor" class="tag">Decor</a>
-            <a href="#stay" class="tag">Group Rentals</a>
-            <a href="#getting-around" class="tag">Party Bus</a>
-            <a href="blogs/folly-beach-trip.html" class="tag">Folly Beach</a>
-            <a href="blogs/isle-of-palms-trip.html" class="tag">Isle of Palms</a>
+            <h4>Pick Your Vibe</h4>
+            <p><strong>Classy:</strong> Sorelle, Camellias, High Cotton jazz brunch</p>
+            <p><strong>Rowdy:</strong> Party Cat, On Air, Lewis Barbecue</p>
+            <p><strong>Beachy:</strong> Folly surf lesson, Pier 101, Red's at sunset</p>
+            <p class="mb-0"><strong>Low-key:</strong> Callie's on the porch, a Folly River paddle, karaoke</p>
 
             <div class="side-block">
-              <h4>When To Go</h4>
-              <p><strong>Spring:</strong> March sits around 70&deg; by day and mid-40s at night. April warms into the mid-70s, and May feels like early summer in the low 80s.</p>
-              <p><strong>Fall:</strong> September still runs mid-80s. October drops to the upper 70s, and November settles into crisp days near 70&deg;.</p>
-              <p class="mb-0">Summer works too, but plan boats and walking tours for early or late in the day.</p>
+              <h4>Tags</h4>
+              <a href="#featured" class="tag">Party Boats</a>
+              <a href="#featured" class="tag">Private Shows</a>
+              <a href="#mornings" class="tag">Biscuits</a>
+              <a href="#mornings" class="tag">Jazz Brunch</a>
+              <a href="#afternoons" class="tag">Surf Lessons</a>
+              <a href="#afternoons" class="tag">Paddleboarding</a>
+              <a href="#afternoons" class="tag">Eco Tours</a>
+              <a href="#sunset" class="tag">Shem Creek</a>
+              <a href="#sunset" class="tag">Sunset Decks</a>
+              <a href="#dinner" class="tag">Private Dining</a>
+              <a href="#dinner" class="tag">BBQ</a>
+              <a href="#late-night" class="tag">Champagne Bar</a>
+              <a href="#late-night" class="tag">Dancing</a>
+              <a href="#late-night" class="tag">Karaoke</a>
+              <a href="#stay" class="tag">Beach Hotels</a>
+              <a href="#stay" class="tag">Decor</a>
             </div>
 
             <div class="side-block">
               <h4>More Guides</h4>
-              <p><a href="blogs/best-resturants-in-charleston.html">Best Restaurants in Charleston</a></p>
-              <p><a href="blogs/bachelorettes-best-time-visit-charleston.html">Best Time for a Bach Trip</a></p>
-              <p><a href="blogs/charleston-hidden-secrets-eats.html">Hidden Eats Locals Love</a></p>
-              <p><a href="blogs/folly-beach-trip.html">Folly Beach Day Trip</a></p>
-              <p class="mb-0"><a href="blogs/isle-of-palms-trip.html">Isle of Palms Day Trip</a></p>
+              <p><a href="blogs/best-resturants-in-charleston.html">Restaurants for Big Groups</a></p>
+              <p><a href="blogs/charleston-hidden-secrets-eats.html">Hidden Eats</a></p>
+              <p><a href="blogs/folly-beach-trip.html">Folly Beach Trip</a></p>
+              <p><a href="blogs/isle-of-palms-trip.html">Isle of Palms Trip</a></p>
+              <p><a href="blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></p>
+              <p class="mb-0"><a href="downtown-charleston-parking.html">Downtown Parking</a></p>
             </div>
           </aside>
         </div>
@@ -590,8 +424,8 @@
     <!-- Closing -->
     <section class="closing">
       <div class="container content-section">
-        <h2>Start Planning the Weekend</h2>
-        <p>Charleston rewards groups that book early and keep the schedule loose. Pick one boat, one big dinner and one late night, then fill the gaps with brunch and King Street. <strong>Know a local spot that belongs on this page? <a href="contact.html">Send it our way</a> and we'll take a look.</strong></p>
+        <h2>Fill In the Clock</h2>
+        <p>One boat, one beach, one big table and one late night. Everything else is a bonus. Pick a lane for each part of the day, book the first two before anyone buys a flight, and let Charleston handle the rest. <strong>Know a spot we should add? <a href="contact.html">Send it our way.</a></strong></p>
       </div>
     </section>
   </div>
@@ -606,20 +440,19 @@
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="blogs/best-resturants-in-charleston.html">Restaurants</a></li>
-            <li><a href="blogs/bachelorettes-best-time-visit-charleston.html">Best Time To Visit</a></li>
             <li><a href="blogs/charleston-hidden-secrets-eats.html">Hidden Eats</a></li>
+            <li><a href="downtown-charleston-parking.html">Parking</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-3">
-          <h5>Plans</h5>
+          <h5>The Day</h5>
           <ul>
-            <li><a href="#on-the-water">Boat Days</a></li>
-            <li><a href="#daytime">Daytime</a></li>
-            <li><a href="#eat-drink">Brunch &amp; Dinner</a></li>
-            <li><a href="#nightlife">Nightlife</a></li>
-            <li><a href="#decor">Decor</a></li>
-            <li><a href="#stay">Where To Stay</a></li>
-            <li><a href="#itinerary">4-Day Plan</a></li>
+            <li><a href="#mornings">Mornings</a></li>
+            <li><a href="#afternoons">Afternoons</a></li>
+            <li><a href="#sunset">Sunset</a></li>
+            <li><a href="#dinner">Dinner</a></li>
+            <li><a href="#late-night">Late Night</a></li>
+            <li><a href="#itinerary">3-Day Plan</a></li>
           </ul>
         </div>
         <div class="col-md-3">
@@ -644,7 +477,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Charleston Bachelorette Activities &middot; Written locally in Charleston, SC &middot; <a href="#top" style="color:#fff;">Back to top</a>
+      &copy; 2026 Charleston Bachelorette Activities &middot; Independent and locally written &middot; <a href="#top" style="color:#fff;">Back to top</a>
     </div>
   </footer>
 
